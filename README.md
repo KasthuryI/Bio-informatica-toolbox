@@ -23,7 +23,6 @@ THIS PART OF THE GUI IS FOR INPUT FILES
 
 
 ## **FastQC based commands**
-TO DO: BOXPLOT COMMAND
 
 ## **Trimmomatic**
 ### **In- and output**
