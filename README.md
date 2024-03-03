@@ -49,7 +49,7 @@ THIS PART OF THE GUI IS FOR INPUT FILES
 #### Paired ended data takes 2 inputs, the forward sequence and the backward sequence. This command gives you 4 outputs, a paired sequence, where both reads survived the processing, and unpaired sequence, where only a read survived but not its partner read, of the forward- and backward sequence.
 
 ### **Trimommatic based commands**
-TO DO: ADDAPTER, CROPPING, LENGHT
+
 #### The following arguments are mostly used in Trimmomatic:
 #### • **ILLUMINACLIP:** Cuts adapters and other illumina-specific sequences from the read (ILLUMINACLIP:TruSeq3-PE.fa:2:30:10) 
 
