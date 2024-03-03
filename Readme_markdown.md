@@ -1,72 +1,66 @@
-autors: Ivar Lottman, Storm Steller, Kasthury Inparajah, Mirte Draaijer 
-version: 0.1
-date:
+# **Bio-informatics Toolbox Website: Trimsequance**
 
-Name and usage
-Toolbox trimsequance
-This website is used for quality control and trimming fastQ files before the mapping and coverage fase of the data.
-We created this website becouse not all of the data produced by sequancing is a 100% acurate and when you want to do mapping and covarige of a refrance genome you want to use acurate data. Therefor this tool was created to help in that process. 
+### **Authors:** Ivar Lottman, Storm Steller, Kasthury Inparajah & Mirte Draaijer 
+### **Version:** 0.1
+### **Date:** 3/3/2024
 
-It does this by visualising the fastq data with a tool cald fastQC and trimommatic for trimming the fastQ data based on input commands
+___
 
-Programmer/ICT user manual
-#to do manual based on how the GUI works on the website
+## **Name and usage**
+### **Toolbox Trimsequance**
+#### This website is used for quality control and trimming fastQ files before the mapping and coverage fase of the data.
+#### We created this website becouse not all of the data produced by sequancing is 100% accurate and when you want to do mapping and covarage of a reference genome you want to use the accurate data. Therefor this tool was created to help in that process. 
 
-GUI input file
-this part of the gui is for inputting files
+#### It does this by visualising the fastq data with a tool called FastQC and another tool named Trimommatic for trimming the fastQ data based on input commands. 
 
-fastQC based commands
-#to do 
-boxplot comman
+## **Programmer/ICT user manual**
+TO DO: MANUAL BASED ON HOW THE GUI WORKS ON THE WEBSITE
 
-Trimommatic based commands
-#to do 
-addapter
-cropping
-lenght
+## **GUI input file**
+THIS PART OF THE GUI IS FOR INPUT FILES
 
-instalation # expanded manual
-FastQC
-Trimommatic
+## **FastQC based commands**
+TO DO: BOXPLOT COMMAND
 
-Systeem requirements
-Working OS: 
-Windows 10 or 11
-linux Debian v12
+## **Trimommatic based commands**
+TO DO: ADDAPTER, CROPPING, LENGHT
 
-Hardware requirements
-No specific requirements
+## **Instalation** # expanded manual
+### **FastQC**
+### **Trimommatic**
 
-Instalation Manual short
+## **Systeem requirements**
+### Working OS: Windows 10 or 11
+### Linux Debian v12
 
-Java v1.8.0_401
-Follow the instal manual from the java website
+## **Hardware requirements**
+### No specific requirements
+
+## **Installation Manual short**
+
+### **Java** *(v1.8.0_401)*
+#### Follow the install manual from the official Java website:
 https://www.java.com/nl/download/
 
-Python v3.11.8
-Follow the instal manual from the python 
-
+### **Python** *(v3.11.8)*
+#### Follow the install manual from the official Python website:
 https://www.python.org/downloads/
 
-FastQC v0.12.1
+### **FastQC** *(v0.12.1)*
 https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
 
-Trimmomatic v0.39
+### **Trimmomatic** *(v0.39)*
 http://www.usadellab.org/cms/?page=trimmomatic
 
-Module discription
-Commandline: Scriptname
+## **Module discription**
+#### Commandline: Scriptname
+TO DO: PER SCRIPT, WEBSITE SCRIPT, TOOL SCRIPT AND FLASK VERSION
 
-#to do per script
-Website script
-Tool script
-Flask # Version
+## **Support**
+### **Ivar Lottman:** i.lottman@st.hanze.nl
+### **Storm Steller:** s.steller@st.hanze.nl
+### **Kasthury Inparajah:** k.inparajah@st.hanze.nl
+### **Mirte Draaijer:** mi.draaijer@st.hanze.nl
 
-Support
-i.lottman@st.hanze.nl
-s.steller@st.hanze.nl
-k.inparajah@st.hanze.nl
-mi.draaijer@st.hanze.nl
-
-Acknowledgment
-#to do
+## **Acknowledgment**
+TO DO
