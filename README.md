@@ -71,7 +71,7 @@ TO DO: ADDAPTER, CROPPING, LENGHT
 ## **Installation** *(expanded manual)*
 
 ### **Install Java**
-#### Please make sure to have installed Java on your computer since Jave is needed to run both FastQC and Trimmomatic. You can donwload Java from the following website: website: https://www.java.com/nl/. **Trimmomatic requires Java 1.8 or higher!**
+#### Please make sure to have installed Java on your computer since Jave is needed to run both FastQC and Trimmomatic. You can donwload Java from the following website: website: https://www.java.com/nl/. **Please note that Trimmomatic requires Java 1.8 or higher!**
 
 ### **FastQC**
 #### This manual was written based on the official instructions for installing FastQC, so if you want you can follow those: https://raw.githubusercontent.com/s-andrews/FastQC/master/INSTALL.txt
