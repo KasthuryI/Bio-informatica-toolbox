@@ -1,8 +1,8 @@
 Trimmomatic Manual
-Requirements
+**Requirements**
 Trimmomatic requires Java version 1.8 or higher.
 
-Installation
+**Installation**
 To install Trimmomatic, go to http://www.usadellab.org/cms/?page=trimmomatic and download a binary release zip of Trimmomatic of version 0.39 or higher. Unpack the zip in a convenient folder.
 
 Once installed and unpacked, you can acces Trimmomatic using the terminal of your OS.
