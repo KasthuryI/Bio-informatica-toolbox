@@ -7,18 +7,21 @@
    </head>
 
    <body>
-      <div class="topnav">
-         <a class="active" href="homepage.html">Home</a>
-         <a href="uploadpage.html">Upload</a>
-         <a href="contactpage.html">Contact</a>
-         <a href="fastqc.html">FastQC</a>
-         <a href=" trimmomatic.html">Trimmomatic</a>
-       </div>
-      <img src="static/logo_trimtech.png" alt="website logo">
-      <h3>Welcome to TrimTech!</h3>
-      <p>Here you can preform quality controls on DNA-seqeunces, trim DNA-sequences, and visually compare your sequence before and after trimming.</p>
-      <a href="uploadpage.html">Try it now</a>
-      <!--This is an example button-->
-      <button onclick="document.location='uploadpage.html'">Try it now!</button>
+      <header class="header">
+         <img class="logo" src="static/logo_trimtech.png" alt="website logo">
+         <nav class="navbar">
+            <a href="homepage.html">Home</a>
+            <a href="uploadpage.html">Upload</a>
+            <a href="contactpage.html">Contact</a>
+            <a href="#">Trimmomatic</a>
+            <a href="#">Fastqc</a>
+         </nav>
+      </header>
+   
+      <div class="contents">
+         <h3>Welcome to TrimTech!</h3>
+         <p>Here you can preform quality controls on DNA-seqeunces, trim DNA-sequences, and visually compare your sequence before and after trimming.</p>
+         <button onclick="document.location='uploadpage.html'">Try it now!</button>
+      </div>
    </body>
 </html>
