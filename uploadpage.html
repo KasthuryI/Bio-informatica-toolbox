@@ -8,15 +8,20 @@
     </head>
 
     <body>
-        <div class="topnav">
-            <a href="homepage.html">Home</a>
-            <a class="active" href="uploadpage.html">Upload</a>
-            <a href="contactpage.html">Contact</a>
-            <a href="fastqc.html">FastQC</a>
-            <a href=" trimmomatic.html">Trimmomatic</a>
-          </div>
-        <img src="static/logo_trimtech.png" alt="website logo">
-        <h3>Welcome to the upload page:</h3>
+        <header class="header">
+            <img class="logo" src="static/logo_trimtech.png" alt="website logo">
+            <nav class="navbar">
+               <a href="homepage.html">Home</a>
+               <a href="uploadpage.html">Upload</a>
+               <a href="contactpage.html">Contact</a>
+               <a href="#">Trimmomatic</a>
+               <a href="#">Fastqc</a>
+            </nav>
+         </header>
+    
+    <div class="contents"> 
+        <h3>Upload your FastQ-file:</h3>
         <p>On this page you will be able to upload your FastQ file. This page currently doesn't work, but it will in the future.</p>
+    </div>
     </body>
 </html>
