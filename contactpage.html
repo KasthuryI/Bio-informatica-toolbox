@@ -7,23 +7,35 @@
     </head>
     
     <body>
-        <div class="topnav">
-            <a href="homepage.html">Home</a>
-            <a href="uploadpage.html">Upload</a>
-            <a class="active" href="contactpage.html">Contact</a>
-            <a href="fastqc.html">FastQC</a>
-            <a href=" trimmomatic.html">Trimmomatic</a>
-          </div>
-        <img src="static/logo_trimtech.png" alt="website logo">
-        <h3>Welcome to the contact page:</h3>
-        <img src="static/email.png" alt="Email icon">
+        <header class="header">
+            <img class="logo" src="static/logo_trimtech.png" alt="website logo">
+            <nav class="navbar">
+               <a href="homepage.html">Home</a>
+               <a href="uploadpage.html">Upload</a>
+               <a href="contactpage.html">Contact</a>
+               <a href="#">Trimmomatic</a>
+               <a href="#">Fastqc</a>
+            </nav>
+         </header>
+    
+    <div class="contents">
+        <h3>Contact us:</h3>
         <p>If you want to share your thoughts or if any questions arise, please contact us via:</p>
-        <ul>
-            <a href="mailto:s.steller@st.hanze.nl">Ivar Lottman</a>
-            <a href="mailto:i.lottman@st.hanze.nl">Storm Steller</a>
-            <a href="mailto:k.inparajah@st.hanze.nl">Kasthury Inparajah</a>
-            <a href="mailto:mi.draaijer@st.hanze.n">Mirte Draaijer</a>
-        </ul>
+    </div>
+
+    <div class="flex-container">
+        <div>
+            <img src="static/email.png" alt="Email icon"> 
+        </div>
+        <div>
+            <ul>
+                <li><a href="mailto:s.steller@st.hanze.nl">Ivar Lottman</a></li>
+                <li><a href="mailto:i.lottman@st.hanze.nl">Storm Steller</a></li>
+                <li><a href="mailto:k.inparajah@st.hanze.nl">Kasthury Inparajah</a></li>
+                <li><a href="mailto:mi.draaijer@st.hanze.n">Mirte Draaijer</a></li>
+            </ul> 
+        </div>
+    </div>
     </body>
 
 </html>
