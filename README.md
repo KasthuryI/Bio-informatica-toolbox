@@ -1,17 +1,17 @@
-# **Bio-informatics Toolbox Website: Trimsequance**
+# **Bio-informatics Toolbox Website: TrimSeq**
 
 ### **Authors:** Ivar Lottman, Storm Steller, Kasthury Inparajah & Mirte Draaijer 
-### **Version:** 0.1
-### **Date:** 3/3/2024
+### **Version:** 0.1.1
+### **Date:** 7/3/2024
 
 ___
 
 ## **Name and usage**
-### **Toolbox Trimsequance**
-#### This website is used for quality control and trimming fastQ files before the mapping and coverage fase of the data.
-#### We created this website becouse not all of the data produced by sequancing is 100% accurate and when you want to do mapping and covarage of a reference genome you want to use the accurate data. Therefor this tool was created to help in that process. 
+### **TrimSeq**
+#### This website is used for quality control and trimming FastQ files before the mapping and coverage phase of the data.
+#### We created this website because not all of the data produced by sequencing is 100% accurate and when you want to do mapping and covarage of a reference genome you want to use the accurate data. Therefore this tool was created to help in that process. 
 
-#### It does this by visualising the fastq data with a tool called FastQC and another tool named Trimommatic for trimming the fastQ data based on input commands. 
+#### It does this by visualising the FastQ data with a tool called FastQC and another tool called Trimommatic for trimming the fastQ data based on input commands. 
 
 
 ## **Programmer/ICT user manual**
@@ -26,9 +26,9 @@ THIS PART OF THE GUI IS FOR INPUT FILES
 
 ## **Trimmomatic**
 ### **In- and output**
-#### Trimmomatic works with FASTQ, using phred + 33 or phred + 64 quality scores. The FASTQ can be either uncompressed or zipped. The use of the gzip format is determined based on the .gz extension.
+#### Trimmomatic works with FastQ, using phred - 33 or phred - 64 quality scores. The FastQ can be either uncompressed or zipped. The use of the gzip format is determined based on the .gz extension.
 
-#### Once you have performed the command, an output file will be created in the directory you are currently in. This output file can be a uncompressed FASTQ or a gzipped FASTQ, depending on how you specified the output in your command. This output can be used in programms like FastQC to recheck the quality of the sequence.
+#### Once you have performed the command, an output file will be created in the directory you are currently in. This output file can be an uncompressed FastQ or a gzipped FastQ, depending on how you specified the output in your command. This output can be used in programms like FastQC to recheck the quality of the sequence.
 
 ### **Usage**
 #### To use Trimmomatic, go to the terminal of your OS. The command needed to run Trimmomatic depends on if your data is single- or paired end. 
@@ -37,7 +37,7 @@ THIS PART OF THE GUI IS FOR INPUT FILES
 #### If your data is single end, use te following example:
 **java -jar trimmomatic-0.39.jar SE -phred33 "input.fq.gz" "output.fq.gz" ILLUMINACLIP:TruSeq3-SE:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36**
 
-#### Single ended data only takes 1 input, a fastq file, and gives 1 output back, a trimmed version of the sequence. You will need to change input.fq.gz to the name of your desired fastq file. You can also change the name of the output.fq.gz to your desired name, but this is optional. 
+#### Single ended data only takes 1 input, a FastQ file, and gives 1 output back, a trimmed version of the sequence. You will need to change input.fq.gz to the name of your desired FastQ file. You can also change the name of the output.fq.gz to your desired name, but this is optional. 
 
 #### You can also change the extension of your output. If you want it to be uncompressed, use .fq of fastq. If you want it to be compressed in a gzip, use .fq.gz or .fastq.gz.
 
@@ -46,14 +46,14 @@ THIS PART OF THE GUI IS FOR INPUT FILES
 
 #### **java -jar trimmomatic-0.39.jar PE "input_forward.fq.gz" "input_reverse.fq.gz" "output_forward_paired.fq.gz output_forward_unpaired.fq.gz output_reverse_paired.fq.gz" "output_reverse_unpaired.fq.gz" ILLUMINACLIP:TruSeq3-PE.fa:2:30:10:2:True LEADING:3 TRAILING:3 MINLEN:36**
 
-#### Paired ended data takes 2 inputs, the forward sequence and the backward sequence. This command gives you 4 outputs, a paired sequence, where both reads survived the processing, and unpaired sequence, where only a read survived but not its partner read, of the forward- and backward sequence.
+#### Paired ended data takes 2 inputs, the forward sequence and the backward sequence. This command gives you 4 outputs, a paired sequence, where both reads survived the processing, and  an unpaired sequence where only one read survived but not its partner read, of the forward- and backward sequence.
 
 ### **Trimommatic based commands**
 
 #### The following arguments are mostly used in Trimmomatic:
-#### • **ILLUMINACLIP:** Cuts adapters and other illumina-specific sequences from the read (ILLUMINACLIP:TruSeq3-PE.fa:2:30:10) 
+#### • **ILLUMINACLIP:** Cuts adapters and other illumina-specific sequences from the read. (ILLUMINACLIP:TruSeq3-PE.fa:2:30:10) 
 
-#### • **LEADING:** Cuts bases off the start of a read, if it is below a threshold quality (LEADING:3) 
+#### • **LEADING:** Cuts bases off the start of a read, if it is below a threshold quality. (LEADING:3) 
 
 #### • **TRAILING:** Cuts bases of the end of a read, if it is below a threshold quality. (TRAILING:3) 
 
