@@ -1,28 +1,89 @@
 <!DOCTYPE html>
 
-<html lang="en-NL">
+<html lang="en">
+
+<!-- HEAD -->
+
    <head>
       <meta charset="UTF-8">
-      <title>TrimTech</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title> TrimTech </title>
+      <link rel="icon" type="image/x-icon" href="static/favicon.ico">
       <link rel="stylesheet" href="static/style.css"/>
    </head>
 
-   <body>
-      <header class="header">
-         <img class="logo" src="static/logo_trimtech.png" alt="website logo">
-         <nav class="navbar">
-            <a href="homepage.html">Home</a>
-            <a href="uploadpage.html">Upload</a>
-            <a href="contactpage.html">Contact</a>
-            <a href="trimmomatic.html">Trimmomatic</a>
-            <a href="fastqc.html">Fastqc</a>
-         </nav>
-      </header>
+<body>
+   <!-- HEADER -->
+
+   <header id="navigation_bar">
+      <a href="homepage.html">
+         <img id="logo" src="static/logo_trimtech.png" alt="website logo">
+      </a>
+
+      <nav id="text_navbar">
+         <a href="about.html"> ABOUT </a>
+         <a href="uploadpage.html"> UPLOAD </a>
+         <a href="fastqc.html"> FASTQC </a>
+         <a href="trimmomatic.html"> TRIMMOMATIC </a>
+         <a href="contactpage.html"> CONTACT </a>
+      </nav>
+
+   </header>
    
-      <div class="contents">
-         <h3>Welcome to TrimTech!</h3>
-         <p>Here you can preform quality controls on DNA-seqeunces, trim DNA-sequences, and visually compare your sequence before and after trimming.</p>
-         <button onclick="document.location='uploadpage.html'">Try it now!</button>
+   
+   <!-- CONTENT -->
+   <div class="content_home_text">
+      <div id="fade_in_left">
+         <p> Quality Controls, <br>
+         Trim Sequences, <br>
+         Visualize Transformation <br>
+         — Your DNA, Perfected! </p>
       </div>
-   </body>
+   </div>
+   <div id="grid_try">
+      <div class="grid_try_text">
+         <a href="uploadpage.html">
+            <p> TRY IT NOW!</p>
+         </a>
+      </div>
+   </div>
+   <div id="grid_how">
+      <div class="grid_how_text">
+         <a href="how_does_it_work.html">
+            <p> HOW DOES IT WORK? </p>
+            <p class="grid_how_hidden"> TrimTech uses different tools to trim and compare your data. 
+               Click to learn more
+            </p>
+         </a>
+      </div>
+   </div>
+   <div id="grid_get">
+      <div class="grid_get_text">
+         <a href="https://www.ncbi.nlm.nih.gov/sra/" target="_blank" rel="noopener noreferrer">
+            <p> GET YOUR FASTQ FILE HERE! </p>
+            <p class="grid_get_hidden"> Go to the NCBI page to download your FASTQ file </p>
+         </a>
+      </div>
+   </div>
+   <div id="grid_disclaimer">
+      <div class="grid_disclaimer_text">
+         <a href="dislaimer.html" target="_blank" rel="noopener noreferer">
+            <p> DISCLAIMER </p>
+            <p class="grid_disclaimer_hidden"> TRIMTECH ONLY USES INPUT FROM ILLUMINA. LEARN HERE WHY </p>
+         </a>
+      </div>
+   </div>
+
+
+   <!-- FOOTER -->
+
+   <footer>
+      <div class="footer">
+         <div class="text_footer">
+            <p> &copy;TrimTech ALL RIGHTS RESERVED</p>
+         </div>
+      </div>
+   </footer>
+
+</body>
 </html>
