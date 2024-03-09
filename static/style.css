@@ -1,75 +1,355 @@
-/* Style sheet */
+/********************************************** Stylesheet ***************************************************/
 
-/* Navigation bar */
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
+/******************************************* Fixed components ************************************************/
+/* Background image for homepage */
+body {
+  background: #F5F5Dc;
+  background-size: cover;
 }
 
-.header{
+/* Logo website */
+#logo {
+  width:100px;
+  height:50px;
+}
+
+/* Navigation bar */
+#navigation_bar{
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 5px 100px 5px 10px;
-  background: #90c590;
+  padding: 10px 100px 10px 20px;
+  background: #90C590; 
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   z-index: 100;
 }
 
-.logo{
-  max-width: 6%;
-  max-height: 6%;
-}
-
-.navbar a{
+ /* Text on navigation bar */
+#text_navbar a{
   position: relative;
-  font-size: 18px;
-  color: beige;
-  font-weight: 500;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #F5F5DC;
   text-decoration: none;
-  margin-left: 40px;
+  text-align: center;
+  margin: 0 60px;
 }
 
-.navbar a::before{
-  content: "";
-  position: absolute;
-  top: 100%;
-  width: 0;
-  height: 1px;
-  background: beige;
-  transition: .3s;
+/* Hover effect nav bar */
+#text_navbar a:hover {
+  color: #228b22;
 }
 
-.navbar a:hover::before{
+/* Footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
   width: 100%;
+  padding: 1px 1px 1px 1px;
+  background: #90C590;
+  display: inline-block;
+  z-index: 100;
 }
 
-/* Positioning the contents of each page */
-.contents{
-  padding: 60px 10px 0px 10px;
+/* Text footer */
+.text_footer{
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 10px;
+  color: #F5F5Dc;
+  text-align: center;
 }
 
-  /* Styling for the body */
-  body{
-    font-family: sans-serif;
-    background-color:beige;
-  }
+/********************************************* Flex components ***********************************************/
 
-  /* Styling for the headers */
-  header{
-    font-family: sans-serif;
-  }
+/**************** Home page content ***************/
+.content_home_text{
+  position: absolute;
+  top: 55px;
+  left: 30px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 45px;
+  color: black;
+  text-align: left;
+}
 
-  /* Styling for the images */
-  img{
-    max-width: 50%;
-    max-height: 50%
-    }
+/* Fade in from left home page text */
+#fade_in_left{
+  animation: fadeInLeft 2s ease-out;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+/* Grid boxes */
+#grid_try{
+  position: absolute;
+  top: 100px;
+  right: 30px;
+  border-radius: 35px;
+  background: #E79384;
+  overflow: hidden;
+  padding: 20px;
+  width: 330px;
+  height: 160px;
+  transition: clip-path 0.3s ease;
+}
+
+#grid_how{
+  position: absolute;
+  top: 340px;
+  right: 880px;
+  border-radius: 35px;
+  background: #0D4028;
+  overflow: hidden;
+  padding: 20px;
+  width: 330px;
+  height: 150px;
+  transition: clip-path 0.3s ease;
+}
+
+#grid_get{
+  position: absolute;
+  top: 340px;
+  right: 455px;
+  border-radius: 35px;
+  background: #228b22;
+  overflow: hidden;
+  padding: 20px;
+  width: 330px;
+  height: 150px;
+  transition: clip-path 0.3s ease;
+}
+
+#grid_disclaimer{
+  position: absolute;
+  top: 340px;
+  right: 30px;
+  border-radius: 35px;
+  background: #B92C25;
+  overflow: hidden;
+  padding: 20px;
+  width: 330px;
+  height: 150px;
+  transition: clip-path 0.3s ease;
+}
+
+
+/* Opacity transition grid and zooming in content */
+#grid_try:hover{
+  clip-path: inset(10px 10px 10px 10px round 35px);
+  opacity: 0.8;
+}
+
+#grid_how:hover{
+  clip-path: inset(10px 10px 10px 10px round 35px);
+  opacity: 0.8;
+}
+
+#grid_get:hover{
+  clip-path: inset(10px 10px 10px 10px round 35px);
+  opacity: 0.8;
+}
+
+#grid_disclaimer:hover{
+  clip-path: inset(10px 10px 10px 10px round 35px);
+  opacity: 0.8;
+}
+
+
+/* Content of grids */
+.grid_try_text a{
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  color: #F5F5DC;
+  text-decoration: none;
+  text-align: center;
+  margin: 100px; 
+}
+
+.grid_how_text a{
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  color: #F5F5DC;
+  text-decoration: none;
+  text-align: center;
+  margin: 100px; 
+}
+
+.grid_get_text a{
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  color: #F5F5DC;
+  text-decoration: none;
+  text-align: center;
+  margin: 0px; 
+}
+
+.grid_disclaimer_text a{
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  color: #F5F5DC;
+  text-decoration: none;
+  text-align: center;
+  margin: 100px; 
+}
+
+
+/* Already existing text move to top on grid */
+/* Except "TRY IT NOW!" and "GET YOUR FASTQC FILE HERE!" grid */
+#grid_try:hover .grid_try_text a{
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  color: #F5F5DC;
+  text-decoration: none;
+  text-align: center;
+  /* margin: 0; */
+}
+
+#grid_how:hover .grid_how_text a{
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  color: #F5F5DC;
+  text-decoration: none;
+  text-align: center;
+  margin: 0;
+}
+
+#grid_get:hover .grid_get_text a{
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  color: #F5F5DC;
+  text-decoration: none;
+  text-align: center;
+  margin: 0;
+}
+
+#grid_disclaimer:hover .grid_disclaimer_text a{
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  color: #F5F5DC;
+  text-decoration: none;
+  text-align: center;
+  margin: 0;
+}
+
+/* Hidden text */
+.grid_try_hidden{
+  position: relative;
+  opacity: 0;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  color: #000000;
+  text-align: center;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(20px);
+  padding: -20px;
+  margin: -20px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.grid_how_hidden{
+  position: relative;
+  opacity: 0;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  color: #000000;
+  text-align: center;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(20px);
+  padding: -20px;
+  margin: -20px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.grid_get_hidden{
+  position: relative;
+  opacity: 0;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  color: #000000;
+  text-align: center;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(20px);
+  padding: -20px;
+  margin: -20px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.grid_disclaimer_hidden{
+  position: relative;
+  opacity: 0;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  color: #000000;
+  text-align: center;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(20px);
+  padding: -20px;
+  margin: -20px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/* Fade in hidden text when hover */
+#grid_try:hover .grid_try_hidden {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#grid_how:hover .grid_how_hidden {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#grid_get:hover .grid_get_hidden {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#grid_disclaimer:hover .grid_disclaimer_hidden {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 /* Putting image on contactpage next to text */
 .flex-container{
