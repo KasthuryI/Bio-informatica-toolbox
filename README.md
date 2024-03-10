@@ -1,4 +1,4 @@
-# **Bio-informatics Toolbox Website: TrimSeq**
+# **Bio-informatics Toolbox Website: TrimTech**
 
 ### **Authors:** Ivar Lottman, Storm Steller, Kasthury Inparajah & Mirte Draaijer 
 ### **Version:** 0.1.1
@@ -7,11 +7,11 @@
 ___
 
 ## **Name and usage**
-### **TrimSeq**
-#### This website is used for quality control and trimming FastQ files before the mapping and coverage phase of the data.
+### **TrimTech**
+#### This website is used for quality control and trimming FASTQ files before the mapping and coverage phase of the data.
 #### We created this website because not all of the data produced by sequencing is 100% accurate and when you want to do mapping and covarage of a reference genome you want to use the accurate data. Therefore this tool was created to help in that process. 
 
-#### It does this by visualising the FastQ data with a tool called FastQC and another tool called Trimommatic for trimming the fastQ data based on input commands. 
+#### It does this by visualising the FASTQ data with a tool called FASTQC and another tool called Trimommatic for trimming the FASTQ data based on input commands. 
 
 
 ## **Programmer/ICT user manual**
@@ -22,11 +22,11 @@ TO DO: MANUAL BASED ON HOW THE GUI WORKS ON THE WEBSITE
 THIS PART OF THE GUI IS FOR INPUT FILES
 
 
-## **FastQC based commands**
+## **FASTQC based commands**
 
 ## **Trimmomatic**
 ### **In- and output**
-#### Trimmomatic works with FastQ, using phred - 33 or phred - 64 quality scores. The FastQ can be either uncompressed or zipped. The use of the gzip format is determined based on the .gz extension.
+#### Trimmomatic works with FASTQ, using phred - 33 or phred - 64 quality scores. The FASTQ can be either uncompressed or zipped. The use of the gzip format is determined based on the .gz extension.
 
 #### Once you have performed the command, an output file will be created in the directory you are currently in. This output file can be an uncompressed FastQ or a gzipped FastQ, depending on how you specified the output in your command. This output can be used in programms like FastQC to recheck the quality of the sequence.
 
@@ -35,7 +35,7 @@ THIS PART OF THE GUI IS FOR INPUT FILES
 
 ### **Single-end**
 #### If your data is single end, use te following example:
-**java -jar trimmomatic-0.39.jar SE -phred33 "input.fq.gz" "output.fq.gz" ILLUMINACLIP:TruSeq3-SE:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36**
+```java -jar trimmomatic-0.39.jar SE -phred33 "input.fq.gz" "output.fq.gz" ILLUMINACLIP:TruSeq3-SE:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36```
 
 #### Single ended data only takes 1 input, a FastQ file, and gives 1 output back, a trimmed version of the sequence. You will need to change input.fq.gz to the name of your desired FastQ file. You can also change the name of the output.fq.gz to your desired name, but this is optional. 
 
@@ -44,7 +44,7 @@ THIS PART OF THE GUI IS FOR INPUT FILES
 ### **Paired end**
 #### If your data is paired end, use this example:
 
-#### **java -jar trimmomatic-0.39.jar PE "input_forward.fq.gz" "input_reverse.fq.gz" "output_forward_paired.fq.gz output_forward_unpaired.fq.gz output_reverse_paired.fq.gz" "output_reverse_unpaired.fq.gz" ILLUMINACLIP:TruSeq3-PE.fa:2:30:10:2:True LEADING:3 TRAILING:3 MINLEN:36**
+```java -jar trimmomatic-0.39.jar PE "input_forward.fq.gz" "input_reverse.fq.gz" "output_forward_paired.fq.gz output_forward_unpaired.fq.gz output_reverse_paired.fq.gz" "output_reverse_unpaired.fq.gz" ILLUMINACLIP:TruSeq3-PE.fa:2:30:10:2:True LEADING:3 TRAILING:3 MINLEN:36```
 
 #### Paired ended data takes 2 inputs, the forward sequence and the backward sequence. This command gives you 4 outputs, a paired sequence, where both reads survived the processing, and  an unpaired sequence where only one read survived but not its partner read, of the forward- and backward sequence.
 
@@ -120,6 +120,7 @@ http://www.usadellab.org/cms/?page=trimmomatic
 #### Commandline: Scriptname
 TO DO: PER SCRIPT, WEBSITE SCRIPT, TOOL SCRIPT AND FLASK VERSION
 
+## **DISCLAIMER: TrimTech only uses input from Illumina.**
 
 ## **Support**
 ### **Ivar Lottman:** i.lottman@st.hanze.nl
