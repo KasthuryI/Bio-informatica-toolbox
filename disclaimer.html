@@ -1,23 +1,52 @@
 <!DOCTYPE html>
 
-<html lang="en-NL">
+<html lang="en">
+
+<!-- HEAD -->
+
    <head>
       <meta charset="UTF-8">
-      <title>TrimTech</title>
-      <link rel="stylesheet" href="style.css"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title> TrimTech </title>
+      <link rel="icon" type="image/x-icon" href="static/favicon.ico">
+      <link rel="stylesheet" href="static/style.css"/>
    </head>
 
-   <body>
-      <div class="topnav">
-         <a href="homepage.html">Home</a>
-         <a href="uploadpage.html">Upload</a>
-         <a href="contactpage.html">Contact</a>
-         <a href="fastqc.html">FastQC</a>
-         <a class="active" href=" trimmomatic.html">Trimmomatic</a>
+<body>
+   <!-- HEADER -->
+
+   <header id="navigation_bar">
+      <a href="homepage.html">
+         <img id="logo" src="static/logo_trimtech.png" alt="website logo">
+      </a>
+
+      <nav id="text_navbar">
+         <a href="about.html"> ABOUT </a>
+         <a href="uploadpage.html"> UPLOAD </a>
+         <a href="fastqc.html"> FASTQC </a>
+         <a href="trimmomatic.html"> TRIMMOMATIC </a>
+         <a href="contactpage.html"> CONTACT </a>
+      </nav>
+
+    </header>
+
+
+    <!-- CONTENT -->
+    <h3 class="head_text_disclaimer_page"> DISCLAIMER </h3>
+    <div class="text_disclaimer_page">
+      <p> Coming soon...
+    </div>
+
+
+       <!-- FOOTER -->
+
+   <footer>
+    <div class="footer">
+       <div class="text_footer">
+          <p> &copy;TrimTech ALL RIGHTS RESERVED</p>
        </div>
-      <img src="logo_trimtech.png" alt="website logo">
-      <h3>Welcome to TrimTech!</h3>
-      <p>Here you can preform quality controls on DNA-seqeunces, trim DNA-sequences, and visually compare your sequence before and after trimming.</p>
-      <a href="uploadpage.html">Try it now</a>
-   </body>
+    </div>
+ </footer>
+
+</body>
 </html>

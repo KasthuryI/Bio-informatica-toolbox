@@ -350,6 +350,163 @@ body {
   transform: translateY(0);
 }
 
+
+/****************** About page content *******************/
+/* Text about page */
+.head_text_about_page{
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 70px;
+  top: 50px;
+}
+
+.text_about_page{
+  position: relative;
+  font-family: sans-serif;
+  font-size: 30px;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 0px;
+  top: 60px;
+}
+
+
+/****************** Try it now page content *******************/
+/* Text try it now page */
+.head_text_try_page{
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 70px;
+  top: 50px;
+}
+
+.text_try_page{
+  position: relative;
+  font-family: sans-serif;
+  font-size: 30px;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 0px;
+  top: 60px;
+}
+
+
+/****************** How does it work page content *******************/
+/* Text how does it work page */
+.head_text_how_page{
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 70px;
+  top: 50px;
+}
+
+.text_how_page{
+  position: relative;
+  font-family: sans-serif;
+  font-size: 30px;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 0px;
+  top: 60px;
+}
+
+
+/****************** Disclaimer page content *******************/
+/* Text disclaimer page */
+.head_text_disclaimer_page{
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 70px;
+  top: 50px;
+}
+
+.text_disclaimer_page{
+  position: relative;
+  font-family: sans-serif;
+  font-size: 30px;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 0px;
+  top: 60px;
+}
+
+
+/****************** FASTQC page content *******************/
+/* Text FASTQC page */
+.head_text_fastqc_page{
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 70px;
+  top: 50px;
+}
+
+.text_fastqc_page{
+  position: relative;
+  font-family: sans-serif;
+  font-size: 30px;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 0px;
+  top: 60px;
+}
+
+
+/****************** Trimmomatic page content *******************/
+/* Text Trimmomatic page */
+.head_text_trimmomatic_page{
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 70px;
+  top: 50px;
+}
+
+.text_trimmomatic_page{
+  position: relative;
+  font-family: sans-serif;
+  font-size: 30px;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 0px;
+  top: 60px;
+}
+
+
 /****************** Contact page content *****************/
 /* Text contact page */
 .head_text_contact_page{
