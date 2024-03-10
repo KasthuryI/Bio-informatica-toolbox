@@ -275,7 +275,7 @@ body {
   text-align: center;
   transition: opacity 0.3s ease, transform 0.3s ease;
   transform: translateY(20px);
-  padding: -20px;
+  padding: 0;
   margin: -20px;
   margin-left: 5px;
   margin-right: 5px;
@@ -291,7 +291,7 @@ body {
   text-align: center;
   transition: opacity 0.3s ease, transform 0.3s ease;
   transform: translateY(20px);
-  padding: -20px;
+  padding: 0;
   margin: -20px;
   margin-left: 5px;
   margin-right: 5px;
@@ -307,7 +307,7 @@ body {
   text-align: center;
   transition: opacity 0.3s ease, transform 0.3s ease;
   transform: translateY(20px);
-  padding: -20px;
+  padding: 0;
   margin: -20px;
   margin-left: 5px;
   margin-right: 5px;
@@ -323,7 +323,7 @@ body {
   text-align: center;
   transition: opacity 0.3s ease, transform 0.3s ease;
   transform: translateY(20px);
-  padding: -20px;
+  padding: 0;
   margin: -20px;
   margin-left: 5px;
   margin-right: 5px;
