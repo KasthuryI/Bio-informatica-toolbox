@@ -350,13 +350,80 @@ body {
   transform: translateY(0);
 }
 
+/****************** Contact page content *****************/
+/* Text contact page */
+.head_text_contact_page{
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 50px;
+  top: 10px;
+  right: 5px;
+}
 
-/* Putting image on contactpage next to text */
-.flex-container{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  height: 250px;
-  flex-wrap: nowrap;
-  padding: 10px;
+.text_contact_page{
+  position: absolute;
+  font-family: sans-serif;
+  /* font-weight: bold; */
+  font-size: 30px;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 100px;
+  margin-left: 32%;
+}
+
+/* E-mail links */
+.email_links a{
+  position: absolute;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #228b22;
+  text-decoration: none;
+  text-align: center;
+  margin: 400px;
+  margin-left: 20%
+}
+
+/* Position e-mailadresses */
+#mail1 {
+  position: absolute;
+  text-align: center;
+  top: 30px;
+  left: 200px;
+}
+
+#mail2 {
+  position: absolute;
+  text-align: center;
+  top: 30px;
+  left: 450px;
+}
+
+#mail3 {
+  position: absolute;
+  text-align: center;
+  top: 30px;
+  right: 550px;
+}
+
+#mail4 {
+  position: absolute;
+  text-align: center;
+  top: 30px;
+  right: 300px;
+}
+
+/* Email picture */
+#picture_email {
+  position: relative;
+  top: 350px;
+  right: -600px;
+  width:50px;
+  height:50px;
 }

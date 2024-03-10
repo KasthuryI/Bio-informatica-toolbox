@@ -1,43 +1,65 @@
 <!DOCTYPE html>
 
-<html lang="en-NL">
-    <head>
-        <meta charset="UTF-8">
-        <title>Contactpage</title> 
-        <title>TrimTech</title>
-        <link rel="stylesheet" href="static/style.css"/>
-    </head>
-    
-    <body>
-        <header class="header">
-            <img class="logo" src="static/logo_trimtech.png" alt="website logo">
-            <nav class="navbar">
-               <a href="homepage.html">Home</a>
-               <a href="uploadpage.html">Upload</a>
-               <a href="contactpage.html">Contact</a>
-               <a href="trimmomatic.html">Trimmomatic</a>
-               <a href="fastqc.html">Fastqc</a>
-            </nav>
-         </header>
-    
-    <div class="contents">
-        <h3>Contact us:</h3>
-        <p>If you want to share your thoughts or if any questions arise, please contact us via:</p>
+<html lang="en">
+
+<!-- HEAD -->
+
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title> TrimTech </title>
+      <link rel="icon" type="image/x-icon" href="static/favicon.ico">
+      <link rel="stylesheet" href="static/style.css"/>
+   </head>
+
+<body>
+   <!-- HEADER -->
+
+   <header id="navigation_bar">
+      <a href="homepage.html">
+         <img id="logo" src="static/logo_trimtech.png" alt="website logo">
+      </a>
+
+      <nav id="text_navbar">
+         <a href="about.html"> ABOUT </a>
+         <a href="uploadpage.html"> UPLOAD </a>
+         <a href="fastqc.html"> FASTQC </a>
+         <a href="trimmomatic.html"> TRIMMOMATIC </a>
+         <a href="contactpage.html"> CONTACT </a>
+      </nav>
+
+    </header>
+
+
+    <!-- CONTENT -->
+    <div class="text_contact_page">
+        <h3 class="head_text_contact_page"> CONTACT </h3>
+        <p> If you want to share your <br>
+            thoughts or if any questions arise, <br>
+            please contact us via:</p>
     </div>
 
-    <div class="flex-container">
-        <div>
-            <img src="static/email.png" alt="Email icon"> 
-        </div>
-        <div>
-            <ul>
-                <li><a href="mailto:s.steller@st.hanze.nl">Ivar Lottman</a></li>
-                <li><a href="mailto:i.lottman@st.hanze.nl">Storm Steller</a></li>
-                <li><a href="mailto:k.inparajah@st.hanze.nl">Kasthury Inparajah</a></li>
-                <li><a href="mailto:mi.draaijer@st.hanze.n">Mirte Draaijer</a></li>
-            </ul> 
-        </div>
+    <img id="picture_email" src="static/email.png" alt="email picture"> 
+    
+    <div class="email_links">
+        <ul>
+            <lu id="mail1"><a href="mailto:s.steller@st.hanze.nl">Ivar Lottman</a></lu>
+            <lu id="mail2"><a href="mailto:i.lottman@st.hanze.nl">Storm Steller</a></lu>
+            <lu id="mail3"><a href="mailto:mi.draaijer@st.hanze.n">Mirte Draaijer</a></lu>
+            <lu id="mail4"><a href="mailto:k.inparajah@st.hanze.nl">Kasthury Inparajah</a></lu>
+        </ul> 
     </div>
-    </body>
 
+
+       <!-- FOOTER -->
+
+   <footer>
+    <div class="footer">
+       <div class="text_footer">
+          <p> &copy;TrimTech ALL RIGHTS RESERVED</p>
+       </div>
+    </div>
+ </footer>
+
+</body>
 </html>
