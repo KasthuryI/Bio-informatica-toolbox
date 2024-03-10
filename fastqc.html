@@ -34,89 +34,89 @@
     <!-- CONTENT -->
     <h3 class="head_text_fastqc_page"> FASTQC </h3>
     <div class="text_fastqc_page">
-         <h1>What is FastQC</h1>
+         <h1>What is FastQC?</h1>
          <p>FastQC is a visualisation tool for FastQ files. This tool visualizes some of the provided data 
          so you can do some quality control checks. The aim of this tool is to potentialy identify problems that could have
-         occord with the sequencer itself or the sample that was used in the test.
+         occured with the sequencer itself or the sample that was used in the test.
          </p>
  
-         <h2>Plot Information</h2>
+         <h2>Plot Information:</h2>
  
-         <h3>Basic statistics</h3>
+         <h3>Basic statistics:</h3>
          <p>This plot contains some basic information about the file.</p>
          
-         <h3>Per base sequence quality</h3>
-         <p>This boxplot contains the quality per base </br>
-         Frequent problems</br>
-         its commmon for reads to degrade in quality over the duration in long runs.
+         <h3>Per base sequence quality:</h3>
+         <p>This boxplot contains the quality per base. </br>
+         Frequent problems:</br>
+         It's commmon for reads to degrade in quality over the duration in long runs.
          There are a couple of diffrent types of encoding that can be applied on the file, this can lead to false reports on
-         the this plot.
+         this plot.
          </p>
          
-         <h3>Per sequence quality score</h3>
+         <h3>Per sequence quality score:</h3>
          <p>This graph shows the overal quality distribution of the reads.</br>
-         if the overal quality is low there might be systematic problem with the flow cell or a specific part of the run.
-         As per babraham bioinformatics standerds if the overal quality is below 27 the read is flagd for warning and if its below 20
-         its flagd for failure
+         If the overal quality is low there might be a systematic problem with the flow cell or a specific part of the run.
+         As per babraham bioinformatics standards if the overal quality is below 27 the read is flagged for warning and if it's below 20
+         it's flagged for failure
          </p>
          
-         <h3>Per base sequence content</h3>
-         <p>In this graph you can see the proportions of the different nucleotide bases</br>
-             In most cases there should be no bias between the complementing bases threwout the run, its worth mentioning that certain
-             sample's can produces biases in the beginning of a run based on the way they where prepared.</br>
-             if the AT or the CG compensition is more then 10% appart it wil be flagd for warning and if its greater then 20% it will be flagd
+         <h3>Per base sequence content:</h3>
+         <p>In this graph you can see the proportions of the different nucleotide bases.</br>
+             In most cases there should be no bias between the complementing bases throuhgout the run, its worth mentioning that certain
+             sample's can produce biases in the beginning of a run based on the way they were prepared.</br>
+             If the AT or the CG compensition is more than 10% appart it wil be flagged for warning and if its greater than 20% it will be flagged
              for failure.</br>
-             Primers,adapters and some samples based on their preparation can create baises.
+             Primers, adapters, and some samples based on their preparation can create biases.
          </p>
          
-         <h3>Per sequance GC content</h3>
-         <p>In this plot you can see the CG content across the sequence</br>
+         <h3>Per sequence GC content:</h3>
+         <p>In this plot you can see the CG content across the sequence.</br>
          The peak of this graph should match the overal CG content of the genome you are testing. If this is not the case
-         or there are multiple peaks the sample can be contaminated. The theoretical distribution is calculated based on the provided
-         if this is weirdly shaped it can also indicate that the sample was contaminated.
-         this plot wil be flag for warning the total amount of diviations from the normal distribution exceeds 15% and if it exceeds 30% its
-         flagd for failure.
+         or there are multiple peaks the sample can be contaminated. The theoretical distribution is calculated based on the provided data.
+         If this is weirdly shaped it can also indicate that the sample was contaminated.
+         This plot will flag for warning if the total amount of diviations from the normal distribution exceeds 15% and if it exceeds 30% its
+         flagged for failure.
          </p>
          
-         <h3>Per base N content</h3>
-         <p>Sequencers cant always decides with confidinces wich of the bases it is and with substitutes
-         it for N. Its normal for smal amounts of N to apear becouse of quality loss near the end of the sequence. The 2 most commmon
+         <h3>Per base N content:</h3>
+         <p>Sequencers can't always decide with confidence which of the bases it is and with substitutes
+         it for N. It's normal for small amounts of N to appear because of quality loss near the end of the sequence. The 2 most commmon
          reasons for a large portion of N content is a bad quality or a biased sample in wich case the sequencer can get confused and make 
          bad calls.
          </p>
          
-         <h3>Sequence lengt distribution</h3>
-         <p>This plot shows the distribution of the lengt of the reads.</br>
-             Warnings will apear when the sequance is not of the same lengt and it will be faild if the lenght is 0.
-             Warnings in this graph can sometimes be ignored if you expect diffrent lengts in sequence, this could be becouse of the type of
-             sequencing you have done or data trimming wich can result into a diffrence in lengt.
+         <h3>Sequence length distribution:</h3>
+         <p>This plot shows the distribution of the length of the reads.</br>
+             Warnings will appear when the sequence is not of the same length and it will be failled if the lenghth is 0.
+             Warnings in this graph can be ignored if you expect diffrent lengths in a sequence, this could be because of the type of
+             sequencing you have done or data trimming which can result into a diffrence in length.
          </p>
          
-         <h3>Sequence duplication graph</h3>
+         <h3>Sequence duplication graph:</h3>
          <p> This graph shows the amount of duplicate sequences. if there are more then 20% duplicate sequences in total this graph will be 
-             flagd for a warning and for failure if its over 50%. There are many reasons why duplications can arise the most common examples
-             are: enricht samples or by chance the same sequence was selected.</br> 
-             for more information on this graph and how to interpret unexpected results please visit <a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/8%20Duplicate%20Sequences.html">Duplication Explanation</a>
+             flagged for a warning and it will be flagged for failure if its over 50%. There are many reasons why duplications can arise the most common examples
+             are: enriched samples or by chance the same sequence was selected.</br> 
+             For more information on this graph and how to interpret unexpected results please visit <a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/8%20Duplicate%20Sequences.html">Duplication Explanation</a>
              as it contains an extensive explanation on this graph.
          </p>
          
-         <h3>Overrepresented sequences</h3>
-         <p>This graph shows overrepresentation of the sequance. there are 3 main reasons why a sequance can be overrepresented, one of them 
-             is that the sample is contaminated and the second one is lack of diversity. And the last reason is that the sequance can be biologically
-             significant 
+         <h3>Overrepresented sequences:</h3>
+         <p>This graph shows overrepresentation of the sequence. There are 3 main reasons why a sequence can be overrepresented, one of them 
+             is that the sample is contaminated and the second one is a lack of diversity. The last reason is that the sequence can be biologically
+             significant.
          </br>
-             this module will show a warning any part of the sequence represents more then 0.1% of and shows a failure at more then 1%
+             This module will show a warning if any part of the sequence represents more than 0.1% of and shows a failure at more than 1%
          </p>
          
-         <h3>Adapter content</h3>
-         <p>The adapters of your sequence sample can influence overrepresentation in your data, this graph will show specific the specific
-             adapter sequences 
+         <h3>Adapter content:</h3>
+         <p>The adapters of your sequence sample can influence overrepresentation in your data, this graph will show the specific
+             adapter sequences.
          </br>
  
          </p>
  
          <h2>Source</h2>
-         <p>If you require more detailt information please visit the official FastQC website</p>
+         <p>If you require more detailed information please visit the official FastQC website:</p>
          <a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/">Babraham Bioinformatics</a>
     </div>
 
