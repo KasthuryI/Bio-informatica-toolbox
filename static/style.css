@@ -70,11 +70,11 @@ body {
 /**************** Home page content ***************/
 .content_home_text{
   position: absolute;
-  top: 55px;
-  left: 30px;
+  top: 10%;
+  left: 3%;
   font-family: sans-serif;
   font-weight: bold;
-  font-size: 45px;
+  font-size: 280%;
   color: black;
   text-align: left;
 }
