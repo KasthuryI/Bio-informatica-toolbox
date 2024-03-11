@@ -9,8 +9,8 @@ body {
 
 /* Logo website */
 #logo {
-  width:100px;
-  height:50px;
+  width:6vw;
+  height:3vw;
 }
 
 /* Navigation bar */
@@ -19,7 +19,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 10px 100px 10px 20px;
+  padding: 0.6vw 6vw 0.6vw 1.2vw;
   background: #90C590; 
   display: flex;
   align-items: center;
@@ -32,11 +32,11 @@ body {
   position: relative;
   font-family: sans-serif;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 1.2vw;
   color: #F5F5DC;
   text-decoration: none;
   text-align: center;
-  margin: 0 60px;
+  margin: 0 3.6vw;
 }
 
 /* Hover effect nav bar */
@@ -50,7 +50,7 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 1px 1px 1px 1px;
+  padding: 0.06vw 0.06vw 0.06vw 0.06vw;
   background: #90C590;
   display: inline-block;
   z-index: 100;
@@ -60,7 +60,7 @@ body {
 .text_footer{
   font-family: sans-serif;
   font-weight: bold;
-  font-size: 10px;
+  font-size: 0.6vw;
   color: #F5F5Dc;
   text-align: center;
 }
@@ -70,11 +70,11 @@ body {
 /**************** Home page content ***************/
 .content_home_text{
   position: absolute;
-  top: 55px;
-  left: 30px;
+  top: 3.3vw;
+  left: 1.8vw;
   font-family: sans-serif;
   font-weight: bold;
-  font-size: 45px;
+  font-size: 3.5vw;
   color: black;
   text-align: left;
 }
@@ -99,53 +99,53 @@ body {
 /* Grid boxes */
 #grid_try{
   position: absolute;
-  top: 100px;
-  right: 30px;
-  border-radius: 35px;
+  top: 7vw;
+  right: 1.8vw;
+  border-radius: 2.1vw;
   background: #E79384;
   overflow: hidden;
-  padding: 20px;
-  width: 330px;
-  height: 160px;
+  padding: 1.2vw;
+  width: 25vw;
+  height: 13vw;
   transition: clip-path 0.3s ease;
 }
 
 #grid_how{
   position: absolute;
-  top: 340px;
-  right: 880px;
-  border-radius: 35px;
+  bottom: 5vw;
+  left: 1.8vw;
+  border-radius: 2.1vw;
   background: #0D4028;
   overflow: hidden;
-  padding: 20px;
-  width: 330px;
-  height: 150px;
+  padding: 1.2vw;
+  width: 25vw;
+  height: 13vw;
   transition: clip-path 0.3s ease;
 }
 
 #grid_get{
   position: absolute;
-  top: 340px;
-  right: 455px;
-  border-radius: 35px;
+  bottom: 5vw;
+  left: 36.5vw;
+  border-radius: 2.1vw;
   background: #228b22;
   overflow: hidden;
-  padding: 20px;
-  width: 330px;
-  height: 150px;
+  padding: 1.2vw;
+  width: 25vw;
+  height: 13vw;
   transition: clip-path 0.3s ease;
 }
 
 #grid_disclaimer{
   position: absolute;
-  top: 340px;
-  right: 30px;
-  border-radius: 35px;
+  bottom: 5vw;
+  right: 1.8vw;
+  border-radius: 2.1vw;
   background: #B92C25;
   overflow: hidden;
-  padding: 20px;
-  width: 330px;
-  height: 150px;
+  padding: 1.2vw;
+  width: 25vw;
+  height: 13vw;
   transition: clip-path 0.3s ease;
 }
 
@@ -357,7 +357,7 @@ body {
   position: relative;
   font-family: sans-serif;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 2vw;
   color: #000000;
   text-decoration: none;
   text-align: center;
@@ -368,7 +368,7 @@ body {
 .text_about_page{
   position: relative;
   font-family: sans-serif;
-  font-size: 30px;
+  font-size: 3vw;
   color: #000000;
   text-decoration: none;
   text-align: center;
@@ -383,7 +383,7 @@ body {
   position: relative;
   font-family: sans-serif;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 2vw;
   color: #000000;
   text-decoration: none;
   text-align: center;
@@ -394,7 +394,7 @@ body {
 .text_try_page{
   position: relative;
   font-family: sans-serif;
-  font-size: 30px;
+  font-size: 3vw;
   color: #000000;
   text-decoration: none;
   text-align: center;
@@ -409,7 +409,7 @@ body {
   position: relative;
   font-family: sans-serif;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 2vw;
   color: #000000;
   text-decoration: none;
   text-align: center;
@@ -420,7 +420,7 @@ body {
 .text_how_page{
   position: relative;
   font-family: sans-serif;
-  font-size: 30px;
+  font-size: 3vw;
   color: #000000;
   text-decoration: none;
   text-align: center;
@@ -435,7 +435,7 @@ body {
   position: relative;
   font-family: sans-serif;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 2vw;
   color: #000000;
   text-decoration: none;
   text-align: center;
@@ -446,7 +446,7 @@ body {
 .text_disclaimer_page{
   position: relative;
   font-family: sans-serif;
-  font-size: 30px;
+  font-size: 3vw;
   color: #000000;
   text-decoration: none;
   text-align: center;
@@ -461,7 +461,7 @@ body {
   position: relative;
   font-family: sans-serif;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 2vw;
   color: #000000;
   text-decoration: none;
   text-align: center;
@@ -472,7 +472,7 @@ body {
 .text_fastqc_page{
   position: relative;
   font-family: sans-serif;
-  font-size: 30px;
+  font-size: 3vw;
   color: #000000;
   text-decoration: none;
   text-align: center;
@@ -487,7 +487,7 @@ body {
   position: relative;
   font-family: sans-serif;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 2vw;
   color: #000000;
   text-decoration: none;
   text-align: center;
@@ -498,7 +498,7 @@ body {
 .text_trimmomatic_page{
   position: relative;
   font-family: sans-serif;
-  font-size: 30px;
+  font-size: 3vw;
   color: #000000;
   text-decoration: none;
   text-align: center;
@@ -513,25 +513,23 @@ body {
   position: relative;
   font-family: sans-serif;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 2vw;
   color: #000000;
   text-decoration: none;
   text-align: center;
-  margin: 50px;
-  top: 10px;
-  right: 5px;
+  margin: 5vw;
+  top: 0.7vw;
 }
 
 .text_contact_page{
   position: absolute;
   font-family: sans-serif;
-  /* font-weight: bold; */
-  font-size: 30px;
+  font-size: 3vw;
   color: #000000;
   text-decoration: none;
   text-align: center;
-  margin: 100px;
-  margin-left: 32%;
+  margin: 5vw;
+  margin-left: 27.5vw;
 }
 
 /* E-mail links */
@@ -539,12 +537,12 @@ body {
   position: absolute;
   font-family: sans-serif;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 2vw;
   color: #228b22;
   text-decoration: none;
   text-align: center;
-  margin: 400px;
-  margin-left: 20%
+  margin: 33vw;
+  margin-left: 0vw;
 }
 
 /* Position e-mailadresses */
@@ -579,8 +577,9 @@ body {
 /* Email picture */
 #picture_email {
   position: relative;
-  top: 350px;
-  right: -600px;
-  width:50px;
-  height:50px;
+  top: 30vw;
+  /* right: 2vw; */
+  left: 47.5vw;
+  width: 5vw;
+  height: 5vw;
 }
