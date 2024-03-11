@@ -1,5 +1,12 @@
 /********************************************** Stylesheet ***************************************************/
 
+/* CSS reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /******************************************* Fixed components ************************************************/
 /* Background image for homepage */
 body {
@@ -36,7 +43,7 @@ body {
   color: #F5F5DC;
   text-decoration: none;
   text-align: center;
-  margin: 0 6vw;
+  margin: 0 5vw;
 }
 
 /* Hover effect nav bar */
@@ -50,7 +57,7 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 0.06vw 0.06vw 0.06vw 0.06vw;
+  padding: 0.6vw 0.6vw 0.6vw 0.6vw;
   background: #90C590;
   display: inline-block;
   z-index: 100;
@@ -70,8 +77,8 @@ body {
 /**************** Home page content ***************/
 .content_home_text{
   position: absolute;
-  top: 3.3vw;
-  left: 1.8vw;
+  top: 7vw;
+  left: 2vw;
   font-family: sans-serif;
   font-weight: bold;
   font-size: 3.5vw;
@@ -99,53 +106,53 @@ body {
 /* Grid boxes */
 #grid_try{
   position: absolute;
-  top: 7vw;
+  top: 8vw;
   right: 1.8vw;
   border-radius: 2.1vw;
   background: #E79384;
   overflow: hidden;
   padding: 1.2vw;
-  width: 25vw;
-  height: 13vw;
+  width: 30vw;
+  height: 15vw;
   transition: clip-path 0.3s ease;
 }
 
 #grid_how{
   position: absolute;
-  bottom: 5vw;
+  bottom: 4vw;
   left: 1.8vw;
   border-radius: 2.1vw;
   background: #0D4028;
   overflow: hidden;
   padding: 1.2vw;
-  width: 25vw;
-  height: 13vw;
+  width: 30vw;
+  height: 15vw;
   transition: clip-path 0.3s ease;
 }
 
 #grid_get{
   position: absolute;
-  bottom: 5vw;
-  left: 36.5vw;
+  bottom: 4vw;
+  left: 35vw;
   border-radius: 2.1vw;
   background: #228b22;
   overflow: hidden;
   padding: 1.2vw;
-  width: 25vw;
-  height: 13vw;
+  width: 30vw;
+  height: 15vw;
   transition: clip-path 0.3s ease;
 }
 
 #grid_disclaimer{
   position: absolute;
-  bottom: 5vw;
+  bottom: 4vw;
   right: 1.8vw;
   border-radius: 2.1vw;
   background: #B92C25;
   overflow: hidden;
   padding: 1.2vw;
-  width: 25vw;
-  height: 13vw;
+  width: 30vw;
+  height: 15vw;
   transition: clip-path 0.3s ease;
 }
 
@@ -175,7 +182,7 @@ body {
 /* Content of grids */
 .grid_try_text a{
   position: relative;
-  top: 2vw;
+  top: 5vw;
   font-family: sans-serif;
   font-weight: bold;
   font-size: 250%;
@@ -186,7 +193,7 @@ body {
 
 .grid_how_text a{
   position: relative;
-  top: 3vw;
+  top: 5vw;
   font-family: sans-serif;
   font-weight: bold;
   font-size: 200%;
@@ -197,10 +204,10 @@ body {
 
 .grid_get_text a{
   position: relative;
-  top: 2vw;
+  top: 3.5vw;
   font-family: sans-serif;
   font-weight: bold;
-  font-size: 220%;
+  font-size: 240%;
   color: #F5F5DC;
   text-decoration: none;
   text-align: center;
@@ -208,7 +215,7 @@ body {
 
 .grid_disclaimer_text a{
   position: relative;
-  top: 2vw;
+  top: 4.3vw;
   font-family: sans-serif;
   font-weight: bold;
   font-size: 280%;
@@ -233,10 +240,10 @@ body {
 
 #grid_how:hover .grid_how_text a{
   position: relative;
-  /* top: 1vw; */
+  top: 4vw;
   font-family: sans-serif;
   font-weight: bold;
-  font-size: 200%;
+  font-size: 180%;
   color: #F5F5DC;
   text-decoration: none;
   text-align: center;
@@ -245,10 +252,10 @@ body {
 
 #grid_get:hover .grid_get_text a{
   position: relative;
-  top: 1vw;
+  top: 2vw;
   font-family: sans-serif;
   font-weight: bold;
-  font-size: 220%;
+  font-size: 240%;
   color: #F5F5DC;
   text-decoration: none;
   text-align: center;
@@ -257,6 +264,7 @@ body {
 
 #grid_disclaimer:hover .grid_disclaimer_text a{
   position: relative;
+  top: 4vw;
   font-family: sans-serif;
   font-weight: bold;
   font-size: 220%;
@@ -272,7 +280,7 @@ body {
   opacity: 0;
   font-family: sans-serif;
   font-weight: bold;
-  font-size: 15vw;
+  font-size: 1.2vw;
   color: #000000;
   text-align: center;
   transition: opacity 0.3s ease, transform 0.3s ease;
@@ -288,13 +296,13 @@ body {
   opacity: 0;
   font-family: sans-serif;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 1vw;
   color: #000000;
   text-align: center;
   transition: opacity 0.3s ease, transform 0.3s ease;
   transform: translateY(20px);
   padding: 0;
-  margin: -20px;
+  margin: 10px;
   margin-left: 5px;
   margin-right: 5px;
 }
@@ -304,13 +312,13 @@ body {
   opacity: 0;
   font-family: sans-serif;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 1vw;
   color: #000000;
   text-align: center;
   transition: opacity 0.3s ease, transform 0.3s ease;
   transform: translateY(20px);
   padding: 0;
-  margin: -20px;
+  margin: 10px;
   margin-left: 5px;
   margin-right: 5px;
 }
@@ -320,13 +328,13 @@ body {
   opacity: 0;
   font-family: sans-serif;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 1vw;
   color: #000000;
   text-align: center;
   transition: opacity 0.3s ease, transform 0.3s ease;
   transform: translateY(20px);
   padding: 0;
-  margin: -20px;
+  margin: 10px;
   margin-left: 5px;
   margin-right: 5px;
 }
