@@ -467,7 +467,7 @@ body {
 
 /****************** FASTQC page content *******************/
 /* Text FASTQC page */
-.head_text_fastqc_page{
+.head_text_fastqc{
   position: relative;
   font-family: sans-serif;
   font-weight: bold;
@@ -479,21 +479,62 @@ body {
   top: 50px;
 }
 
-.text_fastqc_page{
+#header_text_fastqc{
   position: relative;
   font-family: sans-serif;
-  font-size: 3vw;
+  font-size: 2vw;
   color: #000000;
   text-decoration: none;
   text-align: center;
-  margin: 0px;
-  top: 60px;
+  margin: 30px;
+}
+
+.headers_text_fastqc{
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: left;
+  margin: 15px;
+}
+
+.text_fastqc {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: left;
+  margin: 15px;
+  margin-right: 150px;
+}
+
+.source_text_fastqc {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  color: #0D4028;
+  text-decoration: none;
+  text-align: left;
+  margin: 15px;
+  margin-right: 150px;
+}
+
+.links_text_fastqc {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  font-weight: bold;
+  color: #228b22;
+  text-decoration: underline;
+  text-align: left;
 }
 
 
 /****************** Trimmomatic page content *******************/
 /* Text Trimmomatic page */
-.head_text_trimmomatic_page{
+.head_text_trimmomatic {
   position: relative;
   font-family: sans-serif;
   font-weight: bold;
@@ -505,17 +546,101 @@ body {
   top: 50px;
 }
 
-.text_trimmomatic_page{
+.main_headers_text_trimmomatic {
   position: relative;
   font-family: sans-serif;
-  font-size: 3vw;
+  font-size: 2vw;
   color: #000000;
   text-decoration: none;
   text-align: center;
-  margin: 0px;
-  top: 60px;
+  margin: 30px;
 }
 
+.headers_text_trimmomatic {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 2vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 30px;
+}
+
+.text_trimmomatic {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: left;
+  margin: 15px;
+  margin-right: 150px;
+}
+
+.note_trimmomatic {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  font-weight: bold;
+  color: #228b22;
+  text-decoration: none;
+  text-align: left;
+  margin: 15px;
+  margin-right: 150px;
+}
+
+.bold_text_trimmomatic {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  font-weight: bold;
+  color: #000000;
+  text-decoration: none;
+  text-align: left;
+}
+
+.list_text_trimmomatic {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: left;
+  margin: 35px;
+  margin-right: 150px;
+}
+
+.source_text_trimmomatic {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  color: #0D4028;
+  text-decoration: none;
+  text-align: left;
+  margin: 15px;
+  margin-right: 150px;
+}
+
+.links_text_trimmomatic {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  font-weight: bold;
+  color: #228b22;
+  text-decoration: underline;
+  text-align: left;
+  margin: 1px;
+}
+
+.pictures_trimmomatic {
+  margin: 5px;
+  margin-left: 15px;
+}
+
+.figcaption_trimmomatic {
+  margin: 5px;
+  margin-left: 15px;
+}
 
 /****************** Contact page content *****************/
 /* Text contact page */
