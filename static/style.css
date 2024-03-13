@@ -456,11 +456,14 @@ body {
 .text_disclaimer_page{
   position: relative;
   font-family: sans-serif;
-  font-size: 3vw;
-  color: #000000;
+  font-size: 2vw;
+  font-weight: bolder;
+  color: #0D4028;
   text-decoration: none;
   text-align: center;
-  margin: 0px;
+  margin: 15px;
+  margin-right: 150px;
+  margin-left: 150px;
   top: 60px;
 }
 
