@@ -1,18 +1,7 @@
-<!DOCTYPE html>
+<!-- extends from base layout-->
+{% extends "basetemplate.html" %}
 
-<html lang="en">
-
-<!-- HEAD -->
-
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title> TrimTech </title>
-      <link rel="icon" type="image/x-icon" href="../static/favicon.ico">
-      <link rel="stylesheet" href="../static/style.css">
-   </head>
-
-<body>
+{% block content %}
    <!-- HEADER -->
 
    <header id="navigation_bar">
@@ -56,18 +45,4 @@
          Coming soon...
       </p>
    </div>
-
-
-
-   <!-- FOOTER -->
-
-   <footer>
-    <div class="footer">
-       <div class="text_footer">
-          <p> &copy;TrimTech ALL RIGHTS RESERVED</p>
-       </div>
-    </div>
-   </footer>
-
-</body>
-</html>
+{% endblock %}
