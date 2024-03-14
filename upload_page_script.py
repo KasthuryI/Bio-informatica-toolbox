@@ -2,10 +2,15 @@
 Upload page script
 """
 from flask import Flask, request, render_template
-
+ALLOWED_EXTENSIONS = {"txt"}
 
 app = Flask(__name__)
 
+def allowed_file(file):
+    """
+    function part of file uploading
+    """
+    return "." in file.rsplit(".",1)[1].lower() in ALLOWED_EXTENSIONS
 
 @app.route("/")
 def root():
@@ -52,12 +57,16 @@ def succes():
     Return: Confermation HTML page
     """
     if request.method == "POST":
-        f = request.files["file"]
-        f.save("file_uploading/"+f.filename)
+        file = request.files["file"]
+        if file and allowed_file(file.filename):
+            file.save("file_uploading/"+file.filename)
+            with open("file_uploading/"+file.filename, "r") as file:
+                for line in file:
+                    if line.startswith("@"):
+                        return render_template("succes_upload_page.html", name=file.filename)
+                    else:
+                        return render_template("failed_upload_page.html", name=file.filename)
 
-        with open("file_uploading/"+f.filename, "r") as file:
-            for line in file:
-                if line.startswith("@"):
-                    return render_template("succes_upload_page.html", name=f.filename)
-                else:
-                    return render_template("failed_upload_page.html", name=f.filename)
+        else:
+            return render_template("failed_upload_page.html", name=file.filename)
+
