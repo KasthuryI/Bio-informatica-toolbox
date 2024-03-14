@@ -16,27 +16,31 @@
    <!-- HEADER -->
 
    <header id="navigation_bar">
-      <a href="homepage.html">
+      <a href="{{ url_for("homepage")}}">
          <img id="logo" src="../static/logo_trimtech.png" alt="website logo">
       </a>
 
       <nav id="text_navbar">
-         <a href="about.html"> ABOUT </a>
-         <a href="uploadpage.html"> UPLOAD </a>
-         <a href="fastqc.html"> FASTQC </a>
-         <a href="trimmomatic.html"> TRIMMOMATIC </a>
-         <a href="contactpage.html"> CONTACT </a>
+         <a href="{{ url_for("about")}}"> ABOUT </a>
+         <a href="{{ url_for("uploadpage")}}"> UPLOAD </a>
+         <a href="{{ url_for("fastqc")}}"> FASTQC </a>
+         <a href="{{ url_for("trimmomatic")}}"> TRIMMOMATIC </a>
+         <a href="{{ url_for("contactpage")}}"> CONTACT </a>
       </nav>
 
    </header>
 
 
-   <!-- CONTENT -->
-   <h3 class="head_text_try_page"> UPLOAD </h3>
-   <div class="text_try_page">
-      <p> Coming soon...
-   </div>
-
+    <!-- CONTENT -->
+    <h3 class="head_text_try_page"> UPLOAD </h3>
+    <div class="text_try_page">
+      <form action ="/succes" method="post" enctype="multipart/form-data">
+         <input type="file" name="file"/>
+         <input type="submit" value="Upload">
+      </form>
+      <p><a href="\Bio-informatica-toolbox\file_uploading">Uploading_map</a></p> 
+    </div>
+    <!-- file uploading put in iframe? -->
 
    <!-- FOOTER -->
 

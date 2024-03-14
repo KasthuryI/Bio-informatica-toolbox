@@ -16,16 +16,17 @@
    <!-- HEADER -->
 
    <header id="navigation_bar">
-      <a href="homepage.html">
+      <a href="{{ url_for("homepage")}}">
          <img id="logo" src="../static/logo_trimtech.png" alt="website logo">
       </a>
 
       <nav id="text_navbar">
-         <a href="about.html"> ABOUT </a>
-         <a href="uploadpage.html"> UPLOAD </a>
-         <a href="fastqc.html"> FASTQC </a>
-         <a href="trimmomatic.html"> TRIMMOMATIC </a>
-         <a href="contactpage.html"> CONTACT </a>
+         <a href="{{ url_for("about")}}"> ABOUT </a>
+         <a href="{{ url_for("uploadpage")}}"> UPLOAD </a>
+         <a href="{{ url_for("fastqc")}}"> FASTQC </a>
+         <a href="{{ url_for("trimmomatic")}}"> TRIMMOMATIC </a>
+         <a href="{{ url_for("contactpage")}}"> CONTACT </a>
+      </nav>
       </nav>
 
    </header>
