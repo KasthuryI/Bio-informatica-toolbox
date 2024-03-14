@@ -16,16 +16,16 @@
    <!-- HEADER -->
 
    <header id="navigation_bar">
-      <a href="homepage.html">
+      <a href="{{ url_for("homepage")}}">
          <img id="logo" src="../static/logo_trimtech.png" alt="website logo">
       </a>
 
       <nav id="text_navbar">
-         <a href="about.html"> ABOUT </a>
-         <a href="uploadpage.html"> UPLOAD </a>
-         <a href="fastqc.html"> FASTQC </a>
-         <a href="trimmomatic.html"> TRIMMOMATIC </a>
-         <a href="contactpage.html"> CONTACT </a>
+         <a href="{{ url_for("about")}}"> ABOUT </a>
+         <a href="{{ url_for("uploadpage")}}"> UPLOAD </a>
+         <a href="{{ url_for("fastqc")}}"> FASTQC </a>
+         <a href="{{ url_for("trimmomatic")}}"> TRIMMOMATIC </a>
+         <a href="{{ url_for("contactpage")}}"> CONTACT </a>
       </nav>
 
    </header>
@@ -42,14 +42,14 @@
    </div>
    <div id="grid_try">
       <div class="grid_try_text">
-         <a href="uploadpage.html">
+         <a href="{{ url_for("uploadpage")}}">
             <p> TRY IT NOW!</p>
          </a>
       </div>
    </div>
    <div id="grid_how">
       <div class="grid_how_text">
-         <a href="how_does_it_work.html">
+         <a href="{{ url_for("how_does_it_work")}}">
             <p> HOW DOES IT WORK? </p>
             <p class="grid_how_hidden"> TrimTech uses different tools to trim and compare your data. 
                Click to learn more
@@ -67,7 +67,7 @@
    </div>
    <div id="grid_disclaimer">
       <div class="grid_disclaimer_text">
-         <a href="disclaimer.html" target="_blank" rel="noopener noreferer">
+         <a href="{{ url_for("disclaimer")}}" target="_blank" rel="noopener noreferer">
             <p> DISCLAIMER </p>
             <p class="grid_disclaimer_hidden"> TRIMTECH ONLY USES INPUT FROM ILLUMINA. LEARN HERE WHY </p>
          </a>
