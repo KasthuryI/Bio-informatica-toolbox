@@ -414,6 +414,28 @@ body {
   margin-left: 15px;
 }
 
+.source_text_about {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  color: #0D4028;
+  text-decoration: none;
+  text-align: left;
+  margin: 15px;
+  margin-right: 150px;
+}
+
+.links_text_about {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  font-weight: bold;
+  color: #228b22;
+  text-decoration: underline;
+  text-align: left;
+  margin: 1px;
+}
+
 
 /****************** Try it now page content *******************/
 /* Text try it now page */
