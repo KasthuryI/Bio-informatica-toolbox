@@ -67,9 +67,70 @@
    <br>
    <h3 class="headers_text_about_page"> What is a PHRED-score? </h3>
    <div class="text_about_page">
-      <p>
-         Coming soon...
-      </p>
+      <h1> Phred Scores </h1>
+    <p>
+        A Phred score, also known as a Phred quality score/Q score, defines the probability that the base call generated
+        by automated DNA sequencing is correct. It was originally developed for a computer program called Phred to help
+        in the automation of DNA sequencing in the Human Genome Project. Phred quality scores are assigned to each
+        nucleotide base call-in automated sequencer traces. The FASTQ format encodes phred scores as ASCII characters
+        along the read sequences. The quality of the scores ranges from 4 to 40 in most useable phred-scaled base
+        quality scores. However, phred-scaled quality scores in general can range from 0 to infinity. Phred scores are
+        important in determining whether a sequence is accurate and good quality. A higher score indicates a higher
+        probability that a sequence is correct, while a lower score indicates a higher probability that a sequence is
+        incorrect.
+    </p>
+
+    <p>
+        The Phred score of a given sequence is defined by the following equation:
+    </p>
+
+    <figure>
+        <img src="Phred_afbeeldingen/Phred_formula.jpg" alt="Formula Phred score" Title="Formula Phred score">
+        <figcaption> Figure 1: Formula Phred score (Zymoresearch) </figcaption>
+    </figure>
+
+    <ul>
+        <li>Q: The Q stands for the Phred quality score/Q score</li>
+        <li>P: The P stands for the base-calling error probabilities</li>
+    </ul>
+
+
+    <h3> ASCII </h3>
+    <p>
+        ASCII has been the standard for encoding characters to numbers since well before modern DNA sequencing were
+        developed. This encoding scheme was initially developed for a machine known as the teletype, where the user
+        could type a message while connected to a phone line, and the message would be printed elsewhere. Because the
+        original computer keyboards were teletype devices connected to early mainframes, this standard has persisted in
+        computing for decades and was an easy choice for encoding a one- or two-digit value to a single character.
+    </p>
+
+    <figure>
+        <img src="Phred_afbeeldingen/ASCII-Table.svg.png" alt="ASCII table" Title="ASCII table">
+        <figcaption> Figure 2: ASCII table (Wikipedia) </figcaption>
+    </figure>
+
+
+    <h3> Phred – 33 and – 64 </h3>
+    <p>
+        To encode a quality score as a single character, it will need to be compressed first, or encoded, down to a
+        two-digit number by Phred encoding. For a call with a confidence of 99.9%, we would get a Phred score of 30. In
+        ASCII is 30 the backspace character, which does not print, or could even delete the character before it. To get
+        around it, the character encoding scheme adds in a base value. The most used base value is 33, which corresponds
+        to the first visible printing character: the exclamation point. A less commonly used standard, but one that was
+        often used with Phred encoding is 64. This value was chosen because scoring schemes will often not have 0 as a
+        possible quality score, meaning that the @ symbol would not be a potential character for quality encoding and
+        could be left to exclusively signify the beginning of a FASTQ sequence ID line. The common method of denoting
+        the encoding scheme Is to first list the scheme for scaling numbers and then the signed base value. The most
+        used scheme, and the current standard of this writing, is Phred – 33.
+    </p>
+
+    <p>
+        The info used on this paged is based on these sites:
+    </p>
+
+    <a href="https://zymoresearch.eu/blogs/blog/what-are-phred-scores "> Zymo Research </a>
+    <a href="https://en.wikipedia.org/wiki/Phred_quality_score"> Wikipedia (Phred quality score) </a>
+    <a href="https://en.m.wikipedia.org/wiki/File:ASCII-Table.svg"> Wikipedia (ASCII table)</a>
    </div>
 
 
