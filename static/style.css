@@ -383,8 +383,8 @@ body {
   text-decoration: none;
   text-align: left;
   margin: 15px;
+  margin-left: 35px;
 }
-
 
 .text_about_page{
   position: relative;
@@ -395,6 +395,23 @@ body {
   text-align: left;
   margin: 15px;
   margin-right: 150px;
+  margin-left: 15px;
+}
+
+.text_about_list{
+  margin-left: 40px;
+}
+
+.pictures_about{
+  margin: 5px;
+  margin-left: 15px;
+  width: 575px;
+  height: 375px;
+}
+
+.figcaption_about{
+  margin: 5px;
+  margin-left: 15px;
 }
 
 
