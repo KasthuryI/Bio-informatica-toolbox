@@ -1,15 +1,15 @@
 # **Bio-informatics Toolbox Website: TrimTech**
 
 ### **Authors:** Ivar Lottman, Storm Steller, Kasthury Inparajah & Mirte Draaijer 
-### **Version:** 0.1.1
-### **Date:** 7/3/2024
+### **Version:** 0.1.6
+### **Date:** 14/3/2024
 
 ___
 
 ## **Name and usage**
 ### **TrimTech**
-#### This website is used for quality control and trimming FASTQ files before the mapping and coverage phase of the data.
-#### We created this website because not all of the data produced by sequencing is 100% accurate and when you want to do mapping and covarage of a reference genome you want to use the accurate data. Therefore this tool was created to help in that process. 
+#### TrimTech is used for quality control and trimming FASTQ files before the mapping and coverage phase of the data.
+#### We created this website because not all of the data produced by sequencing is 100% accurate and when you want to do mapping and covarage of a reference genome you want to use the accurate data. Therefore this tool was created to do the quality control of the data. 
 
 #### It does this by visualising the FASTQ data with a tool called FASTQC and another tool called Trimommatic for trimming the FASTQ data based on input commands. 
 
@@ -69,7 +69,10 @@ THIS PART OF THE GUI IS FOR INPUT FILES
 
 ## **Installation** *(expanded manual)*
 
+#### **INSTALL THE TOOLS BELOW INTO THE "TOOLS" FOLDER.**
+
 ### **Install Java**
+
 #### Please make sure to have installed Java on your computer since Jave is needed to run both FastQC and Trimmomatic. You can donwload Java from the following website: website: https://www.java.com/nl/. **Please note that Trimmomatic requires Java 1.8 or higher!**
 
 ### **FastQC**
@@ -92,7 +95,7 @@ THIS PART OF THE GUI IS FOR INPUT FILES
 
 
 ## **Systeem requirements**
-### Working OS: Windows 10 or 11
+### Tested on: Windows 10 and 11
 ### Linux Debian v12
 
 
@@ -101,6 +104,8 @@ THIS PART OF THE GUI IS FOR INPUT FILES
 
 
 ## **Installation Manual short**
+
+#### **INSTALL THE TOOLS BELOW INTO THE "TOOLS" FOLDER.**
 
 ### **Java** *(v1.8.0_401)*
 #### Follow the install manual from the official Java website:
@@ -120,14 +125,15 @@ http://www.usadellab.org/cms/?page=trimmomatic
 #### Commandline: Scriptname
 TO DO: PER SCRIPT, WEBSITE SCRIPT, TOOL SCRIPT AND FLASK VERSION
 
-## **DISCLAIMER: TrimTech only uses input from Illumina.**
+## **DISCLAIMER: TRIMTECH ONLY USES INPUT FROM ILLUMINADATA**
 
 ## **Support**
-### **Ivar Lottman:** i.lottman@st.hanze.nl
-### **Storm Steller:** s.steller@st.hanze.nl
-### **Kasthury Inparajah:** k.inparajah@st.hanze.nl
-### **Mirte Draaijer:** mi.draaijer@st.hanze.nl
+#### If you want to share your thoughts or if any questions arise, please contact us via our Github page: 
+#### https://github.com/KasthuryI/Bio-informatica-toolbox
 
 
 ## **Acknowledgment**
-TO DO
+#### W3 SCHOOLS: https://www.w3schools.com/
+#### FASTQC: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/
+#### Trimmomatic: http://www.usadellab.org/cms/?page=trimmomatic
+#### Explanation Trimmomatic: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4103590/#btu170-B5
