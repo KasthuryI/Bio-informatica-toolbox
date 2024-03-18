@@ -1,25 +1,13 @@
 {% extends "basetemplate.html" %}
 
 {% block content %}
-   <!-- HEADER -->
 
-   <header id="navigation_bar">
-      <a href="{{ url_for("homepage")}}">
-         <img id="logo" src="../static/logo_trimtech.png" alt="website logo">
-      </a>
+   <h3 class="head_text_error_page"> Uploaded an invalid file</h3>
+      <div class ="input_file_error">
+         <p> File name: <section class="input_file_error_name">{{name}}</section> </p>
+      </div>
+      <br><br>
+      <h4 class="error_page_text"> Please use a FastQ file in the .txt format</h5>
+        
 
-      <nav id="text_navbar">
-         <a href="{{ url_for("about")}}"> ABOUT </a>
-         <a href="{{ url_for("uploadpage")}}"> UPLOAD </a>
-         <a href="{{ url_for("fastqc")}}"> FASTQC </a>
-         <a href="{{ url_for("trimmomatic")}}"> TRIMMOMATIC </a>
-         <a href="{{ url_for("contactpage")}}"> CONTACT </a>
-      </nav>
-
-    </header>
-    <div class="text_try_page">
-    <p>Uploaded an invalid file<br>
-    File name: {{name}}
-    </p>
-    </div>
-    {% endblock %}
+{% endblock %}

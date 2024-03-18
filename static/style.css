@@ -768,3 +768,46 @@ body {
   width: 5vw;
   height: 5vw;
 }
+
+/****************** Error page content *****************/
+/* Text disclaimer page */
+.head_text_error_page{
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 3vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 70px;
+  top: 50px;
+}
+
+.input_file_error{
+  position: relative;
+  font-family: sans-serif;
+  font-size: 2vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  top: 200px;
+}
+
+.input_file_error_name{
+  position: relative;
+  font-family: sans-serif;
+  font-size: 2vw;
+  font-weight: bold;
+  color: #000000;
+  text-decoration: none;
+}
+
+.error_page_text{
+  position: relative;
+  font-family: sans-serif;
+  font-size: 2.5vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  top: 200px;
+}
