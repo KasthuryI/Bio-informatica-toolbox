@@ -1,35 +1,7 @@
-<!DOCTYPE html>
+<!-- extends from base layout-->
+{% extends "basetemplate.html" %}
 
-<html lang="en">
-
-<!-- HEAD -->
-
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title> TrimTech </title>
-      <link rel="icon" type="image/x-icon" href="../static/favicon.ico">
-      <link rel="stylesheet" href="../static/style.css">
-   </head>
-
-<body>
-   <!-- HEADER -->
-
-   <header id="navigation_bar">
-      <a href="{{ url_for("homepage")}}">
-         <img id="logo" src="../static/logo_trimtech.png" alt="website logo">
-      </a>
-
-      <nav id="text_navbar">
-         <a href="{{ url_for("about")}}"> ABOUT </a>
-         <a href="{{ url_for("uploadpage")}}"> UPLOAD </a>
-         <a href="{{ url_for("fastqc")}}"> FASTQC </a>
-         <a href="{{ url_for("trimmomatic")}}"> TRIMMOMATIC </a>
-         <a href="{{ url_for("contactpage")}}"> CONTACT </a>
-      </nav>
-
-   </header>
-
+{% block content %}
 
    <!-- CONTENT -->
    <h1 class="head_text_about_page"> ABOUT </h1>
@@ -137,18 +109,6 @@
       <a href="https://en.m.wikipedia.org/wiki/File:ASCII-Table.svg" class="links_text_about"> Wikipedia (ASCII table)</a>
       </p>
    </div>
-   <br>
-   <br>
 
-   <!-- FOOTER -->
+{% endblock %}
 
-   <footer>
-    <div class="footer">
-       <div class="text_footer">
-          <p> &copy;TrimTech ALL RIGHTS RESERVED</p>
-       </div>
-    </div>
-   </footer>
-
-</body>
-</html>
