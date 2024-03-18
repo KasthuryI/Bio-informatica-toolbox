@@ -1,24 +1,6 @@
 {% extends "basetemplate.html" %}
 
 {% block content %}
-   <!-- HEADER -->
-
-   <header id="navigation_bar">
-    <a href="{{ url_for("homepage")}}">
-        <img id="logo" src="../static/logo_trimtech.png" alt="website logo">
-     </a>
-
-     <nav id="text_navbar">
-        <a href="{{ url_for("about")}}"> ABOUT </a>
-        <a href="{{ url_for("uploadpage")}}"> UPLOAD </a>
-        <a href="{{ url_for("fastqc")}}"> FASTQC </a>
-        <a href="{{ url_for("trimmomatic")}}"> TRIMMOMATIC </a>
-        <a href="{{ url_for("contactpage")}}"> CONTACT </a>
-     </nav>
-
-    </header>
-
-
     <!-- CONTENT -->
     <h1 class="head_text_trimmomatic"> WHAT IS TRIMMOMATIC? </h1>
     <p class="text_trimmomatic"> 
