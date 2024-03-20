@@ -2,15 +2,8 @@
 Upload page script
 """
 from flask import Flask, request, render_template
-#ALLOWED_EXTENSIONS = {"txt", "fastq"}
 
 app = Flask(__name__)
-
-def allowed_file(file):
-    """
-    function part of file uploading
-    """
-    return "." in file.rsplit(".",1)[1].lower() in ALLOWED_EXTENSIONS
 
 @app.route("/")
 def root():

@@ -20,8 +20,8 @@ class Trimmomatic:
         "java", "-jar",
         r"tools\Trimmomatic-0.39\trimmomatic-0.39.jar",
         "SE",
-        r"file_uploading\SRR18574453.fastq" #file moet nog een variabele worden
-        r"C:\Users\Gebruiker\Downloads\OUTPUT.fq", #naam input_output
+        r"file_uploading\SRR18574453.fastq", #file moet nog een variabele worden
+        r"trimmomatic_output\OUTPUT.fq",
         self.illuminaclip,
         self.leading,
         self.trailing
@@ -32,6 +32,5 @@ class Trimmomatic:
 trim_object = Trimmomatic()
 trim_object.run_trimmomatic()
 
-#TO DO: oplossing naam
-#TO DO pad veranderen output data
+#TO DO: oplossing naam inputfile
 #TO DO: opties voor gebruiker toevoegen
