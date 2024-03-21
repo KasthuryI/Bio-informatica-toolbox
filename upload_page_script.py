@@ -1,4 +1,5 @@
 from trimmomatic import Trimmomatic
+filename = ""
 
 """
 Upload page script
@@ -43,11 +44,6 @@ def how_does_it_work():
 def disclaimer():
     return render_template("disclaimer.html")
 
-@app.route("/options_page")
-def options():
-    return render_template("options_page.html")
-
-
 @app.route("/succes", methods=["post"])
 def succes():
     """
@@ -68,5 +64,13 @@ def succes():
                 else:
                     return render_template("failed_upload_page.html", name=f.filename)
                 
-    trim_object = Trimmomatic(filename)
-    trim_object.run_trimmomatic
+@app.route("/options_page", methods=["GET", "POST"])
+def options():
+    if request.method == "GET": 
+        return render_template("options_page.html")
+    elif request.method == "POST":
+        crop_value = request.form["crop"]
+        minlen_value = request.form["minlen"]
+        trim_object = Trimmomatic(minlen_value, crop_value, filename)
+        trim_object.run_trimmomatic
+        return render_template("options_page.html") #DIT MOET DE PAGINA WORDEN MET DE NIEUWE PLOTJES
