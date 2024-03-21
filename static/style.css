@@ -693,6 +693,7 @@ body {
   margin-left: 15px;
 }
 
+
 /****************** Contact page content *****************/
 /* Text contact page */
 .head_text_contact_page{
@@ -769,6 +770,7 @@ body {
   height: 5vw;
 }
 
+
 /****************** Upload page content *****************/
 /* Text upload page */
 .head_text_upload_page{
@@ -793,6 +795,7 @@ body {
   margin: 5vw;
   margin-left: 34vw;
 }
+
 
 /****************** Succes upload page content *****************/
 /* Text succes upload page page */
@@ -841,6 +844,7 @@ body {
   top: 50px;
 }
 
+
 /****************** Failed upload page content *****************/
 /* Text invalid file page page */
 .text_invalid_file {
@@ -852,6 +856,7 @@ body {
   text-align: center;
   margin: 15px;
 }
+
 
 /****************** Options Trimmomatic content *****************/
 /* Options Trimmomatic page */
