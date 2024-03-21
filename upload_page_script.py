@@ -74,7 +74,3 @@ def options():
         trim_object = Trimmomatic(minlen_value, crop_value, filename)
         trim_object.run_trimmomatic
         return render_template("options_page.html") #DIT MOET DE PAGINA WORDEN MET DE NIEUWE PLOTJES
-
-
-#Trim opties doorgeven
-#Wanneer op start wordt geklikt moet trimmomatic uitgevoerd worden en daarna moeten de nieuwe plotjes weergegeven worden

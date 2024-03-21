@@ -33,5 +33,4 @@ class Trimmomatic:
         self.crop
         ]
 
-        subprocess.run(command)
-        
+        return subprocess.run(command)
