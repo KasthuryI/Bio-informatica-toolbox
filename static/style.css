@@ -768,3 +768,172 @@ body {
   width: 5vw;
   height: 5vw;
 }
+
+/****************** Upload page content *****************/
+/* Text upload page */
+.head_text_upload_page{
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 2vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 70px;
+  top: 50px;
+}
+
+.text_upload_page{
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 2vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 5vw;
+  margin-left: 34vw;
+}
+
+/****************** Succes upload page content *****************/
+/* Text succes upload page page */
+.head_text_succecfully_uploaded {
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 2vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 80px;
+  top: 80px;
+}
+
+.uploaded_file_name {
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 2vw;
+  color: #228b22;
+  text-decoration: none;
+}
+
+/* Question to trim or not */
+#ques {
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.5vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 80px;
+  top: 80px;
+}
+
+/* Trim button*/
+#trim {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 2vw;
+  color: #000000;
+  text-decoration: none;
+  margin-left: 800px;
+  top: 50px;
+}
+
+/****************** Failed upload page content *****************/
+/* Text invalid file page page */
+.text_invalid_file {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 2vw;
+  color: #ff0000;
+  text-decoration: none;
+  text-align: center;
+  margin: 15px;
+}
+
+/****************** Options Trimmomatic content *****************/
+/* Options Trimmomatic page */
+.header_options {
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 2vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 70px;
+  top: 50px;
+}
+
+.option_crop_text {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1vw;
+  color: #000000;
+  text-decoration: none;
+  margin-left: 720px;
+  top: 180px;
+}
+
+.option_minlen_text {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  top: 400px;
+}
+
+#crop {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 2vw;
+  color: #000000;
+  text-decoration: none;
+  margin-left: 720px;
+  top: 60px;
+}
+
+#crop_title {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 2vw;
+  color: #000000;
+  text-decoration: none;
+  margin-left: 720px;
+  top: 55px;
+}
+
+#minlen {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 2vw;
+  color: #000000;
+  text-decoration: none;
+  margin-left: 720px;
+  top: 165px;
+}
+
+#minlen_title {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 2vw;
+  color: #000000;
+  text-decoration: none;
+  margin-left: 720px;
+  top: 160px;
+}
+
+#start_trim {
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 2vw;
+  color: #000000;
+  text-decoration: none;
+  margin-left: 900px;
+  top: 300px;
+}

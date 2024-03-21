@@ -48,6 +48,11 @@ def how_does_it_work():
 def disclaimer():
     return render_template("disclaimer.html")
 
+@app.route("/options_page")
+def options():
+    return render_template("options_page.html")
+
+
 @app.route("/succes", methods=["post"])
 def succes():
     """
