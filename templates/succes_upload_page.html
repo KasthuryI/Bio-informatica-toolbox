@@ -1,9 +1,20 @@
 {% extends "basetemplate.html" %}
 
 {% block content %}
-    <div class="text_try_page">
+    <div class="head_text_succecfully_uploaded">
     <p>Succesfully uploaded a FastQ file<br>
-    File name: {{name}}
+    File name: <span class="uploaded_file_name">{{name}}</span>
     </p>
     </div>
+
+    <div class="button_next">
+        <p id="ques">
+            Do you want to trim your data?
+        </p>
+    </div>
+    <form method="GET">
+      <button id="trim" type="submit" formaction="{{url_for('options')}}">
+        TRIM THE DATA
+      </button>
+    </form>
     {% endblock %}
