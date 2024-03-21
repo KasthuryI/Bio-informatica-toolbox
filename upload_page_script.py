@@ -1,16 +1,11 @@
+from trimmomatic import Trimmomatic
+
 """
 Upload page script
 """
 from flask import Flask, request, render_template
-#ALLOWED_EXTENSIONS = {"txt", "fastq"}
 
 app = Flask(__name__)
-
-def allowed_file(file):
-    """
-    function part of file uploading
-    """
-    return "." in file.rsplit(".",1)[1].lower() in ALLOWED_EXTENSIONS
 
 @app.route("/")
 def root():
@@ -64,6 +59,7 @@ def succes():
     if request.method == "POST":
         f = request.files["file"]
         f.save("file_uploading/"+f.filename)
+        filename = f.filename
 
         with open("file_uploading/"+f.filename, "r") as file:
             for line in file:
@@ -71,3 +67,6 @@ def succes():
                     return render_template("succes_upload_page.html", name=f.filename)
                 else:
                     return render_template("failed_upload_page.html", name=f.filename)
+                
+    trim_object = Trimmomatic(filename)
+    trim_object.run_trimmomatic
