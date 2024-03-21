@@ -2,7 +2,8 @@
 Upload page script
 """
 from flask import Flask, request, render_template
-ALLOWED_EXTENSIONS = {"txt"}
+
+ALLOWED_EXTENSIONS = {"txt","fastq"}
 
 app = Flask(__name__)
 
@@ -10,7 +11,7 @@ def allowed_file(file):
     """
     function part of file uploading
     """
-    return "." in file.rsplit(".",1)[1].lower() in ALLOWED_EXTENSIONS
+    return file.rsplit(".",1)[1].lower() in ALLOWED_EXTENSIONS
 
 @app.route("/")
 def root():
@@ -59,13 +60,16 @@ def succes():
     if request.method == "POST":
         file = request.files["file"]
         if file and allowed_file(file.filename):
+            file_name = file.filename
+            first_file_path = file_name.replace(".fastq", "_fastqc")
+            first_file_img = first_file_path + "/Images/sequence_lenght_distribution"
             file.save("file_uploading/"+file.filename)
-            with open("file_uploading/"+file.filename, "r") as file:
-                for line in file:
+            with open("file_uploading/"+file.filename, "r") as files:
+                for line in files:
                     if line.startswith("@"):
-                        return render_template("succes_upload_page.html", name=file.filename)
+                        return render_template("succes_upload_page.html", name=file_name)
                     else:
-                        return render_template("failed_upload_page.html", name=file.filename)
+                        return render_template("failed_upload_page.html", name=file_name)
 
         else:
             return render_template("failed_upload_page.html", name=file.filename)
