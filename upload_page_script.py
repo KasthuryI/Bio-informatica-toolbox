@@ -1,3 +1,5 @@
+from trimmomatic import Trimmomatic
+
 """
 Upload page script
 """
@@ -52,6 +54,7 @@ def succes():
     if request.method == "POST":
         f = request.files["file"]
         f.save("file_uploading/"+f.filename)
+        filename = f.filename
 
         with open("file_uploading/"+f.filename, "r") as file:
             for line in file:
@@ -59,3 +62,6 @@ def succes():
                     return render_template("succes_upload_page.html", name=f.filename)
                 else:
                     return render_template("failed_upload_page.html", name=f.filename)
+                
+    trim_object = Trimmomatic(filename)
+    trim_object.run_trimmomatic
