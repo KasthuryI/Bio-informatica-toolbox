@@ -1,7 +1,8 @@
 """
 Upload page script
 """
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, send_from_directory
+import os
 
 ALLOWED_EXTENSIONS = {"txt","fastq"}
 
@@ -49,6 +50,12 @@ def how_does_it_work():
 def disclaimer():
     return render_template("disclaimer.html")
 
+#img filepaths
+
+#@app.route("/succes/<path:file_name>")
+#def custom_static(file_name):
+#    return send_from_directory(app.config["file_uploading/SRR18574453_fastqc/Images/",file_name])
+
 @app.route("/succes", methods=["post"])
 def succes():
     """
@@ -61,13 +68,15 @@ def succes():
         file = request.files["file"]
         if file and allowed_file(file.filename):
             file_name = file.filename
-            first_file_path = file_name.replace(".fastq", "_fastqc")
-            first_file_img = first_file_path + "/Images/sequence_lenght_distribution"
             file.save("file_uploading/"+file.filename)
+            first_file_path = file_name.replace(".fastq", "_fastqc/")
+            test_path = "../static/"+first_file_path+"Images/adapter_content.png"
+            print(test_path)
             with open("file_uploading/"+file.filename, "r") as files:
                 for line in files:
                     if line.startswith("@"):
-                        return render_template("succes_upload_page.html", name=file_name)
+
+                        return render_template("succes_upload_page.html", name=file_name,test=test_path)
                     else:
                         return render_template("failed_upload_page.html", name=file_name)
 

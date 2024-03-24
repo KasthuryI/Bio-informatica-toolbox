@@ -14,4 +14,3 @@ commandstorm = ["java",
            r".\seq\SRR18574453.fastq",
            r"C:\Users\ivarl\Desktop\Bio-informatica-toolbox\tools\fastqc_v0.12.1\SRR18574453.fastq" ]
 subprocess.run(commandstorm)
-#subprocess.Popen(command,)
