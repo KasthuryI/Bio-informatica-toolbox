@@ -12,7 +12,7 @@ class class_fastqc:
     def __init__(self, filename):
         self.filename = filename
         self.path_root = os.getcwd()
-        self.path_fastqc = r"\tools\fastqc_v0.12.1\FastQC"
+        self.path_fastqc = r"\tools\FastQC"
         self.path_output = r"\static\\"
 
     def run(self):
