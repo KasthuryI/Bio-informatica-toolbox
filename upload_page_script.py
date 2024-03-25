@@ -5,7 +5,7 @@ Upload page script
 """
 
 from flask import Flask, request, render_template
-from trimmomatic import Trimmomatic
+#from trimmomatic import Trimmomatic
 from fastqc import run_fastqc
 ALLOWED_EXTENSIONS = {"txt","fastq"}
 
@@ -74,9 +74,8 @@ def succes():
 
             with open("file_uploading/"+file.filename, "r") as files:
                 for line in files:
-                    run_fastqc(file_name)
                     if line.startswith("@"):
-
+                        run_fastqc(file_name)
                         return render_template("succes_upload_page.html", name=file_name,test=test_path)
                     else:
                         return render_template("failed_upload_page.html", name=file_name)
