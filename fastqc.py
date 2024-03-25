@@ -1,28 +1,36 @@
+"""
+    Title: fastqc.py
+    Author: Storm Steller
+    Date: 25-3-2024
+    Summary: This programm runs FastQC through the terminal. It is meant to work for the Trimmtech website.
+"""
+
 import subprocess
 import os
 
-def run_fastqc(filename):
-    path_root = os.getcwd()
-    path_fastqc = r"\tools\fastqc_v0.12.1\FastQC"
-    path_output = r"\file_uploading\\"
+class class_fastqc:
+    def __init__(self, filename):
+        self.filename = filename
+        self.path_root = os.getcwd()
+        self.path_fastqc = r"\tools\fastqc_v0.12.1\FastQC"
+        self.path_output = r"\static\\"
 
-    command = ["java",
-                "-Xmx250m",
-                "-Dfastqc.unzip=true",
-                "-Dfastqc.delete=true",
-                r"-Dfastqc.output_dir=" + path_root + path_output,
-                "-classpath",
-                ".;./sam-1.103.jar;./jbzip2-0.9.jar",
-                "uk.ac.babraham.FastQC.FastQCApplication",
-                path_root + path_output + "SRR18574453.fastq"] #filename]
-    print(path_root + path_output)
-
-    os.chdir(path_root + path_fastqc)
-
-    subprocess.run(command)
-
-    os.chdir(path_root)
-    return print("QC complete")
-
-
-# class van de tool maken met methode run, change dir. Basis parameters class: change output dir, command?
+    def run(self):
+        """
+        This function runs the programm with a pre-determined path, except for the filename.
+        """
+        command = ["java", 
+                "-Xmx250m", 
+                "-Dfastqc.unzip=true", 
+                "-Dfastqc.delete=true", 
+                r"-Dfastqc.output_dir=" 
+                + self.path_root 
+                + self.path_output,
+                "-classpath", 
+                ".;./sam-1.103.jar;./jbzip2-0.9.jar", 
+                "uk.ac.babraham.FastQC.FastQCApplication",  
+                self.path_root + self.path_output + self.filename]
+        
+        os.chdir(self.path_root + self.path_fastqc)
+        subprocess.run(command)
+        os.chdir(self.path_root)
