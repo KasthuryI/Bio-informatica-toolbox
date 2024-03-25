@@ -1,11 +1,12 @@
+
+
 """
 Upload page script
 """
 
 from flask import Flask, request, render_template
+from trimmomatic import Trimmomatic
 from fastqc import run_fastqc
-
-
 ALLOWED_EXTENSIONS = {"txt","fastq"}
 
 app = Flask(__name__)
