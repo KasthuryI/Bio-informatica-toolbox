@@ -6,7 +6,7 @@
     File name: {{name}}
     </p>
 
-    <img src="{{url_for("static", filename="../static/{{test}}}Images/adapter_content.png")}}">
+    <img src="{{ url_for('static', filename=test+'/Images/adapter_content.png') }}">
     <img src="{{url_for("static", filename="../static/{{test}}Images/adapter_content.png")}}">
     <img src="{{url_for("static", filename='../static/original/Images/adapter_content.png")')}}">
     <img src="{{url_for("static", filename='../static/+"{{test}}"+Images/adapter_content.png")')}}">

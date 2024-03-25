@@ -1,4 +1,5 @@
 import subprocess
+import os
 # from upload_page_script import *
 
 class Trimmomatic:
@@ -20,12 +21,16 @@ class Trimmomatic:
         """
         This function calls the tool trimmomatic and creates an output file in the specified place.
         """
+        path_root = os.getcwd()
+        path_trimmomatic = r"\tools\Trimmomatic-0.39"
+        path_output = r"\trimmomatic_output"
+    
         command = [
         "java", "-jar",
-        r"tools\Trimmomatic-0.39\trimmomatic-0.39.jar",
+        path_root + r"\tools\Trimmomatic-0.39\trimmomatic-0.39.jar",
         "SE",
-        r"file_uploading\"" + self.filename,
-        r"trimmomatic_output\OUTPUT.fq",
+        path_root + r"\file_uploading" + "\\" + self.filename,
+        path_root + path_output + r"\OUTPUT.fq",
         self.illuminaclip,
         self.leading,
         self.trailing,
@@ -33,4 +38,6 @@ class Trimmomatic:
         self.crop
         ]
 
-        return subprocess.run(command)
+        os.chdir(path_root + path_trimmomatic)
+        subprocess.run(command)
+        os.chdir(path_root)

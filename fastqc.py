@@ -13,7 +13,8 @@ class class_fastqc:
         self.filename = filename
         self.path_root = os.getcwd()
         self.path_fastqc = r"\tools\FastQC"
-        self.path_output = r"\static\\"
+        self.path_input = r"\file_uploading"
+        self.path_output = r"\static"
 
     def run(self):
         """
@@ -29,7 +30,7 @@ class class_fastqc:
                 "-classpath", 
                 ".;./sam-1.103.jar;./jbzip2-0.9.jar", 
                 "uk.ac.babraham.FastQC.FastQCApplication",  
-                self.path_root + self.path_output + self.filename]
+                self.path_root + self.path_input + "\\" + self.filename]
         
         os.chdir(self.path_root + self.path_fastqc)
         subprocess.run(command)
