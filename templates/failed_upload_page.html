@@ -2,12 +2,9 @@
 
 {% block content %}
 
-   <h3 class="head_text_error_page"> Uploaded an invalid file</h3>
-      <div class ="input_file_error">
-         <p> File name: <section class="input_file_error_name">{{name}}</section> </p>
-      </div>
-      <br><br>
-      <h4 class="error_page_text"> Please use a FastQ file in the .txt format</h5>
-        
-
-{% endblock %}
+    <div class="text_try_page">
+    <p>Uploaded an invalid file<br>
+    File name: {{name}}
+    </p>
+    </div>
+    {% endblock %}

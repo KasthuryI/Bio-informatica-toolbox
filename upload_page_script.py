@@ -1,5 +1,3 @@
-
-
 """
 Upload page script
 """
@@ -83,3 +81,13 @@ def succes():
         else:
             return render_template("failed_upload_page.html", name=file.filename)
 
+@app.route("/options_page", methods=["GET", "POST"])
+def options():
+    if request.method == "GET": 
+        return render_template("options_page.html")
+    elif request.method == "POST":
+        crop_value = request.form["crop"]
+        minlen_value = request.form["minlen"]
+        trim_object = Trimmomatic(minlen_value, crop_value, filename)
+        trim_object.run_trimmomatic
+        return render_template("options_page.html") #DIT MOET DE PAGINA WORDEN MET DE NIEUWE PLOTJES

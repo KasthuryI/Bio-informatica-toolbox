@@ -1,0 +1,23 @@
+{% extends "basetemplate.html" %}
+
+{% block content %}
+    <!-- CONTENT -->
+    <h3 class="header_options"> TRIMMING OPTIONS </h3>
+
+    <div class="option_minlen_text">
+        <p> MINLEN: Drop the read if it is below the specified length. </p>
+    </div>
+
+    <div class="option_crop_text">
+        <p> CROP: Cuts the read to a specified length. </p>
+    </div>
+    
+    <form>
+        <label for="crop" id="crop_title">CROP</label><br>
+        <input type="text" id="crop" name="crop"></br>
+        <label for="minlen" id="minlen_title">MINLEN</label><br>
+        <input type="text" id="minlen" name="minlen"></br>
+        <input type="Submit" id="start_trim" value="START">
+    </form>
+
+{% endblock %}
