@@ -478,7 +478,7 @@ body {
   top: 50px;
 }
 
-.text_how_page{
+#text_flowchart{
   position: relative;
   font-family: sans-serif;
   font-size: 3vw;
@@ -487,6 +487,39 @@ body {
   text-align: center;
   margin: 0px;
   top: 60px;
+}
+
+.header_text_how{
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.5vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: left;
+  margin-top: 100px;
+  margin-right: 150px;
+  margin-left: 15px;
+}
+
+.text_how_page{
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: left;
+  margin-top: 20px;
+  margin-right: 150px;
+  margin-left: 15px;
+  margin-bottom: 45px;
+}
+
+#flowchart {
+  position: relative;
+  top: 1vw;
+  width: 98.5vw;
+  height: 19.5vw;
 }
 
 
