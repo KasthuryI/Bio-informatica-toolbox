@@ -1,6 +1,9 @@
+"""
+A module containing class used to run the tool trimmomatic. 
+"""
+
 import subprocess
 import os
-# from upload_page_script import *
 
 class Trimmomatic:
     """
@@ -9,6 +12,12 @@ class Trimmomatic:
     def __init__(self, minlen, crop, file):
         """
         This function sets the default values for trimmomatic objects.
+
+        : Param minlen: the user input for the minimum length.
+        : Param crop: the user input for the crop values.
+        : Param file: the uploaded file.
+
+        : Return: -
         """
         self.illuminaclip = "ILLUMINACLIP:TruSeq3-SE:2:30:10"
         self.leading = "LEADING:3"
@@ -19,7 +28,11 @@ class Trimmomatic:
 
     def run_trimmomatic(self):
         """
-        This function calls the tool trimmomatic and creates an output file in the specified place.
+        This function runs the tool trimmomatic and creates an output file in the specified place.
+
+        : Param: -
+
+        : Return: -
         """
         path_root = os.getcwd()
         path_trimmomatic = r"\tools\Trimmomatic-0.39"
@@ -41,3 +54,13 @@ class Trimmomatic:
         os.chdir(path_root + path_trimmomatic)
         subprocess.run(command)
         os.chdir(path_root)
+
+def __str__(self):
+    """
+    This functioning prints that trimmomatic is running.
+    
+    : Param: -
+    
+    : Return: running trimmomatic printed to the terminal.
+    """
+    return ("Running trimmomatic")
