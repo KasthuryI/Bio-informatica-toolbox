@@ -840,7 +840,7 @@ body {
   color: #000000;
   text-decoration: none;
   margin-left: 42vw;
-  top: 50px;
+  top: 1vw;
 }
 
 
@@ -938,7 +938,7 @@ body {
   font-size: 2vw;
   color: #000000;
   text-decoration: none;
-  top: 35vw;
+  top: 40vw;
   left: 50%;
   transform: translate(-50%, -50%);
   
