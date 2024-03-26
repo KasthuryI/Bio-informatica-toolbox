@@ -26,16 +26,15 @@ class Trimmomatic:
         self.crop = "CROP:" + crop
         self.filename = file
 
-    def run_trimmomatic(self):
+    def command_trimmomatic(self):
         """
-        This function runs the tool trimmomatic and creates an output file in the specified place.
+        This funciton creates the command that is used to run trimmomatic.
 
         : Param: -
 
-        : Return: -
+        : Return: a list containing the command
         """
         path_root = os.getcwd()
-        path_trimmomatic = r"\tools\Trimmomatic-0.39"
         path_output = r"\trimmomatic_output"
     
         command = [
@@ -50,6 +49,20 @@ class Trimmomatic:
         self.minlen,
         self.crop
         ]
+
+        return command
+    
+    def run_trimmomatic(self):
+        """
+        This functions runs trimmomatic.
+
+        : Param: -
+        
+        : Return: -
+        """
+        path_root = os.getcwd() 
+        path_trimmomatic = r"\tools\Trimmomatic-0.39"
+        command = self.command_trimmomatic()
 
         os.chdir(path_root + path_trimmomatic)
         subprocess.run(command)
