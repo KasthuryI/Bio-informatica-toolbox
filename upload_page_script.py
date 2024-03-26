@@ -4,6 +4,7 @@ Upload page script
 from flask import Flask, request, render_template
 from trimmomatic import Trimmomatic
 from fastqc import class_fastqc
+
 ALLOWED_EXTENSIONS = {"fq","fastq"}
 file_name = ""
 app = Flask(__name__)
@@ -61,17 +62,21 @@ def succes():
     global file_name  # Mag van Ronald??
     if request.method == "POST":
         file = request.files["file"]
+
         if file and allowed_file(file.filename):
             file_name = file.filename
             file.save("file_uploading\\"+file.filename)
             first_file_path = file_name.replace(".fastq", "_fastqc/")
 
             with open("file_uploading/"+file.filename, "r") as files:
+
                 for line in files:
+                    
                     if line.startswith("@"):
                         file_name_fastqc = class_fastqc(file_name)
-                        file_name_fastqc.run()
-                        return render_template("succes_upload_page.html", name=file_name,original=first_file_path)
+                        file_name_fastqc.run(r"\file_uploading")
+                        return render_template("succes_upload_page.html", name=file_name,test=first_file_path)
+                    
                     else:
                         return render_template("failed_upload_page.html", name=file_name)
 
@@ -80,11 +85,17 @@ def succes():
 
 @app.route("/options_page", methods=["GET", "POST"])
 def options():
+
     if request.method == "POST":
         crop_value = request.form["crop"]
         minlen_value = request.form["minlen"]
+
         trim_object = Trimmomatic(minlen_value, crop_value, file_name)
         trim_object.run_trimmomatic()
+
+        trim_output_file = class_fastqc("OUTPUT.fq")
+        trim_output_file.run(r"\trimmomatic_output")
         return render_template("about.html") #DIT MOET DE PAGINA WORDEN MET DE NIEUWE PLOTJES
+    
     if request.method == "GET":
         return render_template("options_page.html")

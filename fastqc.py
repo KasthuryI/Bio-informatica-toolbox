@@ -1,6 +1,6 @@
 """
     Title: fastqc.py
-    Author: Storm Steller
+    Author: Mirte Draaier, Ivar Lotman, Kasthury Imparajah, Storm Steller
     Date: 25-3-2024
     Summary: This programm runs FastQC through the terminal. It is meant to work for the Trimmtech website.
 """
@@ -13,10 +13,9 @@ class class_fastqc:
         self.filename = filename
         self.path_root = os.getcwd()
         self.path_fastqc = r"\tools\FastQC"
-        self.path_input = r"\file_uploading"
         self.path_output = r"\static"
 
-    def run(self):
+    def run(self, input_folder):
         """
         This function runs the programm with a pre-determined path, except for the filename.
         """
@@ -24,13 +23,11 @@ class class_fastqc:
                 "-Xmx250m", 
                 "-Dfastqc.unzip=true", 
                 "-Dfastqc.delete=true", 
-                r"-Dfastqc.output_dir=" 
-                + self.path_root 
-                + self.path_output,
+                r"-Dfastqc.output_dir=" + self.path_root + self.path_output,
                 "-classpath", 
                 ".;./sam-1.103.jar;./jbzip2-0.9.jar", 
                 "uk.ac.babraham.FastQC.FastQCApplication",  
-                self.path_root + self.path_input + "\\" + self.filename]
+                self.path_root + input_folder + "\\" + self.filename]
         
         os.chdir(self.path_root + self.path_fastqc)
         subprocess.run(command)
