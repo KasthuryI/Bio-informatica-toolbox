@@ -6,18 +6,14 @@
     File name: {{name}}
     </p>
 
-    <img src="{{ url_for('static', filename=test+'/Images/adapter_content.png') }}">
-    <img src="{{url_for("static", filename="../static/{{test}}Images/adapter_content.png")}}">
-    <img src="{{url_for("static", filename='../static/original/Images/adapter_content.png")')}}">
-    <img src="{{url_for("static", filename='../static/+"{{test}}"+Images/adapter_content.png")')}}">
-    <img src="{{url_for("static", filename='../static/original/Images/duplication_levels.png")')}}">
-    <img src="{{url_for("static", filename='../static/original/Images/per_base_n_content.png")')}}">
-    <img src="{{url_for("static", filename='../static/original/Images/per_base_quality.png")')}}">
-    <img src="{{url_for("static", filename='../static/original/Images/per_base_sequence_content.png")')}}">
-    <img src="{{url_for("static", filename='../static/original/Images/per_sequence_gc_content.png")')}}">
-    <img src="{{url_for("static", filename='../static/original/Images/per_sequence_quality.png")')}}">
-    <img src="{{url_for("static", filename='../static/original/Images/sequence_lengt_distribution.png")')}}">
-    <img src="../static/SRR18574453_fastqc/Images/adapter_content.png">
+    <img src="{{url_for('static', filename=original+'Images/adapter_content.png') }}">
+    <img src="{{url_for('static', filename=original+'Images/duplication_levels.png')}}">
+    <img src="{{url_for('static', filename=original+'/Images/per_base_n_content.png' )}}">
+    <img src="{{url_for('static', filename=original+'/Images/per_base_quality.png')}}">
+    <img src="{{url_for('static', filename=original+'/Images/per_base_sequence_content.png' )}}">
+    <img src="{{url_for('static', filename=original+'/Images/per_sequence_gc_content.png' )}}">
+    <img src="{{url_for('static', filename=original+'/Images/per_sequence_quality.png' )}}">
+    <img src="{{url_for('static', filename=original+'/Images/sequence_length_distribution.png' )}}">
     
     </div>
     <div class="button_next">

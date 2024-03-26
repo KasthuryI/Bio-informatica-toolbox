@@ -71,7 +71,7 @@ def succes():
                     if line.startswith("@"):
                         file_name_fastqc = class_fastqc(file_name)
                         file_name_fastqc.run()
-                        return render_template("succes_upload_page.html", name=file_name,test=first_file_path)
+                        return render_template("succes_upload_page.html", name=file_name,original=first_file_path)
                     else:
                         return render_template("failed_upload_page.html", name=file_name)
 
@@ -81,13 +81,10 @@ def succes():
 @app.route("/options_page", methods=["GET", "POST"])
 def options():
     if request.method == "POST":
-        print("het werkt")
         crop_value = request.form["crop"]
         minlen_value = request.form["minlen"]
-        print(file_name)
         trim_object = Trimmomatic(minlen_value, crop_value, file_name)
         trim_object.run_trimmomatic()
         return render_template("about.html") #DIT MOET DE PAGINA WORDEN MET DE NIEUWE PLOTJES
     if request.method == "GET":
-        print("kut ding werkt niet")
         return render_template("options_page.html")
