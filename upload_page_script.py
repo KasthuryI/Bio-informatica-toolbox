@@ -6,8 +6,10 @@ from trimmomatic import Trimmomatic
 from fastqc import class_fastqc
 
 ALLOWED_EXTENSIONS = {"fq","fastq"}
-file_name = ""
 app = Flask(__name__)
+
+file_name = ""
+first_file_path = ""
 
 def allowed_file(file):
     """
@@ -60,6 +62,7 @@ def succes():
     Return: Confermation HTML page
     """
     global file_name  # Mag van Ronald??
+    global first_file_path
     if request.method == "POST":
         file = request.files["file"]
 
@@ -71,12 +74,12 @@ def succes():
             with open("file_uploading/"+file.filename, "r") as files:
 
                 for line in files:
-                    
+
                     if line.startswith("@"):
                         file_name_fastqc = class_fastqc(file_name)
                         file_name_fastqc.run(r"\file_uploading")
-                        return render_template("succes_upload_page.html", name=file_name,test=first_file_path)
-                    
+                        return render_template("succes_upload_page.html", name=file_name,original=first_file_path)
+
                     else:
                         return render_template("failed_upload_page.html", name=file_name)
 
@@ -95,7 +98,8 @@ def options():
 
         trim_output_file = class_fastqc("OUTPUT.fq")
         trim_output_file.run(r"\trimmomatic_output")
-        return render_template("about.html") #DIT MOET DE PAGINA WORDEN MET DE NIEUWE PLOTJES
-    
+        compare_path = "OUTPUT_fastqc/"
+        return render_template("compare.html", original=first_file_path, compare=compare_path)
+
     if request.method == "GET":
         return render_template("options_page.html")
