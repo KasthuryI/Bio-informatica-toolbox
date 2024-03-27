@@ -8,6 +8,9 @@ import os
 class Trimmomatic:
     """
     A class used to call trimmomatic.
+
+    command_trimmomatic(): generates the command used to run trimmomatic.
+    run_trimmomatic(): runs the tool trimmomatic.
     """
     def __init__(self, minlen, crop, file):
         """
@@ -32,7 +35,7 @@ class Trimmomatic:
 
         : Param: -
 
-        : Return: a list containing the command
+        : Return: a list containing the command.
         """
         path_root = os.getcwd()
         path_output = r"\trimmomatic_output"
