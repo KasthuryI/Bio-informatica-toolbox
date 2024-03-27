@@ -1,10 +1,14 @@
 """
-Upload page script
+Module Upload_page_script
+This script functions as the main module of the website.
+
 """
 from flask import Flask, request, render_template, session
+# impport class tools from respective"s scripts
 from trimmomatic import Trimmomatic
 from fastqc import class_fastqc
 
+# limmits imput to fq and fastq files
 ALLOWED_EXTENSIONS = {"fq","fastq"}
 app = Flask(__name__)
 app.secret_key = "TRIMTASTISCHE_TIJGERS"
