@@ -39,7 +39,7 @@ class Trimmomatic:
         """
         path_root = os.getcwd()
         path_output = r"\trimmomatic_output"
-    
+
         command = [
         "java", "-jar",
         path_root + r"\tools\Trimmomatic-0.39\trimmomatic-0.39.jar",
@@ -54,7 +54,7 @@ class Trimmomatic:
         ]
 
         return command
-    
+
     def run_trimmomatic(self):
         """
         This functions runs trimmomatic.
@@ -63,7 +63,7 @@ class Trimmomatic:
         
         : Return: -
         """
-        path_root = os.getcwd() 
+        path_root = os.getcwd()
         path_trimmomatic = r"\tools\Trimmomatic-0.39"
         command = self.command_trimmomatic()
 
