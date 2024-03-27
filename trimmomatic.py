@@ -81,4 +81,4 @@ def __str__(self):
     
     : Return: running trimmomatic printed to the terminal.
     """
-    return ("Running trimmomatic")
+    return (f"Running trimmomatic using the following command: {self.command_trimmomatic()}")
