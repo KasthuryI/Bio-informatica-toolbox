@@ -25,9 +25,9 @@ class Trimmomatic:
         self.illuminaclip = "ILLUMINACLIP:TruSeq3-SE:2:30:10"
         self.leading = "LEADING:3"
         self.trailing = "TRAILING:3"
-        self.sliding = "SLIDINGWINDOW:" + sliding
-        self.minlen = "MINLEN:" + minlen
-        self.crop = "CROP:" + crop
+        self.sliding = "SLIDINGWINDOW:" + str(sliding)
+        self.minlen = "MINLEN:" + str(minlen)
+        self.crop = "CROP:" + str(crop)
         self.filename = file
 
     def command_trimmomatic(self):
