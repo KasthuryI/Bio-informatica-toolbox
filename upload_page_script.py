@@ -92,8 +92,9 @@ def options():
     if request.method == "POST":
         crop_value = request.form["crop"]
         minlen_value = request.form["minlen"]
+        sliding_show = request.form["sliding"]
 
-        trim_object = Trimmomatic(minlen_value, crop_value, file_name)
+        trim_object = Trimmomatic(sliding_show, minlen_value, crop_value, file_name)
         trim_object.run_trimmomatic()
 
         trim_output_file = class_fastqc("OUTPUT.fq")
