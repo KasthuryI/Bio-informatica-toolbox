@@ -901,111 +901,19 @@ body {
   text-decoration: none;
   text-align: center;
   margin: 70px;
+  margin-left: 25%;
+  margin-right: 25%;
   top: 50px;
 }
 
-.option_crop_text {
+.options{
   position: relative;
   font-family: sans-serif;
   font-size: 1vw;
   color: #000000;
   text-decoration: none;
-  margin-left: 37vw;
-  top: 9.2vw;
-}
-
-.option_minlen_text {
-  position: relative;
-  font-family: sans-serif;
-  font-size: 1vw;
-  color: #000000;
-  text-decoration: none;
-  margin-left: 37vw;
-  top: 21vw;
-}
-
-.option_sliding_text {
-  position: relative;
-  font-family: sans-serif;
-  font-size: 1vw;
-  color: #000000;
-  text-decoration: none;
-  margin-left: 37vw;
-  bottom: 8vw;
-}
-
-#crop {
-  position: relative;
-  font-family: sans-serif;
-  font-size: 2vw;
-  color: #000000;
-  text-decoration: none;
-  margin-left: 37vw;
-  top: 2.5vw;
-}
-
-#crop_title {
-  position: relative;
-  font-family: sans-serif;
-  font-size: 2vw;
-  color: #000000;
-  text-decoration: none;
-  margin-left: 37vw;
-  top: 2vw;
-}
-
-#minlen {
-  position: relative;
-  font-family: sans-serif;
-  font-size: 2vw;
-  color: #000000;
-  text-decoration: none;
-  margin-left: 37vw;
-  top: 8.5vw;
-}
-
-#minlen_title {
-  position: relative;
-  font-family: sans-serif;
-  font-size: 2vw;
-  color: #000000;
-  text-decoration: none;
-  margin-left: 37vw;
-  top: 8vw;
-}
-
-#sliding {
-  position: relative;
-  font-family: sans-serif;
-  font-size: 2vw;
-  color: #000000;
-  text-decoration: none;
-  margin-left: 37vw;
-  top: 14.5vw;
-}
-
-#sliding_title {
-  position: relative;
-  font-family: sans-serif;
-  font-size: 2vw;
-  color: #000000;
-  text-decoration: none;
-  margin-left: 37vw;
-  top: 14vw;
-}
-
-
-#start_trim {
-  position: absolute;
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: 2vw;
-  color: #000000;
-  text-decoration: none;
-  top: 40vw;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  
+  margin-left: 25%;
+  margin-right: 25%
 }
 
 /****************** Error page content *****************/

@@ -3,27 +3,23 @@
 {% block content %}
     <!-- CONTENT -->
     <h3 class="header_options"> TRIMMING OPTIONS </h3>
-
-    <div class="option_minlen_text">
-        <p> MINLEN: Drop the read if it is below the specified length. </p>
-    </div>
-
-    <div class="option_crop_text">
-        <p> CROP: Cuts the read to a specified length. </p>
-    </div>
-
-    <div class="option_sliding_text">
-        <p>SLIDINGWINDOW: cuts if the average quality within the window is bellow a threshold (SLIDINGWINDOW:4:15) The first argument is the size of the window. The argument is the threshold quality.</p>
-    </div>
     
-    <form method="POST">
-        <label for="crop" id="crop_title">CROP</label><br>
-        <input type="text" id="crop" name="crop" placeholder="100"></br>
-        <label for="minlen" id="minlen_title">MINLEN</label><br>
-        <input type="text" id="minlen" name="minlen" placeholder="75"></br>
-        <label for="sliding" id="sliding_title">SLIDINGSHOW</label></form></br>
-        <input type="text" id="sliding" name="sliding" placeholder="4:15"></br>
-        <input type="Submit" id="start_trim" value="START">
+    <form class = "options" method="POST">
+        <label class="options" for="crop" id="crop_title">CROP</label><br>
+        <input class="options" type="text" id="crop" name="crop" placeholder="100"></br>
+        <p class="options"> CROP: Cuts the read to a specified length. </p>
+        </br>
+
+        <label class="options" for="minlen" id="minlen_title">MINLEN</label><br>
+        <input class="options" type="text" id="minlen" name="minlen" placeholder="75"></br>
+        <p class="options"> MINLEN: Drop the read if it is below the specified length. </p>
+        </br>
+
+        <label class="options" for="sliding" id="sliding_title">SLIDINGSHOW</label></br>
+        <input class="options" type="text" id="sliding" name="sliding" placeholder="4:15"></br>
+        <p class="options">SLIDINGWINDOW: cuts if the average quality within the window is bellow a threshold (SLIDINGWINDOW:4:15) The first argument is the size of the window. The argument is the threshold quality.</p>
+        </br>
+        <input class="options" type="Submit" id="start_trim" value="START">
     </form>
 
 {% endblock %}
