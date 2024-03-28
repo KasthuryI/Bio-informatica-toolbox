@@ -1,15 +1,13 @@
 """
 Upload page script
 """
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, session
 from trimmomatic import Trimmomatic
 from fastqc import class_fastqc
 
 ALLOWED_EXTENSIONS = {"fq","fastq"}
 app = Flask(__name__)
-
-file_name = ""
-first_file_path = ""
+app.secret_key = "TRIMTASTISCHE_TIJGERS"
 
 def allowed_file(file):
     """
@@ -61,27 +59,27 @@ def succes():
     Param: upload form in the upload html page
     Return: Confermation HTML page
     """
-    global file_name  # Mag van Ronald??
-    global first_file_path
+
     if request.method == "POST":
         file = request.files["file"]
 
         if file and allowed_file(file.filename):
-            file_name = file.filename
+            session["filename"] = file.filename
+            session["path_folder"] =  file.filename.replace(".fastq", "_fastqc/")
+
             file.save("file_uploading\\"+file.filename)
-            first_file_path = file_name.replace(".fastq", "_fastqc/")
 
             with open("file_uploading/"+file.filename, "r") as files:
 
                 for line in files:
 
                     if line.startswith("@"):
-                        file_name_fastqc = class_fastqc(file_name)
+                        file_name_fastqc = class_fastqc(file.filename)
                         file_name_fastqc.run(r"\file_uploading")
-                        return render_template("succes_upload_page.html", name=file_name,original=first_file_path)
+                        return render_template("succes_upload_page.html", name=session["filename"],original=session["path_folder"])
 
                     else:
-                        return render_template("failed_upload_page.html", name=file_name)
+                        return render_template("failed_upload_page.html", name=session["filename"])
 
         else:
             return render_template("failed_upload_page.html", name=file.filename)
@@ -94,13 +92,14 @@ def options():
         minlen_value = request.form["minlen"]
         sliding_show = request.form["sliding"]
 
-        trim_object = Trimmomatic(sliding_show, minlen_value, crop_value, file_name)
+
+        trim_object = Trimmomatic(sliding_show, minlen_value, crop_value, session["filename"])
         trim_object.run_trimmomatic()
 
         trim_output_file = class_fastqc("OUTPUT.fq")
         trim_output_file.run(r"\trimmomatic_output")
         compare_path = "OUTPUT_fastqc/"
-        return render_template("compare.html", original=first_file_path, compare=compare_path)
+        return render_template("compare.html", original=session["path_folder"], compare=compare_path)
 
     if request.method == "GET":
         return render_template("options_page.html")
