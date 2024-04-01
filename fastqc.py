@@ -10,12 +10,12 @@
 import subprocess
 import os
 
-class class_fastqc:
+class FastQC:
     """
         Summary: Class used to call FastQC.
 
         This class has 1 method, the .run method. This method runs FastQC through the command line.
-    """
+    """    
     def __init__(self, filename):
         self.filename = filename
         self.path_root = os.getcwd()
