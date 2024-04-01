@@ -37,4 +37,17 @@
         });
     </script>
 
+    </div>
+    <div id="loader-overlay" class="loader-overlay">
+    <div class="loader"></div>
+    </div>
+
+    <!-- Script for loader overlay -->
+    <script>
+    document.getElementById('options').addEventListener('submit', function() {
+        // Loader overlay when file is submitted
+        document.getElementById('loader-overlay').style.display = 'flex';
+        });
+    </script>
+
 {% endblock %}
