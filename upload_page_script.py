@@ -6,10 +6,10 @@ This script functions as the main module of the website.
 from flask import Flask, request, render_template, session
 # impport class tools from respective"s scripts
 from trimmomatic import Trimmomatic
-from fastqc import class_fastqc
+from fastqc import FastQC
 
 # limmits imput to fq and fastq files
-ALLOWED_EXTENSIONS = {"fq","fastq"}
+ALLOWED_EXTENSIONS = {"fq", "fastq"}
 app = Flask(__name__)
 app.secret_key = "TRIMTASTISCHE_TIJGERS"
 
@@ -17,7 +17,7 @@ def allowed_file(file):
     """
     function part of file uploading
     """
-    return file.rsplit(".",1)[1].lower() in ALLOWED_EXTENSIONS
+    return file.rsplit(".", 1)[1].lower() in ALLOWED_EXTENSIONS
 
 @app.route("/")
 def root():
@@ -61,7 +61,7 @@ def succes():
     This function uploads a file to the file uploading directory
 
     Param: upload form in the upload html page
-    Return: Confermation HTML page
+    Return: Confirmation HTML page
     """
 
     if request.method == "POST":
@@ -78,7 +78,7 @@ def succes():
                 for line in files:
 
                     if line.startswith("@"):
-                        file_name_fastqc = class_fastqc(file.filename)
+                        file_name_fastqc = FastQC(file.filename)
                         file_name_fastqc.run(r"\file_uploading")
                         return render_template("succes_upload_page.html", name=session["filename"],original=session["path_folder"])
 
@@ -100,7 +100,7 @@ def options():
         trim_object = Trimmomatic(sliding_show, minlen_value, crop_value, session["filename"])
         trim_object.run_trimmomatic()
 
-        trim_output_file = class_fastqc("OUTPUT.fq")
+        trim_output_file = FastQC("OUTPUT.fq")
         trim_output_file.run(r"\trimmomatic_output")
         compare_path = "OUTPUT_fastqc/"
         return render_template("compare.html", original=session["path_folder"], compare=compare_path)
