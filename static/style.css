@@ -57,7 +57,7 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 0.6vw 0.6vw 0.6vw 0.6vw;
+  padding: 0.3vw 0.3vw 0.3vw 0.3vw;
   background: #90C590;
   display: inline-block;
   z-index: 100;
@@ -752,56 +752,16 @@ body {
   margin-left: 27.5vw;
 }
 
-/* E-mail links */
-.email_links a{
-  position: absolute;
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: 2vw;
-  color: #228b22;
-  text-decoration: none;
-  text-align: center;
-  margin: 33vw;
-  margin-left: 0vw;
-}
-
-/* Position e-mailadresses */
-#mail1 {
-  position: absolute;
-  text-align: center;
-  top: 30px;
-  left: 200px;
-}
-
-#mail2 {
-  position: absolute;
-  text-align: center;
-  top: 30px;
-  left: 450px;
-}
-
-#mail3 {
-  position: absolute;
-  text-align: center;
-  top: 30px;
-  right: 550px;
-}
-
-#mail4 {
-  position: absolute;
-  text-align: center;
-  top: 30px;
-  right: 300px;
-}
-
-/* Email picture */
-#picture_email {
+/* GitHub logo */
+#logo_github {
   position: relative;
   top: 30vw;
-  left: 47vw;
-  width: 5vw;
-  height: 5vw;
+  left: 42.5vw;
+  width: 14vw;
+  height: 8vw;
 }
+
+
 /****************** Upload page content *****************/ 
 /* Text upload page */
 .head_text_upload_page{
@@ -827,6 +787,28 @@ body {
   margin-left: 34vw;
 }
 
+.choose_file{
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 5vw;
+  margin-left: -20vw;
+}
+
+.upload_file{
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 5vw;
+  margin-left: 10vw;
+}
+
 
 /****************** Succes upload page content *****************/
 /* Text succes upload page page */
@@ -839,7 +821,7 @@ body {
   text-decoration: none;
   text-align: center;
   margin: 80px;
-  top: 80px;
+  top: 30px;
 }
 
 .uploaded_file_name {
@@ -860,8 +842,8 @@ body {
   color: #000000;
   text-decoration: none;
   text-align: center;
-  margin: 80px;
-  top: 80px;
+  margin: 5x;
+  top: 50px;
 }
 
 /* Trim button*/
@@ -872,8 +854,8 @@ body {
   font-weight: bold;
   color: #000000;
   text-decoration: none;
-  margin-left: 42vw;
-  top: 1vw;
+  margin-left: 1vw;
+  top: 5vw;
 }
 
 
@@ -883,10 +865,23 @@ body {
   position: relative;
   font-family: sans-serif;
   font-size: 2vw;
-  color: #ff0000;
+  font-weight: bold;
+  color: #B92C25;
   text-decoration: none;
   text-align: center;
   margin: 15px;
+  top: 90px;
+}
+
+.link_upload {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 2vw;
+  font-weight: bold;
+  color: #228b22;
+  text-decoration: none;
+  text-align: center;
+  top: 80px;
 }
 
 
@@ -957,4 +952,45 @@ body {
   text-decoration: none;
   text-align: center;
   top: 200px;
+}
+
+
+/****************** Loader *****************/
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loader {
+  position: absolute;
+  left: 42.5%;
+  top: 40%;
+  z-index: 1;
+  border-radius: 50%;
+  border-top: 16px double #0D4028;
+  border-right: 16px double #228b22;
+  border-bottom: 16px double #90C590;
+  border-left: 16px double #228b22;
+  width: 200px;
+  height: 200px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
