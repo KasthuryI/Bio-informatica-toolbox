@@ -17,7 +17,7 @@ class Trimmomatic:
     command_trimmomatic(): generates the command used to run trimmomatic.
     run_trimmomatic(): runs the tool trimmomatic.
     """
-    def __init__(self, minlen, crop, file):
+    def __init__(self, sliding, minlen, crop, file):
         """
         This function sets the default values for trimmomatic objects.
 
@@ -37,7 +37,7 @@ class Trimmomatic:
 
     def command_trimmomatic(self):
         """
-        This funciton creates the command that is used to run trimmomatic.
+        This function creates the command that is used to run trimmomatic.
 
         : Param: -
 
