@@ -1,34 +1,32 @@
 {% extends "basetemplate.html" %}
 
 {% block content %}
-    <div class="head_text_succecfully_uploaded">
-    <p>Succesfully uploaded a FastQ file<br>
-    File name: {{name}}
-    </p>
+  <div class="head_text_succecfully_uploaded">
+  <p>Succesfully uploaded a FastQ file<br>
+    File name: <span class="uploaded_file_name"> {{name}} </span>
+  </p>
+  
+  <div class="button_next">
+      <p id="ques">
+          Do you want to trim your data?
+      </p>
+  </div>
 
-    <img src="{{url_for('static', filename=original+'Images/adapter_content.png') }}">
-    <img src="{{url_for('static', filename=original+'Images/duplication_levels.png')}}">
-    <img src="{{url_for('static', filename=original+'/Images/per_base_n_content.png' )}}">
-    <img src="{{url_for('static', filename=original+'/Images/per_base_quality.png')}}">
-    <img src="{{url_for('static', filename=original+'/Images/per_base_sequence_content.png' )}}">
-    <img src="{{url_for('static', filename=original+'/Images/per_sequence_gc_content.png' )}}">
-    <img src="{{url_for('static', filename=original+'/Images/per_sequence_quality.png' )}}">
-    <img src="{{url_for('static', filename=original+'/Images/sequence_length_distribution.png' )}}">
-    
-    </div>
-    <div class="button_next">
-        <p id="ques">
-            Do you want to trim your data?
-        </p>
-    </div>
-    <form method="GET">
-      <button id="trim" type="submit" formaction="{{url_for('options')}}">
-        TRIM THE DATA
-      </button>
-    </form>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    {% endblock %}
+  <form method="GET">
+    <button id="trim" type="submit" formaction="{{url_for('options')}}">
+      TRIM THE DATA
+    </button>
+  </form>
+  <br>
+  <br>
+  <br>
+  <br>
+  <img src="{{url_for('static', filename=original+'Images/adapter_content.png') }}">
+  <img src="{{url_for('static', filename=original+'Images/duplication_levels.png')}}">
+  <img src="{{url_for('static', filename=original+'/Images/per_base_n_content.png' )}}">
+  <img src="{{url_for('static', filename=original+'/Images/per_base_quality.png')}}">
+  <img src="{{url_for('static', filename=original+'/Images/per_base_sequence_content.png' )}}">
+  <img src="{{url_for('static', filename=original+'/Images/per_sequence_gc_content.png' )}}">
+  <img src="{{url_for('static', filename=original+'/Images/per_sequence_quality.png' )}}">
+  <img src="{{url_for('static', filename=original+'/Images/sequence_length_distribution.png' )}}">
+  {% endblock %}

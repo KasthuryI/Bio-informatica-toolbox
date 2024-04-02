@@ -4,7 +4,7 @@
     <!-- CONTENT -->
     <h3 class="header_options"> TRIMMING OPTIONS </h3>
     
-    <form class = "options" method="POST">
+    <form class = "options" method="POST" id="options">
         <label class="options" for="crop" id="crop_title">CROP</label><br>
         <input class="options" type="text" id="crop" name="crop" placeholder="100"></br>
         <p class="options"> CROP: Cuts the read to a specified length. </p>
@@ -23,5 +23,18 @@
         </br>
         <input class="options" type="Submit" id="start_trim" value="START">
     </form>
+
+    </div>
+    <div id="loader-overlay" class="loader-overlay">
+    <div class="loader"></div>
+    </div>
+
+    <!-- Script for loader overlay -->
+    <script>
+    document.getElementById('options').addEventListener('submit', function() {
+        // Loader overlay when file is submitted
+        document.getElementById('loader-overlay').style.display = 'flex';
+        });
+    </script>
 
 {% endblock %}
