@@ -1,4 +1,8 @@
 """
+Title: test_html_flask
+Author: Mirte Draaijer, Ivar Lottman, Kasthury Inparajah, Storm Steller
+Date: 1-4-2024
+Version: 1.0
 HTML validation test
 console command:
 python3 -m pytest
@@ -29,7 +33,10 @@ def test_trim_form(client):
     response = client.post('/options_page', data={"minlen":"30","crop":"30"})
     assert response.status_code == 200
 
-@pytest.mark.parametrize('uri',['/about','/homepage','/uploadpage','fastqc','/trimmomatic','/contact','/how_does_it_work','/diclaimer'])
+
+@pytest.mark.parametrize('uri', ['/about',
+                                '/homepage', '/uploadpage', 'fastqc'
+                                ,'/trimmomatic', '/contact', '/how_does_it_work', '/diclaimer'])
 def test_html_validation(client, uri):
     response = client.get(uri)
     assert response.status_code == 200
