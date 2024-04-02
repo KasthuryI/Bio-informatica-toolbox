@@ -12,7 +12,7 @@ from flask import Flask, request, render_template, session
 # impport class tools from respective"s scripts
 from trimmomatic import Trimmomatic
 from fastqc import FastQC
-
+# app.wsgi kijk pp
 # limmits imput to fq and fastq files
 ALLOWED_EXTENSIONS = {"fq", "fastq"}
 app = Flask(__name__)
