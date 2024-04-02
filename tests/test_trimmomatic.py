@@ -1,12 +1,19 @@
+"""
+Title: test_trimmomatic
+Author: Mirte Draaijer, Ivar Lottman, Kasthury Inparajah, Storm Steller
+Date: 1-4-2024
+Version: 1.0
+Summery: run trimmomatic test
+"""
 import pytest
 import os
 from trimmomatic import Trimmomatic
 
 
-
 def test_command():
     """
-    This function tests the command_trimmomatic() function from the trimmomatic.py module.
+    This function tests the command_trimmomatic()
+    function from the trimmomatic.py module.
     """
     path_root = os.getcwd()
     path_output = r"\trimmomatic_output"

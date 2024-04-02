@@ -1,2 +1,10 @@
 __pycache__/
 .pyc
+
+file_uploading/*
+!file_uploading/.git_keep_dir
+trimmomatic_output/*
+!trimmomatic_output/.git_keep_dir
+
+/static/*_fastqc/
+/static/*_fastqc.html
