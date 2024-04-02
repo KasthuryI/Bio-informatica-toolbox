@@ -16,20 +16,21 @@
    <h3 class="headers_text_about_page"> What is a FastQ-file? </h3>
    <div class="text_about_page">
     <p>
-         If you want to know more about how this process works it’s important to know what a FastQ-file is.<br>
-         A FASTQ format is a text file format that stores:<br>
-         <ul class="text_about_list">
-         <li>base sequences</li>
-         <li>confidence for each base in a sequence</li>
-         <li>describing the origin of the read down to its position on the sequencing platform flow-cell</li>
-         </ul>
-         A FASTQ file is an extension of the FASTA file format, with the extension allowing for the storage of sequencing quality data along with the sequence itself and the sequence ID. 
-         All FASTQ files consist of a set of reads, with each read having 4 lines of data. 
-         The first line of each set will always begin with an “@” symbol and is often called the sequence identifier/metadata line. The “@” is followed by the sequence identifier and an optional description. 
-         The second line will always contain the raw nucleotide sequence, but if a nucleotide base is undefined it will show an N. 
-         The third line is a spacer that will start with a “+”. There may be additional comments put on this line, such as the same content as the first line, but important data will not be found in this line. 
-         The fourth line contains the quality score of the nucleotide bases based on an ASCII table.
-    </p>
+        If you want to know more about how this process works it’s important to know what a FastQ-file is.<br>
+        A FASTQ format is a text file format that stores:</p><br>
+        <ul class="text_about_list">
+        <li>base sequences</li>
+        <li>confidence for each base in a sequence</li>
+        <li>describing the origin of the read down to its position on the sequencing platform flow-cell</li>
+        </ul>
+        <br>
+        <p>A FASTQ file is an extension of the FASTA file format, with the extension allowing for the storage of sequencing quality data along with the sequence itself and the sequence ID. 
+        All FASTQ files consist of a set of reads, with each read having 4 lines of data. 
+        The first line of each set will always begin with an “@” symbol and is often called the sequence identifier/metadata line. The “@” is followed by the sequence identifier and an optional description. 
+        The second line will always contain the raw nucleotide sequence, but if a nucleotide base is undefined it will show an N. 
+        The third line is a spacer that will start with a “+”. There may be additional comments put on this line, such as the same content as the first line, but important data will not be found in this line. 
+        The fourth line contains the quality score of the nucleotide bases based on an ASCII table.
+        </p>
       <figure>
          <img src="../static/exp_fastq.png" alt="Example of a fastq file" title="Content FastQ" class="pictures_about">
          <figcaption class="figcaption_about"> Figure 1: Explanation about the content of a FastQ file. (https://biocorecrg.github.io/RNAseq_course_2019/fastq.html )</figcaption>
