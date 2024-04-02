@@ -192,7 +192,7 @@ def options():
                                    minlen_value, crop_value, session["filename"])
         trim_object.run_trimmomatic()
 
-        # running fastqc on the newly trimd data
+        # running fastqc on the newly trimmed data
         trim_output_file = FastQC("OUTPUT.fq")
         trim_output_file.run(r"\trimmomatic_output")
         compare_path = "OUTPUT_fastqc/"
