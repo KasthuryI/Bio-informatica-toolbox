@@ -1,0 +1,10 @@
+PASS	Basic Statistics	OUTPUT.fq
+PASS	Per base sequence quality	OUTPUT.fq
+PASS	Per sequence quality scores	OUTPUT.fq
+WARN	Per base sequence content	OUTPUT.fq
+PASS	Per sequence GC content	OUTPUT.fq
+PASS	Per base N content	OUTPUT.fq
+PASS	Sequence Length Distribution	OUTPUT.fq
+FAIL	Sequence Duplication Levels	OUTPUT.fq
+WARN	Overrepresented sequences	OUTPUT.fq
+WARN	Adapter Content	OUTPUT.fq
