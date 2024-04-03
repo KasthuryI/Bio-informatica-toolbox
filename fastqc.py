@@ -11,6 +11,7 @@ import subprocess
 import os
 import sys
 
+
 class class_fastqc:
     """
         Summary: Class used to call FastQC.
@@ -26,9 +27,9 @@ class class_fastqc:
     def __str__(self):
         """
         This functioning prints that FastQC is running.
-    
+
         : Param: None
-    
+
         : Return: running trimmomatic printed to the terminal.
         """
         return ("Running FastQC")
@@ -37,37 +38,37 @@ class class_fastqc:
         """
         This function runs FastQC through the command-line.
 
-        Param: 
+        Param:
             input_folder: The folder which contains the .fastq or .fq file.
 
         Return: None
         """
-        
-        #checking if OS is windows or linux
+
+        # checking if OS is windows or linux
         if sys.platform.startswith('win'):
-            command = ["java", 
-                "-Xmx250m", 
-                "-Dfastqc.unzip=true", 
-                "-Dfastqc.delete=true", 
-                #output location
-                r"-Dfastqc.output_dir=" + self.path_root + self.path_output, 
-                "-classpath", 
-                ".;./sam-1.103.jar;./jbzip2-0.9.jar", 
-                "uk.ac.babraham.FastQC.FastQCApplication",  
-                #input file name and path
+            command = ["java",
+                "-Xmx250m",
+                "-Dfastqc.unzip=true",
+                "-Dfastqc.delete=true",
+                # output location
+                r"-Dfastqc.output_dir=" + self.path_root + self.path_output,
+                "-classpath",
+                ".;./sam-1.103.jar;./jbzip2-0.9.jar",
+                "uk.ac.babraham.FastQC.FastQCApplication",
+                # input file name and patn
                 self.path_root + input_folder + "/" + self.filename]
-            
+
         elif sys.platform.startswith('linux'):
             command = ["fastqc",
                        "--outdir",
-                       #output location
+                       # output location
                        self.path_root + self.path_output,
                        "--extract",
-                       #input file name and path
+                       # input file name and path
                        self.path_root + input_folder + "/" + self.filename]
-        
-        #changes working folder to folder containing FastQC
-        os.chdir(self.path_root + self.path_fastqc) 
+
+        # changes working folder to folder containing FastQC
+        os.chdir(self.path_root + self.path_fastqc)
         subprocess.run(command)
-        #changes working folder to the root
+        # changes working folder to the root
         os.chdir(self.path_root)
