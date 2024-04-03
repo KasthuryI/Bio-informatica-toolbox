@@ -1,14 +1,9 @@
 """
-Title: trimmomatic
-Author: Mirte Draaijer, Ivar Lottman, Kasthury Inparajah, Storm Steller
-Date: 1-4-2024
-Version: 1.0
-Summery:
-A module containing class used to run the tool trimmomatic.
+A module containing class used to run the tool trimmomatic. 
 """
+
 import subprocess
 import os
-
 
 class Trimmomatic:
     """
@@ -37,21 +32,22 @@ class Trimmomatic:
 
     def command_trimmomatic(self):
         """
-        This function creates the command that is used to run trimmomatic.
+        This funciton creates the command that is used to run trimmomatic.
 
         : Param: -
 
         : Return: a list containing the command.
         """
         path_root = os.getcwd()
-        path_output = r"\trimmomatic_output"
+        path_output = r"/trimmomatic_output"
 
         command = [
-        "java", "-jar",
-        path_root + r"\tools\Trimmomatic-0.39\trimmomatic-0.39.jar",
+        "java",
+        "-jar",
+        path_root + r"/tools/Trimmomatic-0.39/trimmomatic-0.39.jar",
         "SE",
-        path_root + r"\file_uploading" + "\\" + self.filename,
-        path_root + path_output + r"\OUTPUT.fq",
+        path_root + r"/file_uploading" + "/" + self.filename,
+        path_root + path_output + r"/OUTPUT.fq",
         self.illuminaclip,
         self.leading,
         self.trailing,
@@ -67,24 +63,23 @@ class Trimmomatic:
         This functions runs trimmomatic.
 
         : Param: -
-
+        
         : Return: -
         """
         path_root = os.getcwd()
-        path_trimmomatic = r"\tools\Trimmomatic-0.39"
+        path_trimmomatic = r"/tools/Trimmomatic-0.39"
         command = self.command_trimmomatic()
 
         os.chdir(path_root + path_trimmomatic)
         subprocess.run(command)
         os.chdir(path_root)
 
-
 def __str__(self):
     """
     This functioning prints that trimmomatic is running.
-
+    
     : Param: -
-
+    
     : Return: running trimmomatic printed to the terminal.
     """
     return (f"Running trimmomatic using the following command: {self.command_trimmomatic()}")
