@@ -994,3 +994,15 @@ body {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+/****************** Compare page *****************/
+.flex-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  top: 15vw;
+  height: 495px;
+  width: 1155px;
+}
