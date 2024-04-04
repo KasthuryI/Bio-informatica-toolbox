@@ -1,9 +1,14 @@
 """
-A module containing class used to run the tool trimmomatic. 
+Title: trimmomatic
+Author: Mirte Draaijer, Ivar Lottman, Kasthury Inparajah, Storm Steller
+Date: 1-4-2024
+Version: 1.0
+Summery:
+A module containing class used to run the tool trimmomatic.
 """
-
 import subprocess
 import os
+
 
 class Trimmomatic:
     """
@@ -63,7 +68,7 @@ class Trimmomatic:
         This functions runs trimmomatic.
 
         : Param: -
-        
+
         : Return: -
         """
         path_root = os.getcwd()
@@ -77,9 +82,9 @@ class Trimmomatic:
 def __str__(self):
     """
     This functioning prints that trimmomatic is running.
-    
+
     : Param: -
-    
+
     : Return: running trimmomatic printed to the terminal.
     """
     return (f"Running trimmomatic using the following command: {self.command_trimmomatic()}")
