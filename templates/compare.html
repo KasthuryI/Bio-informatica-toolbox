@@ -5,37 +5,85 @@
     <p>FastQC Compare<br>
     Original= {{original}} Compare = {{compare}}
     </p>
-    <h4>Adapter_content</h4>
-    <img src="{{url_for('static', filename=original+'Images/adapter_content.png') }}">
-    <img src="{{url_for('static', filename=compare+'Images/adapter_content.png') }}">
 
-    <h4>Duplication_levels</h4>
-    <img src="{{url_for('static', filename=original+'Images/duplication_levels.png')}}">
-    <img src="{{url_for('static', filename=compare+'Images/duplication_levels.png')}}">
+    <h5 class="head_text_more_info">For more information about the graphs below: <a class="link_fastqc_explanation" href='{{ url_for("fastqc")}}'>click here</a></h5>
+    <br>
+    <br>
+    <br>
+
+    <h4>Basic statistics</h4>
+    <br>
+
+    <h4>Adapter content</h4>
+    <br>
+    <div class="flex-container">
+        <img src="{{url_for('static', filename=original+'Images/adapter_content.png') }}">
+        <img src="{{url_for('static', filename=compare+'Images/adapter_content.png') }}">
+    </div>
+    <br>
+    <br>
+
+    <h4>Sequence duplication</h4>
+    <br>
+    <div class="flex-container">
+        <img src="{{url_for('static', filename=original+'Images/duplication_levels.png')}}">
+        <img src="{{url_for('static', filename=compare+'Images/duplication_levels.png')}}">
+    </div>
+    <br>
+    <br>
     
     <h4>Per base N content</h4>
-    <img src="{{url_for('static', filename=original+'/Images/per_base_n_content.png' )}}">
-    <img src="{{url_for('static', filename=compare+'/Images/per_base_n_content.png' )}}">
+    <br>
+    <div class="flex-container">
+        <img src="{{url_for('static', filename=original+'/Images/per_base_n_content.png' )}}">
+        <img src="{{url_for('static', filename=compare+'/Images/per_base_n_content.png' )}}">
+    </div>
+    <br>
+    <br>
     
-    <h4>Per base quality</h4>
-    <img src="{{url_for('static', filename=original+'/Images/per_base_quality.png')}}">
-    <img src="{{url_for('static', filename=compare+'/Images/per_base_quality.png')}}">
+    <h4>Per base sequence quality</h4>
+    <br>
+    <div class="flex-container">
+        <img src="{{url_for('static', filename=original+'/Images/per_base_quality.png')}}">
+        <img src="{{url_for('static', filename=compare+'/Images/per_base_quality.png')}}">
+    </div>
+    <br>
+    <br>
 
     <h4>Per base sequence content</h4>
-    <img src="{{url_for('static', filename=original+'/Images/per_base_sequence_content.png' )}}">
-    <img src="{{url_for('static', filename=compare+'/Images/per_base_sequence_content.png' )}}">
+    <br>
+    <div class="flex-container">
+        <img src="{{url_for('static', filename=original+'/Images/per_base_sequence_content.png' )}}">
+        <img src="{{url_for('static', filename=compare+'/Images/per_base_sequence_content.png' )}}">
+    </div>
+    <br>
+    <br>
 
     <h4>Per sequence GC content</h4>
-    <img src="{{url_for('static', filename=original+'/Images/per_sequence_gc_content.png' )}}">
-    <img src="{{url_for('static', filename=compare+'/Images/per_sequence_gc_content.png' )}}">
+    <br>
+    <div class="flex-container">
+        <img src="{{url_for('static', filename=original+'/Images/per_sequence_gc_content.png' )}}">
+        <img src="{{url_for('static', filename=compare+'/Images/per_sequence_gc_content.png' )}}">
+    </div>
+    <br>
+    <br>
 
-    <h4>Per sequence quality</h4>
-    <img src="{{url_for('static', filename=original+'/Images/per_sequence_quality.png' )}}">
-    <img src="{{url_for('static', filename=compare+'/Images/per_sequence_quality.png' )}}">
+    <h4>Per sequence quality score</h4>
+    <br>
+    <div class="flex-container">
+        <img src="{{url_for('static', filename=original+'/Images/per_sequence_quality.png' )}}">
+        <img src="{{url_for('static', filename=compare+'/Images/per_sequence_quality.png' )}}">
+    </div>
+    <br>
+    <br>
 
-    <h4>Sequence lenght distribution</h4>
-    <img src="{{url_for('static', filename=original+'/Images/sequence_length_distribution.png' )}}">
-    <img src="{{url_for('static', filename=compare+'/Images/sequence_length_distribution.png' )}}">
+    <h4>Sequence length distribution</h4>
+    <br>
+    <div class="flex-container">
+        <img src="{{url_for('static', filename=original+'/Images/sequence_length_distribution.png' )}}">
+        <img src="{{url_for('static', filename=compare+'/Images/sequence_length_distribution.png' )}}">
+    </div>
+    <br>
+    <br>
 
-    
     {% endblock %}
