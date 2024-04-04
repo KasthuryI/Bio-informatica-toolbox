@@ -11,7 +11,7 @@ and it contains 2 functions for using FastQC and Trimmomatic.
 from flask import Flask, request, render_template, session
 # impport class tools from respective"s scripts
 from trimmomatic import Trimmomatic
-from fastqc import class_fastqc
+from fastqc import FastQC
 
 # limmits imput to fq and fastq files
 ALLOWED_EXTENSIONS = {"fq","fastq"}
@@ -154,7 +154,7 @@ def succes():
                     # extra check
                     if line.startswith("@"):
                         # fastqc tool
-                        file_name_fastqc = class_fastqc(file.filename)
+                        file_name_fastqc = FastQC(file.filename)
                         file_name_fastqc.run(r"/file_uploading")
                         return render_template("succes_upload_page.html", name=session["filename"],original=session["path_folder"])
 
@@ -190,7 +190,7 @@ def options():
         trim_object.run_trimmomatic()
 
         # running fastqc on the newly trimmed data
-        trim_output_file = class_fastqc("OUTPUT.fq")
+        trim_output_file = FastQC("OUTPUT.fq")
         trim_output_file.run(r"/trimmomatic_output")
         compare_path = "OUTPUT_fastqc/"
         return render_template("compare.html", original=session["path_folder"], compare=compare_path)
