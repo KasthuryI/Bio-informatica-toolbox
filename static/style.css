@@ -833,6 +833,26 @@ body {
   text-decoration: none;
 }
 
+.head_text_more_info {
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.5vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  top: 50px;
+}
+
+.link_fastqc_explanation {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  font-weight: bold;
+  color: #228b22;
+  text-decoration: underline;
+}
+
 /* Question to trim or not */
 #ques {
   position: relative;

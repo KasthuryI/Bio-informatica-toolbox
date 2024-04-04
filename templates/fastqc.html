@@ -15,7 +15,31 @@
    <h4 class="headers_text_fastqc">Basic statistics:</h4>
    <p class="text_fastqc">This plot contains some basic information about the file.</p>
    <br>
-         
+
+   <h4 class="headers_text_fastqc">Adapter content:</h4>
+   <p class="text_fastqc"> The adapters of your sequence sample can influence overrepresentation in your data, this graph will show specific the specific adapter sequences </p>
+   <br>
+
+   <h4 class="headers_text_fastqc"> Sequence duplication:</h4>
+   <p class="text_fastqc">
+      This graph shows the amount of duplicate sequences. if there are more then 20% duplicate sequences in total this graph will be 
+      flagd for a warning and for failure if its over 50%. There are many reasons why duplications can arise the most common examples
+      are: enricht samples or by chance the same sequence was selected.
+      <br> 
+      for more information on this graph and how to interpret unexpected results please visit <a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/8%20Duplicate%20Sequences.html" class="links_text_fastqc">Duplication Explanation</a>
+      as it contains an extensive explanation on this graph.
+   </p>
+   <br>
+
+   <h4 class="headers_text_fastqc"> Per base N content:</h4>
+   <p class="text_fastqc">
+      Sequencers can't always decide with confidence which of the bases it is and with substitutes
+      it for N. It's normal for small amounts of N to appear because of quality loss near the end of the sequence. The 2 most commmon
+      reasons for a large portion of N content is a bad quality or a biased sample in wich case the sequencer can get confused and make 
+      bad calls.
+   </p>
+   <br>
+
    <h4 class="headers_text_fastqc">Per base sequence quality:</h4>
    <p class="text_fastqc">
       This boxplot contains the quality per base 
@@ -28,14 +52,6 @@
    </p>
    <br>
 
-   <h4 class="headers_text_fastqc"> Per sequence quality score:</h4>
-   <p class="text_fastqc">This graph shows the overal quality distribution of the reads.<br>
-      if the overal quality is low there might be systematic problem with the flow cell or a specific part of the run.
-      As per babraham bioinformatics standerds if the overal quality is below 27 the read is flagd for warning and if its below 20
-      its flagd for failure
-   </p>
-   <br>
-         
    <h4 class="headers_text_fastqc"> Per base sequence content:</h4>
    <p class="text_fastqc">
       In this graph you can see the proportions of the different nucleotide bases
@@ -49,8 +65,8 @@
       Primers,adapters and some samples based on their preparation can create baises.
    </p>
    <br>
-         
-   <h4 class="headers_text_fastqc"> Per sequance GC content:</h4>
+
+   <h4 class="headers_text_fastqc"> Per sequence GC content:</h4>
    <p class="text_fastqc">
       In this plot you can see the CG content across the sequence
       <br>
@@ -61,13 +77,12 @@
       flagged for failure.
    </p>
    <br>
-         
-   <h4 class="headers_text_fastqc"> Per base N content:</h4>
-   <p class="text_fastqc">
-      Sequencers can't always decide with confidence which of the bases it is and with substitutes
-      it for N. It's normal for small amounts of N to appear because of quality loss near the end of the sequence. The 2 most commmon
-      reasons for a large portion of N content is a bad quality or a biased sample in wich case the sequencer can get confused and make 
-      bad calls.
+
+   <h4 class="headers_text_fastqc"> Per sequence quality score:</h4>
+   <p class="text_fastqc">This graph shows the overal quality distribution of the reads.<br>
+      if the overal quality is low there might be systematic problem with the flow cell or a specific part of the run.
+      As per babraham bioinformatics standerds if the overal quality is below 27 the read is flagd for warning and if its below 20
+      its flagd for failure
    </p>
    <br>
          
@@ -77,32 +92,9 @@
       <br>
       Warnings will apear when the sequance is not of the same lengt and it will be faild if the lenght is 0.
       Warnings in this graph can sometimes be ignored if you expect diffrent lengts in sequence, this could be becouse of the type of
-      sequencing you have done or data trimming wich can result into a diffrence in lengt.
+      sequencing you have done or data trimming wich can result into a diffrence in length.
    </p>
-   <br>
-         
-   <h4 class="headers_text_fastqc"> Sequence duplication graph:</h4>
-   <p class="text_fastqc">
-      This graph shows the amount of duplicate sequences. if there are more then 20% duplicate sequences in total this graph will be 
-      flagd for a warning and for failure if its over 50%. There are many reasons why duplications can arise the most common examples
-      are: enricht samples or by chance the same sequence was selected.
-      <br> 
-      for more information on this graph and how to interpret unexpected results please visit <a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/8%20Duplicate%20Sequences.html" class="links_text_fastqc">Duplication Explanation</a>
-      as it contains an extensive explanation on this graph.
-   </p>
-   <br>
-         
-   <h4 class="headers_text_fastqc"> Overrepresented sequences:</h4>
-   <p class="text_fastqc">This graph shows overrepresentation of the sequance. there are 3 main reasons why a sequance can be overrepresented, one of them 
-      is that the sample is contaminated and the second one is lack of diversity. And the last reason is that the sequance can be biologically significant 
-      <br>
-      this module will show a warning any part of the sequence represents more then 0.1% of and shows a failure at more then 1%
-   </p>
-   <br>
-         
-   <h4 class="headers_text_fastqc">Adapter content:</h4>
-   <p class="text_fastqc"> The adapters of your sequence sample can influence overrepresentation in your data, this graph will show specific the specific adapter sequences </p>
-   <br>
+   <br>      
 
    <h4 class="source_text_fastqc"> Source:</h4>
    <p class="source_text_fastqc">If you require more detailed information please visit the official FASTQC website: 

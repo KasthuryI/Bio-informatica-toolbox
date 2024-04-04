@@ -5,7 +5,16 @@
     <p>FastQC Compare<br>
     Original= {{original}} Compare = {{compare}}
     </p>
-    <h4>Adapter_content</h4>
+
+    <h5 class="head_text_more_info">For more information about the graphs below: <a class="link_fastqc_explanation" href='{{ url_for("fastqc")}}'>click here</a></h5>
+    <br>
+    <br>
+    <br>
+
+    <h4>Basic statistics</h4>
+    <br>
+
+    <h4>Adapter content</h4>
     <br>
     <div class="flex-container">
         <img src="{{url_for('static', filename=original+'Images/adapter_content.png') }}">
@@ -14,7 +23,7 @@
     <br>
     <br>
 
-    <h4>Duplication_levels</h4>
+    <h4>Sequence duplication</h4>
     <br>
     <div class="flex-container">
         <img src="{{url_for('static', filename=original+'Images/duplication_levels.png')}}">
@@ -32,7 +41,7 @@
     <br>
     <br>
     
-    <h4>Per base quality</h4>
+    <h4>Per base sequence quality</h4>
     <br>
     <div class="flex-container">
         <img src="{{url_for('static', filename=original+'/Images/per_base_quality.png')}}">
@@ -59,7 +68,7 @@
     <br>
     <br>
 
-    <h4>Per sequence quality</h4>
+    <h4>Per sequence quality score</h4>
     <br>
     <div class="flex-container">
         <img src="{{url_for('static', filename=original+'/Images/per_sequence_quality.png' )}}">
@@ -77,5 +86,4 @@
     <br>
     <br>
 
-    
     {% endblock %}
