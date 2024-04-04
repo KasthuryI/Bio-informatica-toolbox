@@ -91,9 +91,11 @@ def options():
         crop_value = request.form["crop"]
         minlen_value = request.form["minlen"]
         sliding_show = request.form["sliding"]
+        trailing_value = request.form["trailing"]
+        leading_value = request.form["leading"]
 
 
-        trim_object = Trimmomatic(sliding_show, minlen_value, crop_value, session["filename"])
+        trim_object = Trimmomatic(leading_value, trailing_value, sliding_show, minlen_value, crop_value, session["filename"])
         trim_object.run_trimmomatic()
 
         trim_output_file = class_fastqc("OUTPUT.fq")

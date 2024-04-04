@@ -12,7 +12,7 @@ class Trimmomatic:
     command_trimmomatic(): generates the command used to run trimmomatic.
     run_trimmomatic(): runs the tool trimmomatic.
     """
-    def __init__(self, sliding, minlen, crop, file):
+    def __init__(self, leading, trailing, sliding, minlen, crop, file):
         """
         This function sets the default values for trimmomatic objects.
 
@@ -23,8 +23,8 @@ class Trimmomatic:
         : Return: -
         """
         self.illuminaclip = "ILLUMINACLIP:TruSeq3-SE:2:30:10"
-        self.leading = "LEADING:3"
-        self.trailing = "TRAILING:3"
+        self.leading = "LEADING:" + str(leading)
+        self.trailing = "TRAILING:" + str(trailing)
         self.sliding = "SLIDINGWINDOW:" + str(sliding)
         self.minlen = "MINLEN:" + str(minlen)
         self.crop = "CROP:" + str(crop)
