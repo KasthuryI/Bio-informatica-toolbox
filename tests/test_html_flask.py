@@ -13,8 +13,8 @@ import os
 from run_app import app
 from pathlib import Path
 
-second_testfolder = Path(__file__).parent/"file_uploading"
-tritest = second_testfolder + "filename.fastq"
+#second_testfolder = Path(__file__).parent/"file_uploading"
+#tritest = second_testfolder + "filename.fastq"
 testfolder = Path(__file__).parent /"test_files_map"
 @pytest.fixture
 def client():
