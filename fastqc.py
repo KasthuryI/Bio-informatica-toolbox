@@ -4,7 +4,8 @@
     Date: 25-3-2024
     Version: 1.0
 
-    Summary: This program runs FastQC through the command line. This is done by using the terminal.
+    Summary: This program runs FastQC through the command line.
+    This is done by using the terminal.
 """
 
 import subprocess
@@ -12,11 +13,11 @@ import os
 import sys
 
 
-class class_fastqc:
+class FastQC:
     """
         Summary: Class used to call FastQC.
-
-        This class has 1 method, the .run method. This method runs FastQC through the command line.
+        This class has 1 method, the .run method.
+        This method runs FastQC through the command line.
     """
     def __init__(self, filename):
         self.filename = filename
