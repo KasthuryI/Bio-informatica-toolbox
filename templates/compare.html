@@ -6,36 +6,76 @@
     Original= {{original}} Compare = {{compare}}
     </p>
     <h4>Adapter_content</h4>
-    <img src="{{url_for('static', filename=original+'Images/adapter_content.png') }}">
-    <img src="{{url_for('static', filename=compare+'Images/adapter_content.png') }}">
+    <br>
+    <div class="flex-container">
+        <img src="{{url_for('static', filename=original+'Images/adapter_content.png') }}">
+        <img src="{{url_for('static', filename=compare+'Images/adapter_content.png') }}">
+    </div>
+    <br>
+    <br>
 
     <h4>Duplication_levels</h4>
-    <img src="{{url_for('static', filename=original+'Images/duplication_levels.png')}}">
-    <img src="{{url_for('static', filename=compare+'Images/duplication_levels.png')}}">
+    <br>
+    <div class="flex-container">
+        <img src="{{url_for('static', filename=original+'Images/duplication_levels.png')}}">
+        <img src="{{url_for('static', filename=compare+'Images/duplication_levels.png')}}">
+    </div>
+    <br>
+    <br>
     
     <h4>Per base N content</h4>
-    <img src="{{url_for('static', filename=original+'/Images/per_base_n_content.png' )}}">
-    <img src="{{url_for('static', filename=compare+'/Images/per_base_n_content.png' )}}">
+    <br>
+    <div class="flex-container">
+        <img src="{{url_for('static', filename=original+'/Images/per_base_n_content.png' )}}">
+        <img src="{{url_for('static', filename=compare+'/Images/per_base_n_content.png' )}}">
+    </div>
+    <br>
+    <br>
     
     <h4>Per base quality</h4>
-    <img src="{{url_for('static', filename=original+'/Images/per_base_quality.png')}}">
-    <img src="{{url_for('static', filename=compare+'/Images/per_base_quality.png')}}">
+    <br>
+    <div class="flex-container">
+        <img src="{{url_for('static', filename=original+'/Images/per_base_quality.png')}}">
+        <img src="{{url_for('static', filename=compare+'/Images/per_base_quality.png')}}">
+    </div>
+    <br>
+    <br>
 
     <h4>Per base sequence content</h4>
-    <img src="{{url_for('static', filename=original+'/Images/per_base_sequence_content.png' )}}">
-    <img src="{{url_for('static', filename=compare+'/Images/per_base_sequence_content.png' )}}">
+    <br>
+    <div class="flex-container">
+        <img src="{{url_for('static', filename=original+'/Images/per_base_sequence_content.png' )}}">
+        <img src="{{url_for('static', filename=compare+'/Images/per_base_sequence_content.png' )}}">
+    </div>
+    <br>
+    <br>
 
     <h4>Per sequence GC content</h4>
-    <img src="{{url_for('static', filename=original+'/Images/per_sequence_gc_content.png' )}}">
-    <img src="{{url_for('static', filename=compare+'/Images/per_sequence_gc_content.png' )}}">
+    <br>
+    <div class="flex-container">
+        <img src="{{url_for('static', filename=original+'/Images/per_sequence_gc_content.png' )}}">
+        <img src="{{url_for('static', filename=compare+'/Images/per_sequence_gc_content.png' )}}">
+    </div>
+    <br>
+    <br>
 
     <h4>Per sequence quality</h4>
-    <img src="{{url_for('static', filename=original+'/Images/per_sequence_quality.png' )}}">
-    <img src="{{url_for('static', filename=compare+'/Images/per_sequence_quality.png' )}}">
+    <br>
+    <div class="flex-container">
+        <img src="{{url_for('static', filename=original+'/Images/per_sequence_quality.png' )}}">
+        <img src="{{url_for('static', filename=compare+'/Images/per_sequence_quality.png' )}}">
+    </div>
+    <br>
+    <br>
 
-    <h4>Sequence lenght distribution</h4>
-    <img src="{{url_for('static', filename=original+'/Images/sequence_length_distribution.png' )}}">
-    <img src="{{url_for('static', filename=compare+'/Images/sequence_length_distribution.png' )}}">
+    <h4>Sequence length distribution</h4>
+    <br>
+    <div class="flex-container">
+        <img src="{{url_for('static', filename=original+'/Images/sequence_length_distribution.png' )}}">
+        <img src="{{url_for('static', filename=compare+'/Images/sequence_length_distribution.png' )}}">
+    </div>
+    <br>
+    <br>
 
     
     {% endblock %}
