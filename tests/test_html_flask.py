@@ -9,10 +9,12 @@ python3 -m pytest
 """
 import pytest
 import html5lib
+import os
 from run_app import app
 from pathlib import Path
 
-
+second_testfolder = Path(__file__).parent/"file_uploading"
+tritest = second_testfolder + "filename.fastq"
 testfolder = Path(__file__).parent /"test_files_map"
 @pytest.fixture
 def client():
@@ -25,18 +27,25 @@ def test_root(client):
 
 
 def test_input_form(client):
-    response = client.post('/succes', data={"file": ((testfolder/"good_test_fastq.fastq").open('rb'), 'filename.fastq', '')})
+    response = client.post('/succes', data={"file": ((testfolder/"good_test_fastq.fastq").open('rb'), 'file.filename', '')})
     assert response.status_code == 200
 
 
 def test_trim_form(client):
-    response = client.post('/options_page', data={"minlen":"30","crop":"30"})
+    #with client.session_transaction() as session:
+        # set a user id without going through the login route
+        #session["filename"] = "file.filename"
+
+    #path = os.getcwd() + "../" + "tools/Trimmomatic-0.39"
+    #print(path)
+    #os.chdir(path)
+    response = client.post('/options_page', data={"leading":"3", "trailing":"3", "sliding":"4:15", "minlen":"75", "crop":"100",})
     assert response.status_code == 200
 
 
 @pytest.mark.parametrize('uri', ['/about',
                                 '/homepage', '/uploadpage', 'fastqc'
-                                ,'/trimmomatic', '/contact', '/how_does_it_work', '/diclaimer'])
+                                ,'/trimmomatic', '/contactpage', '/how_does_it_work', '/disclaimer'])
 def test_html_validation(client, uri):
     response = client.get(uri)
     assert response.status_code == 200
