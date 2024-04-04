@@ -5,6 +5,16 @@
     <h3 class="header_options"> TRIMMING OPTIONS </h3>
     
     <form class = "options" method="POST" id="options">
+        <label class="options" for="leading" id="leading_title">LEADING</label></br>
+        <input class="options" type="text" id="leading" name="leading" placeholder="3"></br>
+        <p class="options">LEADING: Cuts bases off the start of a read, if it is below a threshold quality.</p>
+        </br>
+
+        <label class="options" for="trailing" id="trailing_title">TRAILING</label></br>
+        <input class="options" type="text" id="trailing" name="trailing" placeholder="3"></br>
+        <p class="options">TRAILING: Cuts bases of the end of a read, if it is below a threshold quality.</p>
+        </br>
+
         <label class="options" for="crop" id="crop_title">CROP</label><br>
         <input class="options" type="text" id="crop" name="crop" placeholder="100"></br>
         <p class="options"> CROP: Cuts the read to a specified length. </p>
