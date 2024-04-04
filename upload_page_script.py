@@ -166,7 +166,7 @@ def succes():
 
 @app.route("/options_page", methods=["GET", "POST"])
 def options():
-   """
+    """
     This function uses the trimmomatic tool to trim the
     fastq file into an fq file. wich is then run truw fastq to
     to genarate plots and a file patch wich is past on to the compare
