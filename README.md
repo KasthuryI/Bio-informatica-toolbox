@@ -37,6 +37,12 @@ ___
 #### This webpage provides details about TrimTech.
 
 
+### **Disclaimerpage**
+
+![Disclaimerpage](static/GUI_pictures/trimtech_disclaimer_page.png)
+#### This webpage provides a disclaimer about the data of the input file. 
+
+
 ### **Uploadpage**
 
 ![Uploadpage](static/GUI_pictures/trimtech_uploadpage.png)
