@@ -58,7 +58,7 @@ ___
 ### **Invalid file webpage**
 
 ![Invalid file uploadpage](static/GUI_pictures/trimtech_invalid_upload_page.png)
-#### If you upload an invalid file to TrimTech, you will see a webpage displaying the name of the invalid file at the top. To retry, you can click on the "Click here to try again" link or "About" option on the navigation bar to go back to the uploadpage and upload a valid file.
+#### If you upload an invalid file to TrimTech, you will see a webpage displaying the name of the invalid file at the top. To retry, you can click on the "Click here to try again" link or the "Upload" option on the navigation bar to go back to the uploadpage and upload a valid file.
 
 
 ### **Trimming options**
@@ -89,11 +89,6 @@ ___
 
 ![Contactpage](static/GUI_pictures/trimtech_contactpage.png)
 #### Users can get in touch with the creators of TrimTech by clicking on the GitHub logo which will redirect the users to the Github repository of this website. 
-
-
-
-## **GUI input file**
-
 
 
 ## **FASTQC based commands**
@@ -211,7 +206,7 @@ TO DO: PER SCRIPT, WEBSITE SCRIPT, TOOL SCRIPT AND FLASK VERSION
 
 #### We would also like to acknowledge the following websites for their valuable resources and assistance during the development of this project:
 
-#### W3 SCHOOLS: https://www.w3schools.com/
-#### FASTQC: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/
-#### Trimmomatic: http://www.usadellab.org/cms/?page=trimmomatic
-#### Explanation Trimmomatic: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4103590/#btu170-B5
+#### **W3 SCHOOLS**: https://www.w3schools.com/
+#### **FASTQC**: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/
+#### **Trimmomatic**: http://www.usadellab.org/cms/?page=trimmomatic
+#### **Explanation Trimmomatic**: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4103590/#btu170-B5
