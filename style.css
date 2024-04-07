@@ -1,0 +1,1060 @@
+/********************************************** Stylesheet ***************************************************/
+
+/* CSS reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/******************************************* Fixed components ************************************************/
+/* Background image for homepage */
+body {
+  background: #F5F5Dc;
+  background-size: cover;
+}
+
+/* Logo website */
+#logo {
+  width:6vw;
+  height:3vw;
+}
+
+/* Navigation bar */
+#navigation_bar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.6vw 6vw 0.6vw 1.2vw;
+  background: #90C590; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+}
+
+ /* Text on navigation bar */
+#text_navbar a{
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.3vw;
+  color: #F5F5DC;
+  text-decoration: none;
+  text-align: center;
+  margin: 0 5vw;
+}
+
+/* Hover effect nav bar */
+#text_navbar a:hover {
+  color: #228b22;
+}
+
+/* Footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.3vw 0.3vw 0.3vw 0.3vw;
+  background: #90C590;
+  display: inline-block;
+  z-index: 100;
+}
+
+/* Text footer */
+.text_footer{
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 0.6vw;
+  color: #F5F5Dc;
+  text-align: center;
+}
+
+/********************************************* Flex components ***********************************************/
+
+/**************** Home page content ***************/
+.content_home_text{
+  position: absolute;
+  top: 7vw;
+  left: 2vw;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 3.5vw;
+  color: black;
+  text-align: left;
+}
+
+/* Fade in from left home page text */
+#fade_in_left{
+  animation: fadeInLeft 2s ease-out;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+/* Grid boxes */
+#grid_try{
+  position: absolute;
+  top: 8vw;
+  right: 1.8vw;
+  border-radius: 2.1vw;
+  background: #E79384;
+  overflow: hidden;
+  padding: 1.2vw;
+  width: 30vw;
+  height: 15vw;
+  transition: clip-path 0.3s ease;
+}
+
+#grid_how{
+  position: absolute;
+  bottom: 4vw;
+  left: 1.8vw;
+  border-radius: 2.1vw;
+  background: #0D4028;
+  overflow: hidden;
+  padding: 1.2vw;
+  width: 30vw;
+  height: 15vw;
+  transition: clip-path 0.3s ease;
+}
+
+#grid_get{
+  position: absolute;
+  bottom: 4vw;
+  left: 35vw;
+  border-radius: 2.1vw;
+  background: #228b22;
+  overflow: hidden;
+  padding: 1.2vw;
+  width: 30vw;
+  height: 15vw;
+  transition: clip-path 0.3s ease;
+}
+
+#grid_disclaimer{
+  position: absolute;
+  bottom: 4vw;
+  right: 1.8vw;
+  border-radius: 2.1vw;
+  background: #B92C25;
+  overflow: hidden;
+  padding: 1.2vw;
+  width: 30vw;
+  height: 15vw;
+  transition: clip-path 0.3s ease;
+}
+
+
+/* Opacity transition grid and zooming in content */
+#grid_try:hover{
+  clip-path: inset(10px 10px 10px 10px round 35px);
+  opacity: 0.8;
+}
+
+#grid_how:hover{
+  clip-path: inset(10px 10px 10px 10px round 35px);
+  opacity: 0.8;
+}
+
+#grid_get:hover{
+  clip-path: inset(10px 10px 10px 10px round 35px);
+  opacity: 0.8;
+}
+
+#grid_disclaimer:hover{
+  clip-path: inset(10px 10px 10px 10px round 35px);
+  opacity: 0.8;
+}
+
+
+/* Content of grids */
+.grid_try_text a{
+  position: relative;
+  top: 5vw;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 250%;
+  color: #F5F5DC;
+  text-decoration: none;
+  text-align: center;
+}
+
+.grid_how_text a{
+  position: relative;
+  top: 5vw;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 200%;
+  color: #F5F5DC;
+  text-decoration: none;
+  text-align: center; 
+}
+
+.grid_get_text a{
+  position: relative;
+  top: 3.5vw;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 240%;
+  color: #F5F5DC;
+  text-decoration: none;
+  text-align: center;
+}
+
+.grid_disclaimer_text a{
+  position: relative;
+  top: 4.3vw;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 280%;
+  color: #F5F5DC;
+  text-decoration: none;
+  text-align: center;
+}
+
+
+
+/* Already existing text move to top on grid */
+/* Except "TRY IT NOW!" and "GET YOUR FASTQC FILE HERE!" grid */
+#grid_try:hover .grid_try_text a{
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 240%;
+  color: #F5F5DC;
+  text-decoration: none;
+  text-align: center;
+}
+
+#grid_how:hover .grid_how_text a{
+  position: relative;
+  top: 4vw;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 180%;
+  color: #F5F5DC;
+  text-decoration: none;
+  text-align: center;
+  margin: 0;
+}
+
+#grid_get:hover .grid_get_text a{
+  position: relative;
+  top: 2vw;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 240%;
+  color: #F5F5DC;
+  text-decoration: none;
+  text-align: center;
+  margin: 0;
+}
+
+#grid_disclaimer:hover .grid_disclaimer_text a{
+  position: relative;
+  top: 4vw;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 220%;
+  color: #F5F5DC;
+  text-decoration: none;
+  text-align: center;
+  margin: 0;
+}
+
+/* Hidden text */
+.grid_try_hidden{
+  position: relative;
+  opacity: 0;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.2vw;
+  color: #000000;
+  text-align: center;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(20px);
+  padding: 0;
+  margin: -20px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.grid_how_hidden{
+  position: relative;
+  opacity: 0;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1vw;
+  color: #000000;
+  text-align: center;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(20px);
+  padding: 0;
+  margin: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.grid_get_hidden{
+  position: relative;
+  opacity: 0;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1vw;
+  color: #000000;
+  text-align: center;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(20px);
+  padding: 0;
+  margin: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.grid_disclaimer_hidden{
+  position: relative;
+  opacity: 0;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1vw;
+  color: #000000;
+  text-align: center;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(20px);
+  padding: 0;
+  margin: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/* Fade in hidden text when hover */
+#grid_try:hover .grid_try_hidden {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#grid_how:hover .grid_how_hidden {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#grid_get:hover .grid_get_hidden {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#grid_disclaimer:hover .grid_disclaimer_hidden {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/****************** About page content *******************/
+/* Text about page */
+.head_text_about_page{
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 2vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 70px;
+  top: 50px;
+}
+
+.headers_text_about_page{
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: left;
+  margin: 15px;
+  margin-left: 15px;
+}
+
+.text_about_page{
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: left;
+  margin: 15px;
+  margin-right: 150px;
+  margin-left: 15px;
+}
+
+.text_about_list{
+  margin-left: 40px;
+}
+
+.pictures_about{
+  margin: 5px;
+  margin-left: 15px;
+  width: 575px;
+  height: 375px;
+}
+
+.figcaption_about{
+  margin: 5px;
+  margin-left: 15px;
+}
+
+.source_text_about {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  color: #0D4028;
+  text-decoration: none;
+  text-align: left;
+  margin: 15px;
+  margin-right: 150px;
+  margin-left: 1px;
+}
+
+.links_text_about {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  font-weight: bold;
+  color: #228b22;
+  text-decoration: underline;
+  text-align: left;
+  margin: 1px;
+}
+
+
+/****************** Try it now page content *******************/
+/* Text try it now page */
+.head_text_try_page{
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 2vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 70px;
+  top: 50px;
+}
+
+.text_try_page{
+  position: relative;
+  font-family: sans-serif;
+  font-size: 3vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 0px;
+  top: 60px;
+}
+
+
+/****************** How does it work page content *******************/
+/* Text how does it work page */
+.head_text_how_page{
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 2vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 70px;
+  top: 50px;
+}
+
+#text_flowchart{
+  position: relative;
+  font-family: sans-serif;
+  font-size: 3vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 0px;
+  top: 60px;
+}
+
+.header_text_how{
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.5vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: left;
+  margin-top: 100px;
+  margin-right: 150px;
+  margin-left: 15px;
+}
+
+.text_how_page{
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: left;
+  margin-top: 20px;
+  margin-right: 150px;
+  margin-left: 15px;
+  margin-bottom: 45px;
+}
+
+#flowchart {
+  position: relative;
+  top: 1vw;
+  width: 98.5vw;
+  height: 19.5vw;
+}
+
+
+/****************** Disclaimer page content *******************/
+/* Text disclaimer page */
+.head_text_disclaimer_page{
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 2vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 70px;
+  top: 50px;
+}
+
+.text_disclaimer_page{
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: left;
+  margin: 15px;
+  margin-right: 150px;
+}
+
+
+/****************** FASTQC page content *******************/
+/* Text FASTQC page */
+.head_text_fastqc{
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 2vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 70px;
+  top: 50px;
+}
+
+#header_text_fastqc{
+  position: relative;
+  font-family: sans-serif;
+  font-size: 2vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 30px;
+}
+
+.headers_text_fastqc{
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: left;
+  margin: 15px;
+}
+
+.text_fastqc {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: left;
+  margin: 15px;
+  margin-right: 150px;
+}
+
+.source_text_fastqc {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  color: #0D4028;
+  text-decoration: none;
+  text-align: left;
+  margin: 15px;
+  margin-right: 150px;
+}
+
+.links_text_fastqc {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  font-weight: bold;
+  color: #228b22;
+  text-decoration: underline;
+  text-align: left;
+}
+
+
+/****************** Trimmomatic page content *******************/
+/* Text Trimmomatic page */
+.head_text_trimmomatic {
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 2vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 70px;
+  top: 50px;
+}
+
+.main_headers_text_trimmomatic {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 2vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 30px;
+}
+
+.headers_text_trimmomatic {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 2vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 30px;
+}
+
+.text_trimmomatic {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: left;
+  margin: 15px;
+  margin-right: 150px;
+}
+
+.note_trimmomatic {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  font-weight: bold;
+  color: #228b22;
+  text-decoration: none;
+  text-align: left;
+  margin: 15px;
+  margin-right: 150px;
+}
+
+.bold_text_trimmomatic {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  font-weight: bold;
+  color: #000000;
+  text-decoration: none;
+  text-align: left;
+}
+
+.list_text_trimmomatic {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: left;
+  margin: 35px;
+  margin-right: 150px;
+}
+
+.source_text_trimmomatic {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  color: #0D4028;
+  text-decoration: none;
+  text-align: left;
+  margin: 15px;
+  margin-right: 150px;
+}
+
+.links_text_trimmomatic {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  font-weight: bold;
+  color: #228b22;
+  text-decoration: underline;
+  text-align: left;
+  margin: 1px;
+}
+
+.pictures_trimmomatic {
+  margin: 5px;
+  margin-left: 15px;
+}
+
+.figcaption_trimmomatic {
+  margin: 5px;
+  margin-left: 15px;
+}
+
+
+/****************** Contact page content *****************/
+/* Text contact page */
+.head_text_contact_page{
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 2vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 5vw;
+  top: 0.7vw;
+}
+
+.text_contact_page{
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 3vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 5vw;
+  margin-left: 27.5vw;
+}
+
+/* GitHub logo */
+#logo_github {
+  position: relative;
+  top: 30vw;
+  left: 42.5vw;
+  width: 14vw;
+  height: 8vw;
+}
+
+
+/****************** Upload page content *****************/ 
+/* Text upload page */
+.head_text_upload_page{
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 2vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 70px;
+  top: 50px;
+}
+
+.text_upload_page{
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 2vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 5vw;
+  margin-left: 34vw;
+}
+
+.choose_file{
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 5vw;
+  margin-left: -20vw;
+}
+
+.upload_file{
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 5vw;
+  margin-left: 10vw;
+}
+
+
+/****************** Succes upload page content *****************/
+/* Text succes upload page page */
+.head_text_succecfully_uploaded {
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 2vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 80px;
+  top: 30px;
+}
+
+.uploaded_file_name {
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 2vw;
+  color: #228b22;
+  text-decoration: none;
+}
+
+.head_text_more_info {
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.5vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  top: 50px;
+}
+
+.link_fastqc_explanation {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  font-weight: bold;
+  color: #228b22;
+  text-decoration: underline;
+}
+
+/* Question to trim or not */
+#ques {
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.5vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 5px;
+  top: 50px;
+}
+
+/* Trim button*/
+#trim {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 2vw;
+  font-weight: bold;
+  color: #000000;
+  text-decoration: none;
+  margin-left: 1vw;
+  top: 5vw;
+}
+
+
+/****************** Failed upload page content *****************/
+/* Text invalid file page page */
+.text_invalid_file {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 2vw;
+  font-weight: bold;
+  color: #B92C25;
+  text-decoration: none;
+  text-align: center;
+  margin: 15px;
+  top: 90px;
+}
+
+.link_upload {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 2vw;
+  font-weight: bold;
+  color: #228b22;
+  text-decoration: none;
+  text-align: center;
+  top: 80px;
+}
+
+
+/****************** Options Trimmomatic content *****************/
+/* Options Trimmomatic page */
+.header_options {
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 2vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 70px;
+  margin-left: 25%;
+  margin-right: 25%;
+  top: 50px;
+}
+
+.options{
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1vw;
+  text-align: center;
+  color: #000000;
+  text-decoration: none;
+  margin-left: 25%;
+  margin-right: 25%
+}
+
+.bold_text {
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1vw;
+  color: #000000;
+  text-decoration: none;
+  margin-left: 25%;
+  margin-right: 25%;
+  
+}
+
+/****************** Error page content *****************/
+/* Text disclaimer page */
+.head_text_error_page{
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 3vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin: 70px;
+  top: 50px;
+}
+
+.input_file_error{
+  position: relative;
+  font-family: sans-serif;
+  font-size: 2vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  top: 200px;
+}
+
+.input_file_error_name{
+  position: relative;
+  font-family: sans-serif;
+  font-size: 2vw;
+  font-weight: bold;
+  color: #000000;
+  text-decoration: none;
+}
+
+.error_page_text{
+  position: relative;
+  font-family: sans-serif;
+  font-size: 2.5vw;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  top: 200px;
+}
+
+
+/****************** Loader *****************/
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loader {
+  position: absolute;
+  left: 42.5%;
+  top: 40%;
+  z-index: 1;
+  border-radius: 50%;
+  border-top: 16px double #0D4028;
+  border-right: 16px double #228b22;
+  border-bottom: 16px double #90C590;
+  border-left: 16px double #228b22;
+  width: 200px;
+  height: 200px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/****************** Compare page *****************/
+.flex-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  top: 15vw;
+  height: 495px;
+  width: 1155px;
+}
+
+/* Download button */
+.download_button {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  font-weight: bold;
+  background-color: #228b22;
+  border: none;
+  color: #f5f5dc;
+  padding: 12px 30px;
+  cursor: pointer;
+}
+
+.download_button:hover {
+  background-color: #1c621c;
+    padding: 8px 26px;
+}

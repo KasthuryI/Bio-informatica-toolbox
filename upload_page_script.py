@@ -8,10 +8,11 @@ it contains functions for serving static pages
 and it contains 2 functions for using FastQC and Trimmomatic.
 """
 
-from flask import Flask, request, render_template, session
+from flask import Flask, request, render_template, session, send_file
 # impport class tools from respective"s scripts
 from trimmomatic import Trimmomatic
 from fastqc import FastQC
+import os
 
 # limmits imput to fq and fastq files
 ALLOWED_EXTENSIONS = {"fq","fastq"}
@@ -198,3 +199,12 @@ def options():
 
     if request.method == "GET":
         return render_template("options_page.html")
+
+@app.route("/compare", methods=["get"])
+def download_file():
+    file_path = os.getcwd() + "/trimmomatic_output/OUTPUT.fq"
+    return send_file(
+        file_path,
+        download_name=session["filename"],
+        as_attachment=True
+    )
