@@ -5,37 +5,34 @@
     <h3 class="header_options"> TRIMMING OPTIONS </h3>
     
     <form class = "options" method="POST" id="options">
-        <label class="bold_text" for="leading" id="leading_title">LEADING</label></br>
+        <label class="options" for="leading" id="leading_title">LEADING</label></br>
         <input class="options" type="text" id="leading" name="leading" placeholder="3"></br>
-        <p class="options">Cuts bases off the start of a read, if it is below a threshold quality.</p>
+        <p class="options">LEADING: Cuts bases off the start of a read, if it is below a threshold quality.</p>
         </br>
 
-        <label class="bold_text" for="trailing" id="trailing_title">TRAILING</label></br>
+        <label class="options" for="trailing" id="trailing_title">TRAILING</label></br>
         <input class="options" type="text" id="trailing" name="trailing" placeholder="3"></br>
-        <p class="options">Cuts bases of the end of a read, if it is below a threshold quality.</p>
+        <p class="options">TRAILING: Cuts bases of the end of a read, if it is below a threshold quality.</p>
         </br>
 
-        <label class="bold_text" for="crop" id="crop_title">CROP</label><br>
+        <label class="options" for="crop" id="crop_title">CROP</label><br>
         <input class="options" type="text" id="crop" name="crop" placeholder="100"></br>
-        <p class="options">Cuts the read to a specified length. </p>
+        <p class="options"> CROP: Cuts the read to a specified length. </p>
         </br>
 
-        <label class="bold_text" for="minlen" id="minlen_title">MINLEN</label><br>
+        <label class="options" for="minlen" id="minlen_title">MINLEN</label><br>
         <input class="options" type="text" id="minlen" name="minlen" placeholder="75"></br>
-        <p class="options">Drop the read if it is below the specified length. </p>
+        <p class="options"> MINLEN: Drop the read if it is below the specified length. </p>
         </br>
 
-        <label class="bold_text" for="sliding" id="sliding_title">SLIDINGSHOW</label></br>
+        <label class="options" for="sliding" id="sliding_title">SLIDINGSHOW</label></br>
         <input class="options" type="text" id="sliding" name="sliding" placeholder="4:15"></br>
-        <p class="options">Cuts if the average quality within the window is below a 
-            threshold. The first argument is the size of the window. 
-            The second argument is the threshold quality.</p>
+        <p class="options">SLIDINGWINDOW: cuts if the average quality within the window is below a 
+            threshold (SLIDINGWINDOW:4:15) The first argument is the size of the window. 
+            The argument is the threshold quality.</p>
         </br>
         <input class="options" type="Submit" id="start_trim" value="START">
     </form>
-    <br>
-    <br>
-    <br>
 
     </div>
     <div id="loader-overlay" class="loader-overlay">
@@ -43,24 +40,9 @@
     </div>
 
     <!-- Script for loader overlay -->
-    <script>
-    document.getElementById('options').addEventListener('submit', function() {
-        // Loader overlay when file is submitted
-        document.getElementById('loader-overlay').style.display = 'flex';
-        });
-    </script>
-
-    </div>
-    <div id="loader-overlay" class="loader-overlay">
-    <div class="loader"></div>
-    </div>
-
-    <!-- Script for loader overlay -->
-    <script>
-    document.getElementById('options').addEventListener('submit', function() {
-        // Loader overlay when file is submitted
-        document.getElementById('loader-overlay').style.display = 'flex';
-        });
+    <script src="{{url_for('static', filename='loader.js')}}"></script>
+    <script type="text/javascript">
+      options_loader('options');
     </script>
 
 {% endblock %}
