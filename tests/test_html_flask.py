@@ -32,9 +32,9 @@ def test_input_form(client):
 
 
 def test_trim_form(client):
-    #with client.session_transaction() as session:
+    with client.session_transaction() as session:
         # set a user id without going through the login route
-        #session["filename"] = "file.filename"
+        session["filename"] = "file.filename"
 
     #path = os.getcwd() + "../" + "tools/Trimmomatic-0.39"
     #print(path)

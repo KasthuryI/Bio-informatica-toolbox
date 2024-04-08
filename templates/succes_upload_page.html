@@ -24,6 +24,9 @@
   <br>
   <br>
   <br>
+  {% for line in data %}
+    <p>{{line}}</p>
+  {% endfor %}
   <img src="{{url_for('static', filename=original+'Images/adapter_content.png') }}">
   <img src="{{url_for('static', filename=original+'Images/duplication_levels.png')}}">
   <img src="{{url_for('static', filename=original+'/Images/per_base_n_content.png' )}}">
