@@ -102,7 +102,6 @@ body {
   }
 }
 
-
 /* Grid boxes */
 #grid_try{
   position: absolute;
@@ -156,7 +155,6 @@ body {
   transition: clip-path 0.3s ease;
 }
 
-
 /* Opacity transition grid and zooming in content */
 #grid_try:hover{
   clip-path: inset(10px 10px 10px 10px round 35px);
@@ -177,7 +175,6 @@ body {
   clip-path: inset(10px 10px 10px 10px round 35px);
   opacity: 0.8;
 }
-
 
 /* Content of grids */
 .grid_try_text a{
@@ -223,8 +220,6 @@ body {
   text-decoration: none;
   text-align: center;
 }
-
-
 
 /* Already existing text move to top on grid */
 /* Except "TRY IT NOW!" and "GET YOUR FASTQC FILE HERE!" grid */
@@ -360,7 +355,6 @@ body {
   transform: translateY(0);
 }
 
-
 /****************** About page content *******************/
 /* Text about page */
 .head_text_about_page{
@@ -437,7 +431,6 @@ body {
   margin: 1px;
 }
 
-
 /****************** Try it now page content *******************/
 /* Text try it now page */
 .head_text_try_page{
@@ -462,7 +455,6 @@ body {
   margin: 0px;
   top: 60px;
 }
-
 
 /****************** How does it work page content *******************/
 /* Text how does it work page */
@@ -522,7 +514,6 @@ body {
   height: 19.5vw;
 }
 
-
 /****************** Disclaimer page content *******************/
 /* Text disclaimer page */
 .head_text_disclaimer_page{
@@ -547,7 +538,6 @@ body {
   margin: 15px;
   margin-right: 150px;
 }
-
 
 /****************** FASTQC page content *******************/
 /* Text FASTQC page */
@@ -615,6 +605,10 @@ body {
   text-align: left;
 }
 
+.pictures_fastqc {
+  margin: 5px;
+  margin-left: 15px;
+}
 
 /****************** Trimmomatic page content *******************/
 /* Text Trimmomatic page */
@@ -726,7 +720,6 @@ body {
   margin-left: 15px;
 }
 
-
 /****************** Contact page content *****************/
 /* Text contact page */
 .head_text_contact_page{
@@ -760,7 +753,6 @@ body {
   width: 14vw;
   height: 8vw;
 }
-
 
 /****************** Upload page content *****************/ 
 /* Text upload page */
@@ -808,7 +800,6 @@ body {
   margin: 5vw;
   margin-left: 10vw;
 }
-
 
 /****************** Succes upload page content *****************/
 /* Text succes upload page page */
@@ -888,7 +879,6 @@ body {
   top: 5vw;
 }
 
-
 /****************** Failed upload page content *****************/
 /* Text invalid file page page */
 .text_invalid_file {
@@ -913,7 +903,6 @@ body {
   text-align: center;
   top: 80px;
 }
-
 
 /****************** Options Trimmomatic content *****************/
 /* Options Trimmomatic page */
@@ -998,48 +987,7 @@ body {
   top: 200px;
 }
 
-
-/****************** Loader *****************/
-.loader-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-
-.loader {
-  position: absolute;
-  left: 42.5%;
-  top: 40%;
-  z-index: 1;
-  border-radius: 50%;
-  border-top: 16px double #0D4028;
-  border-right: 16px double #228b22;
-  border-bottom: 16px double #90C590;
-  border-left: 16px double #228b22;
-  width: 200px;
-  height: 200px;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite;
-}
-
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/****************** Compare page *****************/
+/****************** Comparepage *****************/
 .flex-container{
   display: flex;
   flex-direction: row;
@@ -1090,4 +1038,44 @@ body {
   margin-right: 10px;
   border: 3px solid;
   padding: 1px;
+}
+
+/****************** Loader *****************/
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loader {
+  position: absolute;
+  left: 42.5%;
+  top: 40%;
+  z-index: 1;
+  border-radius: 50%;
+  border-top: 16px double #0D4028;
+  border-right: 16px double #228b22;
+  border-bottom: 16px double #90C590;
+  border-left: 16px double #228b22;
+  width: 200px;
+  height: 200px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

@@ -13,14 +13,21 @@
  
    <h3 id="header_text_fastqc"> Plot Information:</h3>
    <h4 class="headers_text_fastqc">Basic statistics:</h4>
-   <p class="text_fastqc">This plot contains some basic information about the file.</p>
+   <p class="text_fastqc">The basic statistics are presented in a table that displays some essential details 
+      regarding the uploaded file.
+   </p>
    <br>
 
    <h4 class="headers_text_fastqc">Adapter content:</h4>
-   <p class="text_fastqc"> The adapters of your sequence sample can influence overrepresentation in your data, this graph will show specific the specific adapter sequences. </p>
+   <img src="../static/FastQC_examples/adapter.png" alt="Adapter content" class="pictures_fastqc">
+   <p class="text_fastqc"> 
+      The adapters of your sequence sample can influence overrepresentation in your data, this graph will show 
+      specific the specific adapter sequences. 
+   </p>
    <br>
 
    <h4 class="headers_text_fastqc"> Sequence duplication:</h4>
+   <img src="../static/FastQC_examples/percent_of_seqs_remaining_if_dupl.png" alt="Percent of sequences remaining if duplicated" class="pictures_fastqc">
    <p class="text_fastqc">
       This graph shows the number of duplicate sequences. if there are more than 20% duplicate sequences in total this graph will be 
       flagged for a warning and for failure if it’s over 50%. There are many reasons why duplications can arise the most common examples
@@ -32,6 +39,7 @@
    <br>
 
    <h4 class="headers_text_fastqc"> Per base N content:</h4>
+   <img src="../static/FastQC_examples/N_content.png" alt="Per base N content" class="pictures_fastqc">
    <p class="text_fastqc">
       Sequencers can't always decide with confidence which of the bases it is and with substitutes
       it for N. It's normal for small amounts of N to appear because of quality loss near the end of the sequence. The 2 most common
@@ -41,6 +49,7 @@
    <br>
 
    <h4 class="headers_text_fastqc">Per base sequence quality:</h4>
+   <img src="../static/FastQC_examples/quality_scores.png" alt="Per base sequences quality" class="pictures_fastqc">
    <p class="text_fastqc">
       This boxplot contains the quality per base.
       <br>
@@ -53,6 +62,7 @@
    <br>
 
    <h4 class="headers_text_fastqc"> Per base sequence content:</h4>
+   <img src="../static/FastQC_examples/seq_content.png" alt="Per base sequence content" class="pictures_fastqc">
    <p class="text_fastqc">
       In this graph you can see the proportions of the different nucleotide bases
       <br>
@@ -67,6 +77,7 @@
    <br>
 
    <h4 class="headers_text_fastqc"> Per sequence GC content:</h4>
+   <img src="../static/FastQC_examples/GC_distrubution.png" alt="Per sequence GC content" class="pictures_fastqc">
    <p class="text_fastqc">
       In this plot you can see the CG content across the sequence
       <br>
@@ -79,6 +90,7 @@
    <br>
 
    <h4 class="headers_text_fastqc"> Per sequence quality score:</h4>
+   <img src="../static/FastQC_examples/quality_score_distrubution.png" alt="Per sequence quality score" class="pictures_fastqc">
    <p class="text_fastqc">This graph shows the overall quality distribution of the reads.<br>
       if the overall quality is low there might be systematic problem with the flow cell or a specific part of the run.
       As per babraham bioinformatics standards if the overall quality is below 27 the read is flagged for warning and if it’s below 20
@@ -87,6 +99,7 @@
    <br>
          
    <h4 class="headers_text_fastqc"> Sequence length distribution:</h4>
+   <img src="../static/FastQC_examples/disctrubution_of_seq_lengths.png" alt="Sequence length distribution" class="pictures_fastqc">
    <p class="text_fastqc">
       This plot shows the distribution of the lengt of the reads.
       <br>
