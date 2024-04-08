@@ -893,6 +893,15 @@ body {
   top: 90px;
 }
 
+.uploaded_invalid_file {
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 2vw;
+  color: #B92C25;
+  text-decoration: none;
+}
+
 .link_upload {
   position: relative;
   font-family: sans-serif;
