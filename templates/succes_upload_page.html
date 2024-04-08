@@ -14,19 +14,30 @@
           Do you want to trim your data?
       </p>
   </div>
+  <br>
+  <br>
 
   <form method="GET">
-    <button id="trim" type="submit" formaction="{{url_for('options')}}">
+    <button type="submit" class="download_button" formaction="{{url_for('options')}}">
       TRIM THE DATA
     </button>
   </form>
   <br>
   <br>
-  <br>
-  <br>
+
+  <h4> Basic Statistics </h4>
+
   {% for line in data %}
-    <p>{{line}}</p>
+      <table class="basic_statistics">
+            <tr>
+                <th>{{line}}</th>
+            </tr>
+        </table>
   {% endfor %}
+  <br>
+  <br>
+  <br>
+
   <img src="{{url_for('static', filename=original+'Images/adapter_content.png') }}">
   <img src="{{url_for('static', filename=original+'Images/duplication_levels.png')}}">
   <img src="{{url_for('static', filename=original+'/Images/per_base_n_content.png' )}}">

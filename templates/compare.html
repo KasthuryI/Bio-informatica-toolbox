@@ -15,21 +15,34 @@
     <br>
     <br>
     <br>
-    <br>
-    <br>
 
 
     <h4>Basic statistics</h4>
-    <br>
     <div>
     {% for line_one, line_two in data|zip(comp_data) %}
-        <p>{{line_one}} compared to {{line_two}}</p>
+        <table class="table">
+            <tr>
+                <th>{{line_one}}</th>
+            </tr>
+        </table>
+
+        <table class="table2">
+            <tr>
+                <th>{{line_two}}</th>
+            </tr>
+        </table>
+        <br>
+{#        <p>{{line_one}} compared to {{line_two}}</p>#}
     {% endfor %}
     </div>
     <br>
     <br>
     <br>
-
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <h4>Adapter content</h4>
     <br>
     <div class="flex-container">
