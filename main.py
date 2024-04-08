@@ -225,6 +225,7 @@ def options():
                 else:
                     break
             session["comp_stats"] = compare_list
+            print(session["comp_stats"])
 
         return render_template("compare.html",
                                original=session["path_folder"], compare=compare_path,
