@@ -1,22 +1,24 @@
 """
-Title: Module Upload_page_script
+Title: Module main.py
 Author: Mirte Draaijer, Ivar Lottman, Kasthury Inparajah, Storm Steller
 Date: 1-4-2024
 Version: 1.0
-Summery: This script functions as the main module of the website.
-it contains functions for serving static pages
+Summary: This module functions as the main module of the website.
+It contains functions for serving static pages,
 and it contains 2 functions for using FastQC and Trimmomatic.
 """
 
-from flask import Flask, request, render_template, session
+from flask import Flask, request, render_template, session, send_file
 # impport class tools from respective"s scripts
 from trimmomatic import Trimmomatic
 from fastqc import FastQC
+import os
 
 # limmits imput to fq and fastq files
-ALLOWED_EXTENSIONS = {"fq","fastq"}
+ALLOWED_EXTENSIONS = {"fq", "fastq"}
 # session keys
 app = Flask(__name__)
+app.jinja_env.filters['zip'] = zip
 app.secret_key = "TRIMTASTISCHE_TIJGERS"
 
 
@@ -28,7 +30,7 @@ def allowed_file(file):
     Param: file string
     Return: True or False boolean
     """
-    return file.rsplit(".",1)[1].lower() in ALLOWED_EXTENSIONS
+    return file.rsplit(".", 1)[1].lower() in ALLOWED_EXTENSIONS
 
 
 @app.route("/")
@@ -135,7 +137,7 @@ def succes():
 
     conditions for failed invalid file exctensions or first line in file
     did not start with an "@"
-    
+
     param: function call form /succes in the upload_page.html
     return: Renders succes upload page
     return: Renders failed upload page
@@ -156,13 +158,28 @@ def succes():
                         # fastqc tool
                         file_name_fastqc = FastQC(file.filename)
                         file_name_fastqc.run(r"/file_uploading")
-                        return render_template("succes_upload_page.html", name=session["filename"],original=session["path_folder"])
+                        # getting basic statics
+                        with open("static/"+session["path_folder"]+"fastqc_data.txt", "r") as data_files:
+                            data_list = []
+                            for line in data_files:
+                                if "#" in line:
+                                    continue
+                                if "Basic" in line:
+                                    continue
+                                if ">>END_MODULE" not in line:
+                                    data_list.append(line.strip())
+                                else:
+                                    break
+                            session["original_stats"] = data_list
+                        return render_template("succes_upload_page.html",
+                                               name=session["filename"], original=session["path_folder"], data=session["original_stats"])
 
                     else:
                         return render_template("failed_upload_page.html", name=session["filename"])
 
         else:
             return render_template("failed_upload_page.html", name=file.filename)
+
 
 @app.route("/options_page", methods=["GET", "POST"])
 def options():
@@ -194,7 +211,35 @@ def options():
         trim_output_file = FastQC("OUTPUT.fq")
         trim_output_file.run(r"/trimmomatic_output")
         compare_path = "OUTPUT_fastqc/"
-        return render_template("compare.html", original=session["path_folder"], compare=compare_path)
+
+        # loop to get the basic statistics plot
+        with open("static/"+compare_path+"fastqc_data.txt", "r") as compare_file:
+            compare_list = []
+            for line in compare_file:
+                if "#" in line:
+                    continue
+                if "Basic" in line:
+                    continue
+                if ">>END_MODULE" not in line:
+                    compare_list.append(line.strip())
+                else:
+                    break
+            session["comp_stats"] = compare_list
+            print(session["comp_stats"])
+
+        return render_template("compare.html",
+                               original=session["path_folder"], compare=compare_path,
+                               data=session["original_stats"], comp_data=session["comp_stats"])
 
     if request.method == "GET":
         return render_template("options_page.html")
+
+
+@app.route("/compare", methods=["get"])
+def download_file():
+    file_path = os.getcwd() + "/trimmomatic_output/OUTPUT.fq"
+    return send_file(
+        file_path,
+        download_name=session["filename"],
+        as_attachment=True
+    )

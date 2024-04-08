@@ -58,7 +58,7 @@
       <br>
       
       <p class="text_trimmomatic">
-        In the image above you see simple mode visualised. The proces
+        In the image above you see simple mode visualized. The process
         begins with a partial overlap of the 3'end of the technical
         sequence with the 5'end of the read (A). Testing then proceeds
         by moving the supposed contaminant towards the 3'end of the
@@ -100,7 +100,7 @@
     <br>
   
     <p class="text_trimmomatic">
-        In the image above you see palindrome mode visualised. It begins
+        In the image above you see palindrome mode visualized. It begins
         with an overlap between the adapters and the start of the
         opposite reads (A). Because of the ligation of the adapters,
         this alignment would detect a read pair with no useful
@@ -139,7 +139,7 @@
         If the seeds are within the distance given by the user, the full
         alignment scoring algorithm is used. Matching bases are scored as
         Log10<sup>4</sup>, while mismatches get penalized on their
-        quality score, by Q/10, which can vary from 0 to 4. This wil result
+        quality score, by Q/10, which can vary from 0 to 4. This will result
         in a higher penalty for bases that appear to be highly accurate.
         <br><br>
         Simple mode aligns each read against each technical sequence, using
@@ -184,7 +184,7 @@
         to determine how much of a read should be kept. The first factor
         is the length threshold, whereby a read must be of at least a minimal
         length to be useful for the downstream application. Very short reads
-        have little value, because they are too cryptic to be informative.
+        have little value because they are too cryptic to be informative.
         Long reads on the other hand, can be mapped to few locations in the
         target sequence. If they cannot be uniquely mapped, because they come
         from a repetitive region, it is unlikely that a small number of extra

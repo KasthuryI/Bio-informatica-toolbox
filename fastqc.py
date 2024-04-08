@@ -4,8 +4,7 @@
     Date: 25-3-2024
     Version: 1.0
 
-    Summary: This program runs FastQC through the command line.
-    This is done by using the terminal.
+    Summary: This module runs FastQC through the command line.
 """
 
 import subprocess
