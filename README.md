@@ -191,8 +191,16 @@ https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
 http://www.usadellab.org/cms/?page=trimmomatic
 
 ## **Module discription**
-#### Commandline: Scriptname
-TO DO: PER SCRIPT, WEBSITE SCRIPT, TOOL SCRIPT AND FLASK VERSION
+
+#### TrimTech is a website that comprises 4 modules, named main.py, run_app.py, fastqc.py, and trimmomatic.py. Each module has a specific function in the software. Here is a brief overview of the modules with a short explanation of their functions:
+
+#### **fastqc.py**: This module runs FastQC through the command line.
+#### **run_app.py**: This module functions as the main module of the website, and calls the flask app from upload_page_script.
+#### **trimmomatic.py**: this module runs Trimmomatic through the command line.
+#### **main.py**: this module functions as the main module of the website. It contains functions for serving static pages and it contains 2 functions for using FastQC and Trimmomatic.
+
+#### All these modules were created using Flask version 2.2.3.
+
 
 ## **DISCLAIMER: TRIMTECH ONLY USES INPUT FROM ILLUMINADATA**
 
