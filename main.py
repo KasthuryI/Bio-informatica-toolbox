@@ -240,6 +240,6 @@ def download_file():
     file_path = os.getcwd() + "/trimmomatic_output/OUTPUT.fq"
     return send_file(
         file_path,
-        download_name=session["filename"],
+        download_name="trimmed-" + session["filename"],
         as_attachment=True
     )

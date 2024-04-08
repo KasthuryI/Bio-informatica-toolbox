@@ -70,7 +70,7 @@ ___
 ### **Comparepage**
 
 ![Comparepage data quality pre and post-trimming](static/GUI_pictures/trimtech_compare_page.png)
-#### The comparepage displays the quality of the uploaded FASTQ file pre and post-trimming.
+#### The comparepage displays the quality of the uploaded FASTQ file pre and post-trimming. The user can download the trimmed FASTQ file by clicking on the "Download Trimmomatic File" button. 
 
 
 ### **FASTQC**
