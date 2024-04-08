@@ -13,8 +13,7 @@ import os
 from run_app import app
 from pathlib import Path
 
-#second_testfolder = Path(__file__).parent/"file_uploading"
-#tritest = second_testfolder + "filename.fastq"
+
 testfolder = Path(__file__).parent /"test_files_map"
 @pytest.fixture
 def client():
@@ -35,10 +34,14 @@ def test_trim_form(client):
     with client.session_transaction() as session:
         # set a user id without going through the login route
         session["filename"] = "file.filename"
+        session["path_folder"] = "file.filename.replace(.fastq, _fastqc/)"
+        session["original_stats"] = "oristat"
+        session["comp_stats"] = "compstat"
 
-    #path = os.getcwd() + "../" + "tools/Trimmomatic-0.39"
-    #print(path)
-    #os.chdir(path)
+    path = os.getcwd()
+    os.chdir(path)
+    os.chdir("../")
+
     response = client.post('/options_page', data={"leading":"3", "trailing":"3", "sliding":"4:15", "minlen":"75", "crop":"100",})
     assert response.status_code == 200
 
