@@ -853,6 +853,16 @@ body {
   text-decoration: underline;
 }
 
+.basic_statistics {
+  position: relative;
+  margin-left: 25%;
+  margin-right: 50%;
+  top: 10px;
+  width: 50%;
+  border: 3px solid;
+  padding: 2px;
+}
+
 /* Question to trim or not */
 #ques {
   position: relative;
@@ -891,15 +901,6 @@ body {
   text-align: center;
   margin: 15px;
   top: 90px;
-}
-
-.uploaded_invalid_file {
-  position: relative;
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: 2vw;
-  color: #B92C25;
-  text-decoration: none;
 }
 
 .link_upload {
@@ -1066,4 +1067,27 @@ body {
 .download_button:hover {
   background-color: #1c621c;
     padding: 8px 26px;
+}
+
+/* Comparison table */
+.table {
+  position: relative;
+  float: left;
+  top: 60px;
+  width: 45%;
+  margin: 1px;
+  margin-left: 10px;
+  border: 3px solid;
+  padding: 1px;
+}
+
+.table2 {
+  position: relative;
+  float: right;
+  top: 60px;
+  width: 45%;
+  margin: 1px;
+  margin-right: 10px;
+  border: 3px solid;
+  padding: 1px;
 }
