@@ -1049,3 +1049,21 @@ body {
   height: 495px;
   width: 1155px;
 }
+
+/* Download button */
+.download_button {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1.5vw;
+  font-weight: bold;
+  background-color: #228b22;
+  border: none;
+  color: #f5f5dc;
+  padding: 12px 30px;
+  cursor: pointer;
+}
+
+.download_button:hover {
+  background-color: #1c621c;
+    padding: 8px 26px;
+}
