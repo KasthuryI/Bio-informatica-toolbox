@@ -3,8 +3,8 @@ Title: Module main.py
 Author: Mirte Draaijer, Ivar Lottman, Kasthury Inparajah, Storm Steller
 Date: 1-4-2024
 Version: 1.0
-Summary: This script functions as the main module of the website.
-it contains functions for serving static pages
+Summary: This module functions as the main module of the website.
+It contains functions for serving static pages,
 and it contains 2 functions for using FastQC and Trimmomatic.
 """
 

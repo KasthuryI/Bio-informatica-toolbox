@@ -3,8 +3,8 @@ Title: run_app
 Author: Mirte Draaijer, Ivar Lottman, Kasthury Inparajah, Storm Steller
 Date: 1-4-2024
 Version: 1.0
-Summary: This script functions as the main module of the website. and calls
-the flak app from main.py
+Summary: This module functions as the main module of the website, and calls
+the flask app from main.py
 """
 from main import app
 

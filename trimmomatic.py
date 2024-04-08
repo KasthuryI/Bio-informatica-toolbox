@@ -3,8 +3,7 @@ Title: trimmomatic
 Author: Mirte Draaijer, Ivar Lottman, Kasthury Inparajah, Storm Steller
 Date: 1-4-2024
 Version: 1.0
-Summary:
-A module containing class used to run the tool trimmomatic.
+Summary: This module runs Trimmomatic through the command line.
 """
 import subprocess
 import os
