@@ -20,11 +20,6 @@ def client():
     return app.test_client()
 
 
-def test_root(client):
-    response = client.get('/')
-    assert response.status_code == 200
-
-
 def test_input_form(client):
     response = client.post('/succes', data={"file": ((testfolder/"good_test_fastq.fastq").open('rb'), 'file.filename', '')})
     assert response.status_code == 200
@@ -32,9 +27,9 @@ def test_input_form(client):
 
 def test_trim_form(client):
     with client.session_transaction() as session:
-        # set a user id without going through the login route
+        # set session vars
         session["filename"] = "file.filename"
-        session["path_folder"] = "file.filename.replace(.fastq, _fastqc/)"
+        session["path_folder"] = "file_uploading/"
         session["original_stats"] = "oristat"
         session["comp_stats"] = "compstat"
 
@@ -46,9 +41,10 @@ def test_trim_form(client):
     assert response.status_code == 200
 
 
-@pytest.mark.parametrize('uri', ['/about',
-                                '/homepage', '/uploadpage', 'fastqc'
-                                ,'/trimmomatic', '/contactpage', '/how_does_it_work', '/disclaimer'])
+@pytest.mark.parametrize('uri', [
+    '/', '/about', '/homepage', '/uploadpage', '/fastqc',
+    '/trimmomatic', '/contactpage', '/how_does_it_work', '/disclaimer'
+])
 def test_html_validation(client, uri):
     response = client.get(uri)
     assert response.status_code == 200
@@ -56,4 +52,4 @@ def test_html_validation(client, uri):
         parser = html5lib.HTMLParser(strict=True, namespaceHTMLElements=False)
         htmldoc = parser.parse(response.data)
     except html5lib.html5parser.ParseError as error:
-        pytest.fail(f'{error.__class__.__name__}:{str(error)}',pytrace=False)
+        pytest.fail(f'{error.__class__.__name__}:{str(error)}', pytrace=False)
