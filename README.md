@@ -126,7 +126,7 @@ ___
 
 #### • **TRAILING:** Cuts bases of the end of a read, if it is below a threshold quality. (TRAILING:3) 
 
-#### • **SLIDINGSHOW:** Performs a sliding window trimming, cuts if the average quality within the window is bellow a threshold (SLIDINGWINDOW:4:15) The first argument is the size of the window. The argument is the threshold quality.
+#### • **SLIDINGSHOW:** Performs a sliding window trimming, cuts if the average quality within the window is bellow a threshold. The first argument is the size of the window. The second argument is the threshold quality.
 
 #### • **MINLEN:** Drop the read if it is below the specified length. (MINLEN:36)
 
